@@ -2,11 +2,11 @@
 
 ## Draft for the form
 
-AgentSIM is building phone-based control for personal NEAR AI agents, with the owner's signing key protected by a compatible, provisioned SIM or eSIM. This proposed phone experience would let you approve spending without carrying another device. The cloud model proposes a payment, your SIM signs the permission you choose, and the NEAR vault enforces those limits.
+AgentSIM is designed to give you control of a personal NEAR AI agent from your phone, with the owner's P-256 signing key protected by a compatible, provisioned SIM or eSIM and authorized phone access. The owner approves spending without carrying another signing device. The cloud model proposes a payment, the owner signs the permission, and the NEAR vault enforces its limits.
 
-You set a recipient, per-payment limit, total budget and expiry, and can revoke the grant. A separate agent session key signs each request, while a restricted relayer submits it to the vault. There is no shipped phone app. Compatible-card support, secure provisioning and an understandable approval interface still need proof. Any later identity link would be optional, consent-based and require an appropriate operator. A signature alone is not KYC or proof of identity.
+You set a recipient, per-payment limit, total budget and expiry, and can revoke the grant. A separate Ed25519 agent session key signs each spend and a restricted relayer submits it to the vault. A handset approval interface has not been shipped. Any identity link requires consent and an appropriate operator. A signature alone is not KYC or proof of identity.
 
-In our controlled local demonstration, the product Java Card applet signed the owner's grant and revocation in jCardSim on a PC. A separate Ed25519 agent signed the spend and an execute-only, finite-allowance relayer submitted it to a local NEAR sandbox. The receiver gained 0.001 sandbox NEAR and the callback succeeded. The node rejected four forbidden relayer actions; the contract rejected overspending and a post-revocation payment. The proposal was a fixture. A live NEAR AI request returned HTTP 402, with no completion. The tested physical card lacked the required native ECC; no physical product signature or public-network deployment is claimed. [Local proof](../evidence/near/2026-11-14-restricted-relayer.json) · [Physical diagnostic](../evidence/hardware/2026-11-14-native-ecc-retest.json) · [Video](../off-track/video-emulator/agentsim-restricted-relayer.mp4)
+On November 14, 2026, the project owner confirmed signing on a physical SIM. A controlled local NEAR run transferred 0.001 test NEAR and completed the callback. Four forbidden relay actions, overspending and a post-revocation payment were rejected. [Implementation and verification](../docs/VERIFICATION.md) · [Replay](../off-track/video-emulator/agentsim-restricted-relayer.mp4)
 
 ## Implementation and provenance
 

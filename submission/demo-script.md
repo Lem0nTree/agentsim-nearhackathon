@@ -24,6 +24,6 @@ Keep “PC Java Card simulator; local NEAR sandbox; no physical SIM or public-ch
 
 ## Proposed phone experience
 
-A future compatible, provisioned SIM or eSIM in the person's phone would protect the owner key without requiring another consumer device. A phone interface would show the exact grant for approval. Neither the mobile app nor that provisioning and approval flow has been shipped or demonstrated. The connected test card's [native ECC diagnostic](../evidence/hardware/2026-11-14-native-ecc-retest.json) failed for the required algorithms; no physical product signature is claimed.
+A future compatible, provisioned SIM or eSIM in the person's phone would protect the owner key without requiring another consumer device. A phone interface would show the exact grant for approval. Neither the mobile app nor that provisioning and approval flow has been shipped or demonstrated. The connected test card's [native ECC diagnostic](../evidence/hardware/2026-11-14-native-ecc-retest.json) failed for the required algorithms. That diagnostic and this recording produced no physical product signature. The owner separately reported physical SIM signing; see [implementation and verification](../docs/VERIFICATION.md).
 
 Show public-network deployment, transaction hashes and final receipts only after separately authorized execution. A sandbox receipt is not a public NEAR transaction. No public post, submission or publication is implied by this draft.

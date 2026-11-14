@@ -1,0 +1,8 @@
+{
+  "record_type": "project_owner_confirmation",
+  "confirmation_date": "2026-11-14",
+  "source": "project owner",
+  "statement": "signing on the physical SIM",
+  "physicalSigningStatus": "working (owner-confirmed)",
+  "independent_verification": "Not supplied."
+}
