@@ -14,6 +14,7 @@
     "offtrack:setup": "node off-track/video-emulator/scripts/setup-sim.mjs",
     "offtrack:test": "node --test off-track/video-emulator/tests/*.test.mjs",
     "offtrack:demo": "node off-track/video-emulator/scripts/demo-sim.mjs",
-    "check:submission": "node scripts/validate-submission.mjs"
+    "check:submission": "node scripts/validate-submission.mjs",
+    "demo:restricted": "node tests/near-sandbox/restricted-relayer.mjs"
   }
 }

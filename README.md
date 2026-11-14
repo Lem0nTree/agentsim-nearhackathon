@@ -2,6 +2,10 @@
 
 AgentSIM explores owner-authorized, bounded agent spending using a P-256 owner signer and a NEAR vault. Canonical protocol bytes bind grants, spending and control operations. This is research software, not a deployed financial service.
 
+## Restricted relayer and proposals
+
+Run `npm run demo:restricted -- fixture` after starting the dedicated local sandbox as described in the [restricted relayer guide](tests/near-sandbox/RESTRICTED.md). The fixture proposes an amount and recipient; trusted code enforces the grant and uses a separate execute-only, finite-allowance relayer key. The [local proof](evidence/near/2026-11-14-restricted-relayer.json) records node-level permission rejections, a transfer and callback, and contract-level revocation. The [replay video](off-track/video-emulator/agentsim-restricted-relayer.mp4) is fixture-based; live NEAR AI inference requires explicit credentials and available credits. No physical product signature or public-chain transaction is shown.
+
 | Component | Evidence and limits |
 | --- | --- |
 | Protocol and local vault | Automated software tests; settlement is simulated locally. |

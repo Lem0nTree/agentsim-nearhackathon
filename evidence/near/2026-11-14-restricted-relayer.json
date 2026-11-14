@@ -1,0 +1,1345 @@
+{
+  "schema": "agentsim-restricted-relayer/v1",
+  "createdAt": "2026-11-14T18:07:40.049Z",
+  "scope": "local NEAR sandbox only; no public-chain transaction or physical card",
+  "appletSourceSha256": "fa9d26eca4f6c0e9e4a7292872aaff77fd5dc5ebe05bca575ce86294c81e9a40",
+  "simulatorJarSha256": "5587d55f63d0364ed4da93404595071ad56f09833ded91d7addfd860341bee6b",
+  "networkIsolation": {
+    "rpc": "http://127.0.0.1:3030",
+    "peerAddress": "127.0.0.1:24568",
+    "bootNodes": "",
+    "stunServers": [],
+    "telemetryEndpoints": [],
+    "tier1Inbound": false,
+    "tier1Outbound": false,
+    "peerOutboundDisabled": true
+  },
+  "chainId": "agentsim-local",
+  "protocolVersion": 88,
+  "sandboxVersion": {
+    "build": "2.14.0",
+    "commit": "bc4e9e8cfb03d9e82f027883055624e18576993e",
+    "rustc_version": "1.95.0",
+    "version": "2.14.0"
+  },
+  "p256HostFunction": true,
+  "mode": {
+    "mode": "fixture",
+    "liveInference": false
+  },
+  "policy": {
+    "receiver": "pmwgpxb1x.test.near",
+    "maxAmount": "2000000000000000000000"
+  },
+  "proposal": {
+    "amount": "1000000000000000000000",
+    "receiver": "pmwgpxb1x.test.near"
+  },
+  "roles": {
+    "owner": {
+      "algorithm": "P-256",
+      "publicKey": "02906869870dc460292e0f05680469fb142d150d7e31c138adc31cead2797c991f",
+      "source": "product applet in jCardSim"
+    },
+    "agent": {
+      "algorithm": "Ed25519",
+      "publicKey": "04ca4a70e9237080f0eb9f19a6136cf9408b3a8a62be9fcc8f0f661070c12b28"
+    },
+    "relayer": {
+      "algorithm": "Ed25519",
+      "account": "rmwgpxb1x.test.near",
+      "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh"
+    },
+    "setupOperator": {
+      "account": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ"
+    },
+    "vaultOperator": {
+      "account": "vmwgpxb1x.test.near",
+      "publicKey": "ed25519:2LCvmivWU7Bh76m8tMm9E5kXMkUCXnQ4AozuMBdUf79F"
+    }
+  },
+  "wasmSha256": "b26c7b6a9928e967e3e26c8219a8587f84982c40acfe05fa77d673317c20c3c0",
+  "deployedCodeSha256": "b26c7b6a9928e967e3e26c8219a8587f84982c40acfe05fa77d673317c20c3c0",
+  "installedKey": {
+    "nonce": "5639000000",
+    "permission": {
+      "FunctionCall": {
+        "allowance": "500000000000000000000000",
+        "method_names": [
+          "execute"
+        ],
+        "receiver_id": "vmwgpxb1x.test.near"
+      }
+    }
+  },
+  "allKeys": {
+    "block_hash": "9cZmM5N2Jimm5SXwznHKqjBoUcAbVN4pd1G3ZKJ2MbMf",
+    "block_height": 5641,
+    "keys": [
+      {
+        "access_key": {
+          "nonce": 5639000000,
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "public_key": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh"
+      }
+    ]
+  },
+  "grant": {
+    "value": {
+      "chain": "agentsim-local",
+      "vault": "vmwgpxb1x.test.near",
+      "epoch": "0",
+      "agent": "fixture-agent",
+      "sessionKey": "04ca4a70e9237080f0eb9f19a6136cf9408b3a8a62be9fcc8f0f661070c12b28",
+      "perCall": "2000000000000000000000",
+      "total": "3000000000000000000000",
+      "receiver": "pmwgpxb1x.test.near",
+      "expires": "1794680855"
+    },
+    "canonicalUtf8": "[\"AgentSIM\",1,\"grant\",\"agentsim-local\",\"vmwgpxb1x.test.near\",\"0\",\"fixture-agent\",\"04ca4a70e9237080f0eb9f19a6136cf9408b3a8a62be9fcc8f0f661070c12b28\",\"2000000000000000000000\",\"3000000000000000000000\",\"pmwgpxb1x.test.near\",\"1794680855\"]",
+    "signature": "17433b4ed38772523d5fc6ab82a6796548c7162fd9ebed81958d22516bda565da355fa765129584f0e2a0865398ed1adea4304259b657892836bf1e9059ecbab",
+    "id": "9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e"
+  },
+  "spend": {
+    "value": {
+      "chain": "agentsim-local",
+      "vault": "vmwgpxb1x.test.near",
+      "epoch": "0",
+      "grantId": "9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e",
+      "nonce": "0",
+      "receiver": "pmwgpxb1x.test.near",
+      "amount": "1000000000000000000000",
+      "deadline": "1794680255"
+    },
+    "canonicalUtf8": "[\"AgentSIM\",1,\"spend\",\"agentsim-local\",\"vmwgpxb1x.test.near\",\"0\",\"9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e\",\"0\",\"pmwgpxb1x.test.near\",\"1000000000000000000000\",\"1794680255\"]",
+    "signature": "b87fccb3c3dd096c8bbe0093a4c363d5df501b614d4820138784a1d25db27bc22f57845396a4f3a5909b9a4d7aea25f5773d8330fe0836af2ff7bfb201ecdb0e"
+  },
+  "revocation": {
+    "value": {
+      "chain": "agentsim-local",
+      "vault": "vmwgpxb1x.test.near",
+      "epoch": "0",
+      "nonce": "0",
+      "operation": "revoke",
+      "value": "9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e"
+    },
+    "canonicalUtf8": "[\"AgentSIM\",1,\"control\",\"agentsim-local\",\"vmwgpxb1x.test.near\",\"0\",\"0\",\"revoke\",\"9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e\"]",
+    "signature": "7f106aace2e3851fe3bdbb068edd223753acd8813df6051c2952719b0732a5860c0e885cdc2d71d03b9da4ca9023fa50522dcd7a9d7fb62fa222c673047951a9"
+  },
+  "protocolRejects": [
+    {
+      "label": "wrong-method",
+      "layer": "protocol",
+      "expected": "MethodNameMismatch",
+      "error": {
+        "name": "HANDLER_ERROR",
+        "cause": {
+          "info": {},
+          "name": "INVALID_TRANSACTION"
+        },
+        "code": -32000,
+        "message": "Server error",
+        "data": {
+          "TxExecutionError": {
+            "InvalidTxError": {
+              "InvalidAccessKeyError": {
+                "MethodNameMismatch": {
+                  "method_name": "control"
+                }
+              }
+            }
+          }
+        }
+      },
+      "signed": {
+        "signedTxBase64": "EwAAAHJtd2dweGIxeC50ZXN0Lm5lYXIAMz7xT6WBgdW8Uxl/4WsVAF8qEbHK6T+tWaSV7bXBhrzCTxxQAQAAABMAAAB2bXdncHhiMXgudGVzdC5uZWFySjqiZAgq1WJLDketyYiRRkpAaw9x8a2WiztPa1YxXjMBAAAAAgcAAABjb250cm9sAgAAAHt9AID0IOa1AAAAAAAAAAAAAAAAAAAAAAAAAPbQ5P0IOJI1Uw8LT+s3cUjpPvhGRx1YhtyleDsE3gn4ibSeSzC68q8t5CklGDnT7YU/Oy+zqbAbpF0LeNdXmgQ=",
+        "transactionHash": "gBxPWySnrMQ3VpZYzFFc5AwVwKgancqrm3MARJ9yj6X",
+        "signer": "rmwgpxb1x.test.near",
+        "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "5639000002",
+        "blockHash": "5zm2WwPzdUbbY9osyL4WtYYZvZcQUZChFQZa9ppc1aKk"
+      },
+      "before": {
+        "relayKey": {
+          "nonce": "5639000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996970172216916400000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      },
+      "after": {
+        "relayKey": {
+          "nonce": "5639000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996970172216916400000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      }
+    },
+    {
+      "label": "wrong-receiver",
+      "layer": "protocol",
+      "expected": "ReceiverMismatch",
+      "error": {
+        "name": "HANDLER_ERROR",
+        "cause": {
+          "info": {},
+          "name": "INVALID_TRANSACTION"
+        },
+        "code": -32000,
+        "message": "Server error",
+        "data": {
+          "TxExecutionError": {
+            "InvalidTxError": {
+              "InvalidAccessKeyError": {
+                "ReceiverMismatch": {
+                  "ak_receiver": "vmwgpxb1x.test.near",
+                  "tx_receiver": "pmwgpxb1x.test.near"
+                }
+              }
+            }
+          }
+        }
+      },
+      "signed": {
+        "signedTxBase64": "EwAAAHJtd2dweGIxeC50ZXN0Lm5lYXIAMz7xT6WBgdW8Uxl/4WsVAF8qEbHK6T+tWaSV7bXBhrzCTxxQAQAAABMAAABwbXdncHhiMXgudGVzdC5uZWFySjqiZAgq1WJLDketyYiRRkpAaw9x8a2WiztPa1YxXjMBAAAAAgcAAABleGVjdXRlkQEAAHsic3BlbmQiOnsiY2hhaW4iOiJhZ2VudHNpbS1sb2NhbCIsInZhdWx0Ijoidm13Z3B4YjF4LnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI5ZmVkNmUyMTIyNjRhNGVhYzQ3NWQ1MTMyMzhhYWRjZjU1NzVkYzhiMTdmMzIxODZkZGY1NjhkYWIyYmRhYTBlIiwibm9uY2UiOiIwIiwicmVjZWl2ZXIiOiJwbXdncHhiMXgudGVzdC5uZWFyIiwiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImRlYWRsaW5lIjoiMTc5NDY4MDI1NSJ9LCJzaWduYXR1cmUiOiJiODdmY2NiM2MzZGQwOTZjOGJiZTAwOTNhNGMzNjNkNWRmNTAxYjYxNGQ0ODIwMTM4Nzg0YTFkMjVkYjI3YmMyMmY1Nzg0NTM5NmE0ZjNhNTkwOWI5YTRkN2FlYTI1ZjU3NzNkODMzMGZlMDgzNmFmMmZmN2JmYjIwMWVjZGIwZSJ9AID0IOa1AAAAAAAAAAAAAAAAAAAAAAAAAEqXlaf56nVClAMIv//LGKq4cto346ugAEzaxF0nHCIGFWbtzdRi+6acUiSM8kagbjFoT6RopE+eXleBEbVoqAQ=",
+        "transactionHash": "71YGKhtfqbTrEVrqgPwWDxv3SM1E7p22maJkfvavQXfa",
+        "signer": "rmwgpxb1x.test.near",
+        "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+        "receiver": "pmwgpxb1x.test.near",
+        "nonce": "5639000002",
+        "blockHash": "5zm2WwPzdUbbY9osyL4WtYYZvZcQUZChFQZa9ppc1aKk"
+      },
+      "before": {
+        "relayKey": {
+          "nonce": "5639000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996970172216916400000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      },
+      "after": {
+        "relayKey": {
+          "nonce": "5639000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996970172216916400000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      }
+    },
+    {
+      "label": "nonzero-deposit",
+      "layer": "protocol",
+      "expected": "DepositWithFunctionCall",
+      "error": {
+        "name": "HANDLER_ERROR",
+        "cause": {
+          "info": {},
+          "name": "INVALID_TRANSACTION"
+        },
+        "code": -32000,
+        "message": "Server error",
+        "data": {
+          "TxExecutionError": {
+            "InvalidTxError": {
+              "InvalidAccessKeyError": "DepositWithFunctionCall"
+            }
+          }
+        }
+      },
+      "signed": {
+        "signedTxBase64": "EwAAAHJtd2dweGIxeC50ZXN0Lm5lYXIAMz7xT6WBgdW8Uxl/4WsVAF8qEbHK6T+tWaSV7bXBhrzCTxxQAQAAABMAAAB2bXdncHhiMXgudGVzdC5uZWFyVFKPJQ/xhxQE736MWlD7gMC0VdfSSubemPoxsj37HcYBAAAAAgcAAABleGVjdXRlkQEAAHsic3BlbmQiOnsiY2hhaW4iOiJhZ2VudHNpbS1sb2NhbCIsInZhdWx0Ijoidm13Z3B4YjF4LnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI5ZmVkNmUyMTIyNjRhNGVhYzQ3NWQ1MTMyMzhhYWRjZjU1NzVkYzhiMTdmMzIxODZkZGY1NjhkYWIyYmRhYTBlIiwibm9uY2UiOiIwIiwicmVjZWl2ZXIiOiJwbXdncHhiMXgudGVzdC5uZWFyIiwiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImRlYWRsaW5lIjoiMTc5NDY4MDI1NSJ9LCJzaWduYXR1cmUiOiJiODdmY2NiM2MzZGQwOTZjOGJiZTAwOTNhNGMzNjNkNWRmNTAxYjYxNGQ0ODIwMTM4Nzg0YTFkMjVkYjI3YmMyMmY1Nzg0NTM5NmE0ZjNhNTkwOWI5YTRkN2FlYTI1ZjU3NzNkODMzMGZlMDgzNmFmMmZmN2JmYjIwMWVjZGIwZSJ9AID0IOa1AAABAAAAAAAAAAAAAAAAAAAAAG5S+PpeN7YTOIO2pBAuBKHIrSI3HCk0PuHaj6XRsmJWemaNY4buviLwPSXvcPCAC1Qw68xqYNn0WR+0jNE3cA8=",
+        "transactionHash": "76h4LG7D88tzatMhzFa91P2JL2r2f2XvZVDvniC55wXV",
+        "signer": "rmwgpxb1x.test.near",
+        "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "5639000002",
+        "blockHash": "6gAGDYpGi23fQGjYyqDm6k251tN9ddwuV1JjipRNhXtq"
+      },
+      "before": {
+        "relayKey": {
+          "nonce": "5639000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996970172216916400000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      },
+      "after": {
+        "relayKey": {
+          "nonce": "5639000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996970172216916400000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      }
+    },
+    {
+      "label": "transfer-action",
+      "layer": "protocol",
+      "expected": "RequiresFullAccess",
+      "error": {
+        "name": "HANDLER_ERROR",
+        "cause": {
+          "info": {},
+          "name": "INVALID_TRANSACTION"
+        },
+        "code": -32000,
+        "message": "Server error",
+        "data": {
+          "TxExecutionError": {
+            "InvalidTxError": {
+              "InvalidAccessKeyError": "RequiresFullAccess"
+            }
+          }
+        }
+      },
+      "signed": {
+        "signedTxBase64": "EwAAAHJtd2dweGIxeC50ZXN0Lm5lYXIAMz7xT6WBgdW8Uxl/4WsVAF8qEbHK6T+tWaSV7bXBhrzCTxxQAQAAABMAAAB2bXdncHhiMXgudGVzdC5uZWFyIBm1bPmlqvsIpuWW10dABA3ZFymF4B0NKrNKegfOCrIBAAAAAwEAAAAAAAAAAAAAAAAAAAAAiCSVzFF4wpaD7FmdNNrGks4jakTw5LktgyIOb4hhdUVV4/zEJSeglsuVqa/T+emiKpU62hjuF4bnbXOpp/OhDw==",
+        "transactionHash": "83wdr8huaFb8MJ7ZsgzKt4mMsTGr3gHMViiU9wdexebb",
+        "signer": "rmwgpxb1x.test.near",
+        "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "5639000002",
+        "blockHash": "3AJnRn8V2ro6sx4xUV6auTAQ7XS8hLzJDoPG3e1j85rH"
+      },
+      "before": {
+        "relayKey": {
+          "nonce": "5639000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996970172216916400000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      },
+      "after": {
+        "relayKey": {
+          "nonce": "5639000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vmwgpxb1x.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996970172216916400000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      }
+    }
+  ],
+  "states": {
+    "trustedBefore": {
+      "relayKey": {
+        "nonce": "5639000000",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "500000000000000000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vmwgpxb1x.test.near"
+          }
+        }
+      },
+      "relayBalance": "10000000000000000000000000",
+      "vaultBalance": "9996970172216916400000000",
+      "recipientBalance": "10000000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "2000000000000000000000000"
+      },
+      "grant": {
+        "spent": "0",
+        "nextNonce": "0",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "trustedAfter": {
+      "relayKey": {
+        "nonce": "5639000000",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "500000000000000000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vmwgpxb1x.test.near"
+          }
+        }
+      },
+      "relayBalance": "10000000000000000000000000",
+      "vaultBalance": "9996970172216916400000000",
+      "recipientBalance": "10000000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "2000000000000000000000000"
+      },
+      "grant": {
+        "spent": "0",
+        "nextNonce": "0",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "before": {
+      "relayKey": {
+        "nonce": "5639000000",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "500000000000000000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vmwgpxb1x.test.near"
+          }
+        }
+      },
+      "relayBalance": "10000000000000000000000000",
+      "vaultBalance": "9996970172216916400000000",
+      "recipientBalance": "10000000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "2000000000000000000000000"
+      },
+      "grant": {
+        "spent": "0",
+        "nextNonce": "0",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "paid": {
+      "relayKey": {
+        "nonce": "5639000002",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499469916677457000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vmwgpxb1x.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999469916677457000000000",
+      "vaultBalance": "9995970172216916400000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "overspendBefore": {
+      "relayKey": {
+        "nonce": "5639000002",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499469916677457000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vmwgpxb1x.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999469916677457000000000",
+      "vaultBalance": "9995970172216916400000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "overspendAfter": {
+      "relayKey": {
+        "nonce": "5639000004",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499278568751069500000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vmwgpxb1x.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999278568751069500000000",
+      "vaultBalance": "9995970172216916400000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "revokedBefore": {
+      "relayKey": {
+        "nonce": "5639000004",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499278568751069500000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vmwgpxb1x.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999278568751069500000000",
+      "vaultBalance": "9995970172216916400000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "1",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": true,
+        "epoch": "0"
+      }
+    },
+    "revokedAfter": {
+      "relayKey": {
+        "nonce": "5639000006",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499095479093169000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vmwgpxb1x.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999095479093169000000000",
+      "vaultBalance": "9995970172216916400000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "1",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": true,
+        "epoch": "0"
+      }
+    }
+  },
+  "outcomes": [
+    {
+      "name": "create-account",
+      "layer": "setup",
+      "transactionHash": "7or9c9yBCiCgkWZJhvVyivwZnWdAchxFFMSnYaZDCyUp",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "DVjaxFCj8gMZpiAYZk456GzmnRjUt9eRnhznoyS2ZLDN",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 7524947687500,
+          "tokensBurnt": "7032494768750000000000"
+        },
+        {
+          "id": "8xPGC7NX64wuo2jLjoudES1BspkQj68G1TR6JjiUJDxz",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6QzwAAAAAAAAAEwAAAHZtd2dweGIxeC50ZXN0Lm5lYXKc1qi3ZZlTg+1ZoO8K9g19+fd9yC78nyVuoTOr3jqs2AMAAAAAAwAAAEpIARQWlUUIAAAAAAAFABPHNVMiE51hwASxrKIUTgOBIHIJ+THVcYQyd9eqGZxWAAAAAAAAAAABACbMKKYAOw5BQFpvfyctbueSaUsbtysqYUpAdBQF9AUye2KshuEqrr6iK1mk/ntlQ0Bv/LcshF0rxt8nh+8taQU=",
+        "transactionHash": "7or9c9yBCiCgkWZJhvVyivwZnWdAchxFFMSnYaZDCyUp",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "60",
+        "blockHash": "BZESthGDC6NpxdnC5vPnmC6CpMEoEEKuUaDjkt4JZ6Xh"
+      }
+    },
+    {
+      "name": "create-account",
+      "layer": "setup",
+      "transactionHash": "HFuaAeSaCehTNJ8XUKLPkzpFC3ZFeK4kkNwtk45XSWqv",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "pmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "GNGFwxBdLzceH2xWAZLacNYnvZPL9Q95jZkYi1tUQ2TU",
+          "executor": "pmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 7524947687500,
+          "tokensBurnt": "7032494768750000000000"
+        },
+        {
+          "id": "DJQgRn7fDtz9uQ74axDQSxutAy2VmaEzVMeEhtq8wBPt",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Qz4AAAAAAAAAEwAAAHBtd2dweGIxeC50ZXN0Lm5lYXIDHw9l5yVjsHCCcxWgCIaxyjx2OcDO+lCNwF6+lHo0kgMAAAAAAwAAAEpIARQWlUUIAAAAAAAFAEVawrY7bX9w8X9BLVQeqe1W7s7ttUeXg0EbSWSP8GQ2AAAAAAAAAAABAG39hkMrCylnDANlJ5e8x3/jWr6kjRjlgpY/ZDenSd0LN+bWvqB3XmzQbzUfWskvtbi4MdugjwQXb7j17W/Togk=",
+        "transactionHash": "HFuaAeSaCehTNJ8XUKLPkzpFC3ZFeK4kkNwtk45XSWqv",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "pmwgpxb1x.test.near",
+        "nonce": "62",
+        "blockHash": "DBhBjcTurSMkWfUr5vCbXKPy8Kib7y1CVoFGvEmdbRT"
+      }
+    },
+    {
+      "name": "create-restricted-relay",
+      "layer": "setup",
+      "transactionHash": "9zKTMtmQbdhH7tVZLETNxmJgFK8Nzc5GXQ93HViHTHdJ",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "rmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "A37MhXa69RB3kbRFSpf2vbZD2gsuYKCRpmR7BViFfzsN",
+          "executor": "rmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 7525415590148,
+          "tokensBurnt": "7032541559014800000000"
+        },
+        {
+          "id": "BWcCVSmqewFYQPhJQoPmdUGFQ4ww4Jh4a2NFzivWpcyL",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Q0AAAAAAAAAAEwAAAHJtd2dweGIxeC50ZXN0Lm5lYXKJ5JXh/RZGdUzXmuZWbercQ61pvfx4MiM5wfbHH1/DOwMAAAAAAwAAAEpIARQWlUUIAAAAAAAFADM+8U+lgYHVvFMZf+FrFQBfKhGxyuk/rVmkle21wYa8AAAAAAAAAAAAAQAAgNB2ZucN4WkAAAAAAAATAAAAdm13Z3B4YjF4LnRlc3QubmVhcgEAAAAHAAAAZXhlY3V0ZQDkWBwDjrdMyHyYyo75lUMg3PjXHAwC9oT62ZDzqxXPZFluuOuWbK1jORt1BXJo0xzlDe8khISol3nGlq9QksQB",
+        "transactionHash": "9zKTMtmQbdhH7tVZLETNxmJgFK8Nzc5GXQ93HViHTHdJ",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "rmwgpxb1x.test.near",
+        "nonce": "64",
+        "blockHash": "AHH1yMAc2tFfy98RLqCU1cnLWb7CqeTKVvE4D1wScnEn"
+      }
+    },
+    {
+      "name": "deploy",
+      "layer": "setup",
+      "transactionHash": "DbVPzjAkWfVFtxUxHRFT4TqwvzbjzhSuVQ1qvfzu1jFE",
+      "signer": "vmwgpxb1x.test.near",
+      "publicKey": "ed25519:2LCvmivWU7Bh76m8tMm9E5kXMkUCXnQ4AozuMBdUf79F",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "2TiTxZN3okDrBuYyaXVRo4VPCdgtD9AdQ44Y8CjaCZ5i",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 23351113250016,
+          "tokensBurnt": "2335111325001600000000"
+        },
+        {
+          "id": "3rkHF1ReACuy9DF2GBEyvTjFzn2288ECyi3hjf5iNJn1",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {}
+    },
+    {
+      "name": "new",
+      "layer": "setup",
+      "transactionHash": "9A5VCEvcAT6ZxobmCBFyPENNGxFsjw3HJ1QBCzoRP1SW",
+      "signer": "vmwgpxb1x.test.near",
+      "publicKey": "ed25519:2LCvmivWU7Bh76m8tMm9E5kXMkUCXnQ4AozuMBdUf79F",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "3rJruyh2uRyjMm5MuNw4XdGMXawQZaPKx6RKwe4sKLiK",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 2123413692199,
+          "tokensBurnt": "212341369219900000000"
+        },
+        {
+          "id": "49PeKEy2nsbBj2vRLNWJD6ZCLaisdKLzTaqo7XraUj2t",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "EwAAAHZtd2dweGIxeC50ZXN0Lm5lYXIAE8c1UyITnWHABLGsohROA4Egcgn5MdVxhDJ316oZnFbENGVPAQAAABMAAAB2bXdncHhiMXgudGVzdC5uZWFyZpm/YJFeURGCqJ4/pBNqqMeGKNXuc4hwU/HjPR93uwkBAAAAAgMAAABuZXdSAAAAeyJvd25lcl9rZXkiOiIwMjkwNjg2OTg3MGRjNDYwMjkyZTBmMDU2ODA0NjlmYjE0MmQxNTBkN2UzMWMxMzhhZGMzMWNlYWQyNzk3Yzk5MWYifQCA9CDmtQAAAAAAAAAAAAAAAAAAAAAAAADjDqEPOXNGwU3Eguf3nFCjLqU0eZ6ynkJ3S7j9YGf6wuPIsvW2EYM9noPziA8t8vlR5OejqbuCnnT4jTgOGUMA",
+        "transactionHash": "9A5VCEvcAT6ZxobmCBFyPENNGxFsjw3HJ1QBCzoRP1SW",
+        "signer": "vmwgpxb1x.test.near",
+        "publicKey": "ed25519:2LCvmivWU7Bh76m8tMm9E5kXMkUCXnQ4AozuMBdUf79F",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "5627000004",
+        "blockHash": "7uWZVrATCsnnAjkQDp6Pw6PbBR7YVxAXZTXvL3pXbdsN"
+      }
+    },
+    {
+      "name": "fund",
+      "layer": "setup",
+      "transactionHash": "8s5fo2KCZU1MoVY89Z9ko8vZe5Hj7mrQVxPhwaAAToKF",
+      "signer": "vmwgpxb1x.test.near",
+      "publicKey": "ed25519:2LCvmivWU7Bh76m8tMm9E5kXMkUCXnQ4AozuMBdUf79F",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "D3S2nywPSPfBm8hrtevvRtxNen2bt5Jd9QySpEVpcUNJ",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 1481756168716,
+          "tokensBurnt": "148175616871600000000"
+        },
+        {
+          "id": "5dKR3MncPmm8n6AfVdfLQoP31iupYPK4Pv5ja89Z9W5P",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "EwAAAHZtd2dweGIxeC50ZXN0Lm5lYXIAE8c1UyITnWHABLGsohROA4Egcgn5MdVxhDJ316oZnFbGNGVPAQAAABMAAAB2bXdncHhiMXgudGVzdC5uZWFyyCACM8gyCMexapVoNRrhPypWZb6H970cDVkiWTeHPXQBAAAAAgQAAABmdW5kAgAAAHt9AID0IOa1AAAAAABC25mdN4SnAQAAAAAAABhI1Qdz7PPexdzxdCZKyI9z8LysS2PQug8at3UmYSWwNB8InG3Z9+UANyvS68lEqI6aQ/djJtavout0+p/zSg4=",
+        "transactionHash": "8s5fo2KCZU1MoVY89Z9ko8vZe5Hj7mrQVxPhwaAAToKF",
+        "signer": "vmwgpxb1x.test.near",
+        "publicKey": "ed25519:2LCvmivWU7Bh76m8tMm9E5kXMkUCXnQ4AozuMBdUf79F",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "5627000006",
+        "blockHash": "EUCrC5uvBiqw8U1yEzkub6QzKE1KY5UYvodQuvPNVxJo"
+      }
+    },
+    {
+      "name": "authorize",
+      "layer": "setup",
+      "transactionHash": "TRx173oJbp59UAKZB5f96kj9cWaiU6XdndoJE9GWaFH",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": "IjlmZWQ2ZTIxMjI2NGE0ZWFjNDc1ZDUxMzIzOGFhZGNmNTU3NWRjOGIxN2YzMjE4NmRkZjU2OGRhYjJiZGFhMGUi"
+      },
+      "receipts": [
+        {
+          "id": "9mnNQ1DQvdbgjjfgXysCQPy3HfpatKa8p4wiQjpBbcV",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": "IjlmZWQ2ZTIxMjI2NGE0ZWFjNDc1ZDUxMzIzOGFhZGNmNTU3NWRjOGIxN2YzMjE4NmRkZjU2OGRhYjJiZGFhMGUi"
+          },
+          "logs": [
+            "{\"event\":\"agentsim_grant\",\"grant_id\":\"9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e\"}"
+          ],
+          "gasBurnt": 3258190512765,
+          "tokensBurnt": "325819051276500000000"
+        },
+        {
+          "id": "3vkCk4x7Hmp2GRVLJKaHXfGGx4FCHK52msVSQhuTpah4",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "grant": {
+          "chain": "agentsim-local",
+          "vault": "vmwgpxb1x.test.near",
+          "epoch": "0",
+          "agent": "fixture-agent",
+          "sessionKey": "04ca4a70e9237080f0eb9f19a6136cf9408b3a8a62be9fcc8f0f661070c12b28",
+          "perCall": "2000000000000000000000",
+          "total": "3000000000000000000000",
+          "receiver": "pmwgpxb1x.test.near",
+          "expires": "1794680855"
+        },
+        "signature": "17433b4ed38772523d5fc6ab82a6796548c7162fd9ebed81958d22516bda565da355fa765129584f0e2a0865398ed1adea4304259b657892836bf1e9059ecbab"
+      },
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Q0IAAAAAAAAAEwAAAHZtd2dweGIxeC50ZXN0Lm5lYXL0UMuXlEG9E6Au90I6zuiNdKNCVpA9Twsriwn3uPLJHgEAAAACCQAAAGF1dGhvcml6ZcEBAAB7ImdyYW50Ijp7ImNoYWluIjoiYWdlbnRzaW0tbG9jYWwiLCJ2YXVsdCI6InZtd2dweGIxeC50ZXN0Lm5lYXIiLCJlcG9jaCI6IjAiLCJhZ2VudCI6ImZpeHR1cmUtYWdlbnQiLCJzZXNzaW9uS2V5IjoiMDRjYTRhNzBlOTIzNzA4MGYwZWI5ZjE5YTYxMzZjZjk0MDhiM2E4YTYyYmU5ZmNjOGYwZjY2MTA3MGMxMmIyOCIsInBlckNhbGwiOiIyMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwidG90YWwiOiIzMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwicmVjZWl2ZXIiOiJwbXdncHhiMXgudGVzdC5uZWFyIiwiZXhwaXJlcyI6IjE3OTQ2ODA4NTUifSwic2lnbmF0dXJlIjoiMTc0MzNiNGVkMzg3NzI1MjNkNWZjNmFiODJhNjc5NjU0OGM3MTYyZmQ5ZWJlZDgxOTU4ZDIyNTE2YmRhNTY1ZGEzNTVmYTc2NTEyOTU4NGYwZTJhMDg2NTM5OGVkMWFkZWE0MzA0MjU5YjY1Nzg5MjgzNmJmMWU5MDU5ZWNiYWIifQCA9CDmtQAAAAAAAAAAAAAAAAAAAAAAAABXAZjMBdNwc7JSnwYdXLH4AMJ46ogORY7qwdrFsyUXqHEIOks94sutNklMvRHY6c9MFoXC0NnCscjuVJ4/CXEO",
+        "transactionHash": "TRx173oJbp59UAKZB5f96kj9cWaiU6XdndoJE9GWaFH",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "66",
+        "blockHash": "HShwB1eJCfUPYrKapVkp8GYUkPyNL3CodzwKqhKR3zPF"
+      }
+    },
+    {
+      "name": "execute",
+      "layer": "contract",
+      "transactionHash": "6PScNdxi91NCbtvXWQsiFUPq6XAz7jcTBVLHPYqE9uKW",
+      "signer": "rmwgpxb1x.test.near",
+      "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": "dHJ1ZQ=="
+      },
+      "receipts": [
+        {
+          "id": "CyEvgHXhAQp4YH444nf7ZsDAdZg3a8RaPoCGiYzhue92",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessReceiptId": "8269eKmdBDjiUMqYJ4sSjoLS8Sf3KhxJ19gfKmkv23uM"
+          },
+          "logs": [
+            "{\"event\":\"agentsim_reserved\",\"transfer_id\":\"d55c9cc1c5bc6f40d27b52fce54e92e80556d2db26f4bae1ee7ae4e866441a5d\",\"amount\":\"1000000000000000000000\"}"
+          ],
+          "gasBurnt": 3007608206636,
+          "tokensBurnt": "300760820663600000000"
+        },
+        {
+          "id": "j53PYH1KG31VCPVtNVydoZjXy9r7ZZr6KVUwHs1DmV3",
+          "executor": "pmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "22318256250000000000"
+        },
+        {
+          "id": "DaZGH7h6yBMihgk7UtwumgDUgVRqQj3GiKVNiMVXCVcX",
+          "executor": "rmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        },
+        {
+          "id": "8269eKmdBDjiUMqYJ4sSjoLS8Sf3KhxJ19gfKmkv23uM",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": "dHJ1ZQ=="
+          },
+          "logs": [
+            "{\"event\":\"agentsim_settled\",\"transfer_id\":\"d55c9cc1c5bc6f40d27b52fce54e92e80556d2db26f4bae1ee7ae4e866441a5d\",\"success\":true}"
+          ],
+          "gasBurnt": 1742528000574,
+          "tokensBurnt": "174252800057400000000"
+        },
+        {
+          "id": "Ax1fVH4F9NDEu67NFM1jy7u2BRHxVu1wUDxjJvajGphL",
+          "executor": "rmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        },
+        {
+          "id": "7CNtGq2g3LX5bei72wjYUi5tVKc4E3prQekZc7NProhN",
+          "executor": "rmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "spend": {
+          "chain": "agentsim-local",
+          "vault": "vmwgpxb1x.test.near",
+          "epoch": "0",
+          "grantId": "9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e",
+          "nonce": "0",
+          "receiver": "pmwgpxb1x.test.near",
+          "amount": "1000000000000000000000",
+          "deadline": "1794680255"
+        },
+        "signature": "b87fccb3c3dd096c8bbe0093a4c363d5df501b614d4820138784a1d25db27bc22f57845396a4f3a5909b9a4d7aea25f5773d8330fe0836af2ff7bfb201ecdb0e"
+      },
+      "signed": {
+        "signedTxBase64": "EwAAAHJtd2dweGIxeC50ZXN0Lm5lYXIAMz7xT6WBgdW8Uxl/4WsVAF8qEbHK6T+tWaSV7bXBhrzCTxxQAQAAABMAAAB2bXdncHhiMXgudGVzdC5uZWFybKfD3NSJKZaiYHVSxRibx76ePP6asDNMa6h6CpkM8vMBAAAAAgcAAABleGVjdXRlkQEAAHsic3BlbmQiOnsiY2hhaW4iOiJhZ2VudHNpbS1sb2NhbCIsInZhdWx0Ijoidm13Z3B4YjF4LnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI5ZmVkNmUyMTIyNjRhNGVhYzQ3NWQ1MTMyMzhhYWRjZjU1NzVkYzhiMTdmMzIxODZkZGY1NjhkYWIyYmRhYTBlIiwibm9uY2UiOiIwIiwicmVjZWl2ZXIiOiJwbXdncHhiMXgudGVzdC5uZWFyIiwiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImRlYWRsaW5lIjoiMTc5NDY4MDI1NSJ9LCJzaWduYXR1cmUiOiJiODdmY2NiM2MzZGQwOTZjOGJiZTAwOTNhNGMzNjNkNWRmNTAxYjYxNGQ0ODIwMTM4Nzg0YTFkMjVkYjI3YmMyMmY1Nzg0NTM5NmE0ZjNhNTkwOWI5YTRkN2FlYTI1ZjU3NzNkODMzMGZlMDgzNmFmMmZmN2JmYjIwMWVjZGIwZSJ9AID0IOa1AAAAAAAAAAAAAAAAAAAAAAAAAPBMcJBiZ1y1pwYEA5wh1mqzdz/kD79CERTAY4bf5DVRt0qWroX7DKz6pMk2OD5KlhagAV60qMjXFKsLeeaaTQQ=",
+        "transactionHash": "6PScNdxi91NCbtvXWQsiFUPq6XAz7jcTBVLHPYqE9uKW",
+        "signer": "rmwgpxb1x.test.near",
+        "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "5639000002",
+        "blockHash": "8K9QQtWW32PYCce1wGWFgkmZoo5z8Y8HUuV1bvgexfAA"
+      }
+    },
+    {
+      "name": "execute-overspend",
+      "layer": "contract",
+      "transactionHash": "AorTm9omyhQTNRKSFvQSAD81QGiMBod3kToxE9ttw66N",
+      "signer": "rmwgpxb1x.test.near",
+      "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "Failure": {
+          "ActionError": {
+            "index": 0,
+            "kind": {
+              "FunctionCallError": {
+                "ExecutionError": "Smart contract panicked: PER_CALL"
+              }
+            }
+          }
+        }
+      },
+      "receipts": [
+        {
+          "id": "FsGzyhtgxrddVRaeEiSC8SpzRwCWYcj2TZ8afmcy6b4E",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "Failure": {
+              "ActionError": {
+                "index": 0,
+                "kind": {
+                  "FunctionCallError": {
+                    "ExecutionError": "Smart contract panicked: PER_CALL"
+                  }
+                }
+              }
+            }
+          },
+          "logs": [],
+          "gasBurnt": 1585964808155,
+          "tokensBurnt": "158596480815500000000"
+        },
+        {
+          "id": "GP8R4TQkU77im7LotAmuS8aX2bXe6RZAR38cxWtWoRNE",
+          "executor": "rmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "spend": {
+          "chain": "agentsim-local",
+          "vault": "vmwgpxb1x.test.near",
+          "epoch": "0",
+          "grantId": "9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e",
+          "nonce": "1",
+          "receiver": "pmwgpxb1x.test.near",
+          "amount": "3000000000000000000000",
+          "deadline": "1794680255"
+        },
+        "signature": "c6e6ffd355c19a4033512e44071275618d2a5654adb8ab98c41b1f1be9658281e7513d9c278c42fe2734288a6492756f46ee1f7e72dd4f097398d49d8124430f"
+      },
+      "signed": {
+        "signedTxBase64": "EwAAAHJtd2dweGIxeC50ZXN0Lm5lYXIAMz7xT6WBgdW8Uxl/4WsVAF8qEbHK6T+tWaSV7bXBhrzETxxQAQAAABMAAAB2bXdncHhiMXgudGVzdC5uZWFyKBvmPVNs204+Sb39kiQnFnJ2ZauhgW2hX9D7EsQi5ToBAAAAAgcAAABleGVjdXRlkQEAAHsic3BlbmQiOnsiY2hhaW4iOiJhZ2VudHNpbS1sb2NhbCIsInZhdWx0Ijoidm13Z3B4YjF4LnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI5ZmVkNmUyMTIyNjRhNGVhYzQ3NWQ1MTMyMzhhYWRjZjU1NzVkYzhiMTdmMzIxODZkZGY1NjhkYWIyYmRhYTBlIiwibm9uY2UiOiIxIiwicmVjZWl2ZXIiOiJwbXdncHhiMXgudGVzdC5uZWFyIiwiYW1vdW50IjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImRlYWRsaW5lIjoiMTc5NDY4MDI1NSJ9LCJzaWduYXR1cmUiOiJjNmU2ZmZkMzU1YzE5YTQwMzM1MTJlNDQwNzEyNzU2MThkMmE1NjU0YWRiOGFiOThjNDFiMWYxYmU5NjU4MjgxZTc1MTNkOWMyNzhjNDJmZTI3MzQyODhhNjQ5Mjc1NmY0NmVlMWY3ZTcyZGQ0ZjA5NzM5OGQ0OWQ4MTI0NDMwZiJ9AID0IOa1AAAAAAAAAAAAAAAAAAAAAAAAAOmzmrfQFSrUjMnZLI8XIVEFy/HZHzcMqe1KHd5mENNt3EfXSxmL0i2zhzpTD1QPuJ7ZW64UqLG3MWJKCtKP2ww=",
+        "transactionHash": "AorTm9omyhQTNRKSFvQSAD81QGiMBod3kToxE9ttw66N",
+        "signer": "rmwgpxb1x.test.near",
+        "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "5639000004",
+        "blockHash": "3hZyyKF7hZxa8KCKuNE42G9TmMgCuGphrR8Mpp5SeNYh"
+      }
+    },
+    {
+      "name": "control",
+      "layer": "setup",
+      "transactionHash": "DD3EhvKRnoRBCcR5gsxMp2j6RDab7xiKPtKGT7EsEJzX",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "GT5Nhm3Ln3F4dHU85dMBiE5Ea9zy3neEkAEj5KWN4W9b",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [
+            "{\"event\":\"agentsim_control\",\"operation\":\"revoke\",\"epoch\":\"0\"}"
+          ],
+          "gasBurnt": 3050749223142,
+          "tokensBurnt": "305074922314200000000"
+        },
+        {
+          "id": "B3CNNWx6L3MnSUSUsuUiBkx49deyW53QnEVxYBGh4Csc",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "command": {
+          "chain": "agentsim-local",
+          "vault": "vmwgpxb1x.test.near",
+          "epoch": "0",
+          "nonce": "0",
+          "operation": "revoke",
+          "value": "9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e"
+        },
+        "signature": "7f106aace2e3851fe3bdbb068edd223753acd8813df6051c2952719b0732a5860c0e885cdc2d71d03b9da4ca9023fa50522dcd7a9d7fb62fa222c673047951a9"
+      },
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Q0QAAAAAAAAAEwAAAHZtd2dweGIxeC50ZXN0Lm5lYXJ1uemVCFsvUlGi3jJWn7VdBuIJEhDiHpyTTqyYJY5Y/wEAAAACBwAAAGNvbnRyb2xLAQAAeyJjb21tYW5kIjp7ImNoYWluIjoiYWdlbnRzaW0tbG9jYWwiLCJ2YXVsdCI6InZtd2dweGIxeC50ZXN0Lm5lYXIiLCJlcG9jaCI6IjAiLCJub25jZSI6IjAiLCJvcGVyYXRpb24iOiJyZXZva2UiLCJ2YWx1ZSI6IjlmZWQ2ZTIxMjI2NGE0ZWFjNDc1ZDUxMzIzOGFhZGNmNTU3NWRjOGIxN2YzMjE4NmRkZjU2OGRhYjJiZGFhMGUifSwic2lnbmF0dXJlIjoiN2YxMDZhYWNlMmUzODUxZmUzYmRiYjA2OGVkZDIyMzc1M2FjZDg4MTNkZjYwNTFjMjk1MjcxOWIwNzMyYTU4NjBjMGU4ODVjZGMyZDcxZDAzYjlkYTRjYTkwMjNmYTUwNTIyZGNkN2E5ZDdmYjYyZmEyMjJjNjczMDQ3OTUxYTkifQCA9CDmtQAAAAAAAAAAAAAAAAAAAAAAAAC1x9s/kAATkXY+gpgFMWda5TlxlzDyyfBz+BcQdpMvSJddlIGo0ky1G69uM2nhqNKjin75LtB1YexL4V4Ix3MG",
+        "transactionHash": "DD3EhvKRnoRBCcR5gsxMp2j6RDab7xiKPtKGT7EsEJzX",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "68",
+        "blockHash": "8vZ87CqHa3KRRFA6uGqMBsGxvqCesJCXYCHuomQZzbTC"
+      }
+    },
+    {
+      "name": "execute-revoked",
+      "layer": "contract",
+      "transactionHash": "B7FcE4nYK3KryXKMLLn1cb9NiEHkkpNnZBxdVvMwPyCn",
+      "signer": "rmwgpxb1x.test.near",
+      "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+      "receiver": "vmwgpxb1x.test.near",
+      "status": {
+        "Failure": {
+          "ActionError": {
+            "index": 0,
+            "kind": {
+              "FunctionCallError": {
+                "ExecutionError": "Smart contract panicked: REVOKED"
+              }
+            }
+          }
+        }
+      },
+      "receipts": [
+        {
+          "id": "6BQR4s3nTdX5mW1JGvtydpw1vfBg7Dch2Hpj5tTgUaMi",
+          "executor": "vmwgpxb1x.test.near",
+          "status": {
+            "Failure": {
+              "ActionError": {
+                "index": 0,
+                "kind": {
+                  "FunctionCallError": {
+                    "ExecutionError": "Smart contract panicked: REVOKED"
+                  }
+                }
+              }
+            }
+          },
+          "logs": [],
+          "gasBurnt": 1503382123285,
+          "tokensBurnt": "150338212328500000000"
+        },
+        {
+          "id": "HHoZV7NwYeFWXCQzF2Ywx11c3TpXKr88GEUc4yAAzim7",
+          "executor": "rmwgpxb1x.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "spend": {
+          "chain": "agentsim-local",
+          "vault": "vmwgpxb1x.test.near",
+          "epoch": "0",
+          "grantId": "9fed6e212264a4eac475d513238aadcf5575dc8b17f32186ddf568dab2bdaa0e",
+          "nonce": "1",
+          "receiver": "pmwgpxb1x.test.near",
+          "amount": "1000000000000000000000",
+          "deadline": "1794680255"
+        },
+        "signature": "ddfd08c4454a3e8b39f3e355cc73f78e265c9ca335e2a92798252f892210a38f3f5870dd6fdc57b09d764e4946243b1d913fa55e228dc043e5ad3643b57deb03"
+      },
+      "signed": {
+        "signedTxBase64": "EwAAAHJtd2dweGIxeC50ZXN0Lm5lYXIAMz7xT6WBgdW8Uxl/4WsVAF8qEbHK6T+tWaSV7bXBhrzGTxxQAQAAABMAAAB2bXdncHhiMXgudGVzdC5uZWFyPPW6xpuuR8Rzop8HuWKDtbXdCWCL2aZU3d41qP5IKREBAAAAAgcAAABleGVjdXRlkQEAAHsic3BlbmQiOnsiY2hhaW4iOiJhZ2VudHNpbS1sb2NhbCIsInZhdWx0Ijoidm13Z3B4YjF4LnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI5ZmVkNmUyMTIyNjRhNGVhYzQ3NWQ1MTMyMzhhYWRjZjU1NzVkYzhiMTdmMzIxODZkZGY1NjhkYWIyYmRhYTBlIiwibm9uY2UiOiIxIiwicmVjZWl2ZXIiOiJwbXdncHhiMXgudGVzdC5uZWFyIiwiYW1vdW50IjoiMTAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImRlYWRsaW5lIjoiMTc5NDY4MDI1NSJ9LCJzaWduYXR1cmUiOiJkZGZkMDhjNDQ1NGEzZThiMzlmM2UzNTVjYzczZjc4ZTI2NWM5Y2EzMzVlMmE5Mjc5ODI1MmY4OTIyMTBhMzhmM2Y1ODcwZGQ2ZmRjNTdiMDlkNzY0ZTQ5NDYyNDNiMWQ5MTNmYTU1ZTIyOGRjMDQzZTVhZDM2NDNiNTdkZWIwMyJ9AID0IOa1AAAAAAAAAAAAAAAAAAAAAAAAAKX3eKm4qKYn2bR/hrg6u/epU8iFXt+TqDaJfhP95wWdf/WVKkM6C2Va/UAcEkZZyeixHV4HOgju8BCED3voogs=",
+        "transactionHash": "B7FcE4nYK3KryXKMLLn1cb9NiEHkkpNnZBxdVvMwPyCn",
+        "signer": "rmwgpxb1x.test.near",
+        "publicKey": "ed25519:4T3TeHXwB4wNG5A5RpyR6zvVoSC65FPfEit397en5aqh",
+        "receiver": "vmwgpxb1x.test.near",
+        "nonce": "5639000006",
+        "blockHash": "56xncKwheuKBKg5ZWxHfu8SLhexBLVvscwQT5boskxFJ"
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "reviewedAt": "2026-11-14T20:10:31.845Z",
+  "baseCommit": "6caa4bc732a956475f0eae386905c0fc90d9c0b4",
+  "feature": "Restricted NEAR relay and payment proposals",
+  "decision": "accepted for the tested isolated local network",
+  "proposalSource": "explicit offline fixture",
+  "ownerSigner": "product Java Card applet in PC jCardSim",
+  "agentSigner": "Ed25519",
+  "relaySigner": "dedicated Ed25519 function-call key on a separate relay account, scoped to the vault execute method with a finite gas allowance",
+  "proof": "../near/2026-11-14-restricted-relayer.json",
+  "proofSha256": "70ef5e52d1f10b9e82071a4f97cbc833dc57e29ff62d1606108a1f557090736e",
+  "independentReplaySha256": "bffcea21057f488825a24cbe78e042bd8e1cc4a53eb880b5e3505a67923f81ad",
+  "checks": {
+    "coreTests": 48,
+    "offtrackTests": 22,
+    "oldAndNewProofTamperTests": 5,
+    "storedAndFreshProofVerifiers": "passed",
+    "finalCredentialRegression": "dummy key absent before RPC and child startup in fixture/live; fixture retains no key",
+    "video": {
+      "codec": "H.264",
+      "width": 1280,
+      "height": 720,
+      "frames": 575,
+      "fps": 24,
+      "durationSeconds": 23.958333,
+      "fullDecode": "passed",
+      "representativeFrames": "inspected; legible fixture/local-chain/PC-signer boundaries"
+    },
+    "independentRpc": {
+      "transactions": 11,
+      "receiptsMatched": true,
+      "actualSingleRestrictedKey": true,
+      "deployedCodeMatched": true,
+      "actualFinalStateMatched": true,
+      "protocolRejectCodes": [
+        "MethodNameMismatch",
+        "ReceiverMismatch",
+        "DepositWithFunctionCall",
+        "RequiresFullAccess"
+      ],
+      "receiverDelta": "1000000000000000000000",
+      "contractRejectionFeeDeltas": [
+        {
+          "name": "overspend",
+          "relayNonceAdvanced": true,
+          "relayBalanceSpent": "191627677100900000000"
+        },
+        {
+          "name": "revoked",
+          "relayNonceAdvanced": true,
+          "relayBalanceSpent": "183302120691700000000"
+        }
+      ]
+    }
+  },
+  "liveCloud": {
+    "observedAt": "2026-11-14T18:00:17.125Z",
+    "httpStatus": 402,
+    "completionReceived": false,
+    "accountCreditsRequired": true,
+    "attestationVerified": false
+  },
+  "physicalCardOperations": 0,
+  "publicChainTransactions": 0
+}
