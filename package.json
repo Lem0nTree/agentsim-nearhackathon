@@ -9,6 +9,8 @@
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "demo": "node src/demo.mjs",
+    "verify:proof": "node tests/near-sandbox/verify-restricted.mjs evidence/near/2026-11-15-live-near-ai.json",
+    "check": "npm test && npm run verify:proof && node tests/near-sandbox/verify.mjs evidence/near/2026-11-14-local-sandbox.json",
     "card:inspect": "node card/host/inspect.mjs",
     "applet:build": "node card/applet/build.mjs",
     "check:submission": "node scripts/validate-submission.mjs",

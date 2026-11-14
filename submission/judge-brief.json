@@ -1,0 +1,38 @@
+{
+  "project": "AgentSIM",
+  "oneLine": "SIM-secured P-256 spending authority for a personal NEAR AI agent, with a Rust vault that refuses anything outside the signed grant.",
+  "tracks": ["security"],
+  "recorded": "physical SIM over PC/SC, November 15",
+  "verify": [
+    "npm ci --prefix tests/near-sandbox",
+    "npm test",
+    "node tests/near-sandbox/verify-restricted.mjs evidence/near/2026-11-15-live-near-ai.json",
+    "node tests/near-sandbox/verify.mjs evidence/near/2026-11-14-local-sandbox.json"
+  ],
+  "expectedStdout": {
+    "npm test": "# pass 48",
+    "verify-restricted": "Verified restricted key setup, signed messages/actions, recorded node rejection codes, local receipts and policy states.",
+    "verify": "Verified signed local actions, owner and agent signatures, recorded receipt outcomes and receiver delta."
+  },
+  "appletTests": {
+    "note": "jCardSim reproduction path; the recorded run used the card",
+    "requires": "JDK 17+ or AGENTSIM_JAVA_HOME",
+    "commands": ["npm run card-sim:setup", "npm run card-sim:test"],
+    "expected": "# pass 21",
+    "withoutJdk": "JDK_REQUIRED"
+  },
+  "evidence": {
+    "physical": "evidence/near/2026-11-15-live-near-ai.json",
+    "emulatorControl": "evidence/near/2026-11-14-live-near-ai.json",
+    "mechanism": "tests/near-sandbox/verify-restricted.mjs",
+    "limits": "docs/VERIFICATION.md"
+  },
+  "limits": [
+    "local NEAR sandbox and test funds only",
+    "no public-chain settlement",
+    "no compute delivered",
+    "PC/SC does not attest reader, applet build or card identity",
+    "provider response origin not attested",
+    "phone approval screen and provisioning not shipped"
+  ]
+}

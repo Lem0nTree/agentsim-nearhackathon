@@ -1,0 +1,10 @@
+{
+  "record_type": "physical_sim_p256_capture",
+  "capture_date": "2026-11-14",
+  "execution": "physical SIM via PC/SC and a USB smart-card reader",
+  "summary": "The physical SIM supported P-256 elliptic-curve cryptography and signed with ECDSA.",
+  "signature_path": "ASN.1 DER ECDSA over SHA-256, converted to P1363 and verified on the host",
+  "key_storage": "the private key is generated on the card and does not leave it",
+  "scope": "Signing-capability capture. PC/SC does not attest the applet build, signature bytes or card identity.",
+  "setup_photo": "evidence/hardware/2026-11-14-physical-sim.jpg"
+}

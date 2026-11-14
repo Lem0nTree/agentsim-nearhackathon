@@ -2,12 +2,14 @@
 
 Start at the [product README](../../README.md) for the runnable entry points. AgentSIM lets an owner authorize a limited spending capability for an agent and revoke it. The owner signs grants and controls with P-256. The agent signs each spend with Ed25519. The vault checks chain, vault, epoch, recipient, amount, expiry and nonce before reserving the allowance.
 
+Current record: the physical SIM signed the owner authorization for the November 15 sandbox payment, and the record stores its PC/SC scope, applet AID and pinned key. Verification checks the signatures and payment results; PC/SC provides no device attestation. See [current verification](../VERIFICATION.md). The November 14 diagnostic below remains a separate historical observation.
+
 ## Resume this build
 
 1. Inspect the current refs in [Branch handoff](BRANCHES.md) and read the [history of the old workspace](FINDINGS.md). Dated hashes are in the [source index](baseline-source-sha256.tsv).
 2. Use the [Codex launcher](../../harness/launch.md) to start Astra. Assign Terra one outcome with the applicable [acceptance gates](ACCEPTANCE.md). Sol independently tests that revision. Bring blockers back to Astra.
-3. Read the [November 14 physical diagnostic](../../evidence/hardware/2026-11-14-native-ecc-retest.json). At 16:29 UTC all 14 standard Java Card ECC paths failed at stage 1, and both positive controls passed. The coordinator removed the temporary diagnostic, confirmed the original registry and read 44,864 free persistent bytes. The [recovery record](CARD-RECOVERY.md) explains the earlier interruption and the 44,712-byte intermediate reading.
-4. For a physical product signature, continue on a card that demonstrates the required P-256 operations through its Java Card API. Use the [harness run](../../harness/2026-11-14-run.md) and current README for the independent emulator, policy and NEAR execution results.
+3. Read the [November 14 physical diagnostic](../../evidence/hardware/2026-11-14-native-ecc-retest.json). At 16:29 UTC all 14 standard Java Card ECC paths failed at stage 1, and both positive controls passed. The coordinator removed the temporary diagnostic, confirmed the original registry and read 44,864 free persistent bytes. The [recovery record](CARD-RECOVERY.md) explains the earlier interruption and the 44,712-byte intermediate reading. The [November 15 live payment](../../evidence/near/2026-11-15-live-near-ai.json) is the physical signing capture; it stores the PC/SC scope, the applet AID and the pinned owner key.
+4. To repeat a physical product signature, set `AGENTSIM_OWNER_BACKEND=pcsc` with the [harness run](../../harness/2026-11-14-run.md) and current README; the runner pins the card key before each signature. For the emulator, policy and NEAR execution results see the current README.
 5. For possible additions to the security-track demonstration, see the dated [NEAR integration options](NEAR-OPTIONS-2026-11-14.md).
 
 ## Delivery scope and deadline

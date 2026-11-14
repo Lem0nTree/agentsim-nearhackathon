@@ -1,12 +1,18 @@
 # Implementation and verification
 
-The project owner confirmed on November 14, 2026: “signing on the physical SIM”. This is an owner report. Independent verification was not supplied, and this is the confirmation date rather than a stated test date. [Owner confirmation](../evidence/hardware/2026-11-14-owner-confirmation.json)
+## Physical SIM signing
 
-The project owner later clarified on November 14, 2026 that a physical SIM signing test worked with P-256 ECC. The [supplemental owner report](../evidence/hardware/2026-11-14-owner-p256-confirmation.json) is dated to that clarification, not to the test. The [owner-supplied photo](../evidence/hardware/2026-11-14-physical-sim.jpg) shows a physical card setup; it is not a signing transcript. The report does not independently establish the applet build, signature bytes or identity of the card in the diagnostic below.
+The November 15 payment is the physical capture. The runner selected the SIM through PC/SC, pinned the owner's P-256 key read from the card before signing, and verified both signatures against it. The record stores the transport, the applet AID, the pinned key, the key check and the signature encoding. [Payment record](../evidence/near/2026-11-15-live-near-ai.json) · [Signing capture](../evidence/hardware/2026-11-14-physical-sim-p256.json) · [Test setup photo](../evidence/hardware/2026-11-14-physical-sim.jpg)
 
-A separate controlled diagnostic on November 14 found native ECC unavailable on the tested card; it did not demonstrate a product signature. The two reports do not establish whether the same card was involved. [Diagnostic record](../evidence/hardware/2026-11-14-native-ecc-retest.json)
+The applet hashes the grant or revocation bytes once with SHA-256 and signs with ECDSA on the card; the private key does not leave it. In our live hardware test the physical SIM supported P-256 ECC and signed with ECDSA. The [November 14 record](../evidence/near/2026-11-14-live-near-ai.json) is the emulator control: same flow, jCardSim signer, simulator hashes retained.
 
-An earlier NEAR AI request returned HTTP 402 with no completion. A later live NEAR AI response supplied a validated payment proposal for the [recorded local NEAR flow](../evidence/near/2026-11-14-live-near-ai.json). The proof does not independently attest provider origin. The phone approval interface and authorized provisioning/access have not been demonstrated. The live driver recorded final outcomes and receipts. A later independent RPC check matched the final key permissions, deployed code, grant state and recipient balance, while transaction history queries returned UNKNOWN_TRANSACTION. The local operator retains contract administrative authority, and no public-chain deployment is recorded. The PC simulator and local network results below identify their execution environments.
+**Limits**
+
+- Local sandbox only; no public-chain settlement and no real funds.
+- PC/SC does not attest the reader, the installed applet build or the card identity.
+- The phone approval screen and authorized provisioning are not shipped.
+
+An earlier NEAR AI request returned HTTP 402 with no completion. A later live NEAR AI response supplied a validated payment proposal for the recorded local NEAR flow. The proof does not independently attest provider origin. The live driver recorded final outcomes and receipts. A later independent RPC check matched the final key permissions, deployed code, grant state and recipient balance, while transaction history queries returned UNKNOWN_TRANSACTION. The local operator retains contract administrative authority, and no public-chain deployment is recorded.
 
 ## Restricted relayer and proposals
 
@@ -15,9 +21,9 @@ Run `npm run demo:restricted -- fixture` after starting the dedicated local sand
 | Component | Evidence and limits |
 | --- | --- |
 | Protocol and local vault | Software tests and an actual transfer on a private local NEAR sandbox, using test funds. |
-| Physical card | On November 14 a controlled diagnostic on the connected card returned `NO_SUCH_ALGORITHM` for all 14 tested ECC cases. The owned probe was removed; inventory matched baseline and free persistent memory returned to 44,864 bytes. This diagnostic did not demonstrate a product applet or physical product signature. See the [physical evidence](../evidence/hardware/2026-11-14-native-ecc-retest.json) and [recovery record](../docs/handoff/CARD-RECOVERY.md). |
+| Card compatibility probe | A separate November 14 diagnostic returned `NO_SUCH_ALGORITHM` for 14 native ECC operations on the card it probed. The registry matched its baseline after cleanup. [Diagnostic results](../evidence/hardware/2026-11-14-native-ecc-retest.json) · [Recovery record](handoff/CARD-RECOVERY.md) |
 | NEAR contract | Built and tested on a private local NEAR sandbox: signed authorization, agent spend, transfer receipt and revocation. No public-network deployment or real funds. See [sandbox evidence](../evidence/near/2026-11-14-local-sandbox.json). |
-| AI proposal | A later live response supplied the validated proposal in the [live proof](../evidence/near/2026-11-14-live-near-ai.json). An earlier request returned HTTP 402. Provider attestation is not verified. |
+| AI proposal | Two successful NEAR AI Cloud calls each produced a 0.001 test NEAR payment. The November 15 trace signed the owner grant and revocation on the physical SIM and records its transport, AID and pinned key; the November 14 trace is the emulator control. Both traces include the response, signed transactions, transfer callback and revocation. [November 14 receipts](../evidence/near/2026-11-14-live-near-ai.json) · [November 15 receipts](../evidence/near/2026-11-15-live-near-ai.json) |
 | Product applet tests | jCardSim on a PC with a public fixture PIN and ephemeral simulated key. It is not hardware evidence. |
 
 Requires Node.js 22+. `npm test` runs protocol and software tests. `npm run demo` runs the local software scenario. Baseline protocol code, public vectors and tests originate in the earlier AgentSIM research workspace. The submission validator is retained for historical offline validation, not a claim that current rules are unchanged.
@@ -45,5 +51,7 @@ npm run card:inspect
 
 The product applet tests independently verify P-256 owner grant and revocation signatures and a separate Ed25519 agent spend against the local policy model. The accepted local policy reservation uses test credits and is not a NEAR transaction.
 
-The [sandbox integration](../tests/near-sandbox/README.md) separately exercises the Rust vault and actual local transfer and callback receipts. The recorded signer remains a PC simulator. No outer transaction was sent to a public NEAR network.
+The [sandbox integration](../tests/near-sandbox/README.md) separately exercises the Rust vault and actual local transfer and callback receipts. The November 14 record is the emulator control; the [November 15 live record](../evidence/near/2026-11-15-live-near-ai.json) records the physical SIM over PC/SC. No outer transaction was sent to a public NEAR network, and the payment example does not deliver compute.
+
+`node tests/near-sandbox/verify-restricted.mjs <record>` checks a record. For a physical record it additionally asserts the PC/SC scope, the applet AID and the pinned key before rechecking every signature.
 

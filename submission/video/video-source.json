@@ -1,11 +1,11 @@
 {
-  "proofSha256": "a6ec92a57fd7d9aeaecd53fc353e41d764c47c9b458c441e79292675ac0d4317",
+  "proofSha256": "4c3fd1a8c4ff09a47c0a112b3a6d7d1376eee93294013dc6ca4dd59475e9cc20",
   "mode": "live",
   "proposalAmount": "1000000000000000000000",
-  "receiver": "pfunded1794691321922.test.near",
-  "executeTransactionHash": "5K5Uz1Evew8wNKsYyKQjj7wTDtgnmWzWbzu8U11mnmJz",
+  "receiver": "pcheck1794701134.test.near",
+  "executeTransactionHash": "uZ5xPztcDMj2MYpwgXjzPQxQH2WhuupFA2vUxw1qUgq",
   "requestedModel": "z-ai/glm-5.3-flash",
   "returnedModel": "z-ai/glm-5.3-flash",
-  "assistantContentSha256": "04cf6df0dc252d04286e628c48fb6790dd13c447b1e1e183d87bdbd12827d901",
+  "assistantContentSha256": "8deea0d2e3f2fa8379abf7fb62a6142a6489a182855cad012d9d3ba47d714130",
   "attestation": "not verified"
 }

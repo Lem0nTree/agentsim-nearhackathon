@@ -17,15 +17,16 @@ if not font: raise SystemExit('Arial or DejaVu Sans is required')
 shutil.copyfile(font,tmp/'font.ttf')
 slides=[
 ('YOUR SIM. YOUR AGENT. YOUR RULES.','Owner control for personal NEAR AI agents.',f'Buy one compute job for {human} test NEAR.'),
-('SIGNING ON A PHYSICAL SIM','The project owner confirmed physical SIM signing.','Owner report, 14 Nov 2026. Independent verification not supplied.'),
-('PERMISSION WITH LIMITS','P-256 owner grant: recipient, budget and expiry.',f"PC applet grant signature: {e['grant']['signature'][:20]}..."),
+('SIGNING ON A PHYSICAL SIM','The physical SIM signs the P-256 owner authorization.','Physical PC/SC capture, 15 Nov 2026. Device provenance not attested.'),
+('PERMISSION WITH LIMITS','P-256 owner grant: recipient, budget and expiry.',f"Owner grant signature: {e['grant']['signature'][:20]}..."),
 ('A LIVE AI PAYMENT PROPOSAL',f"{human} test NEAR | {e['mode']['returnedModel']}",f"Receiver: {e['proposal']['receiver']}"),
 ('THE AGENT SIGNS THE SPEND','A separate Ed25519 session key signs the payment.',f"Agent signature: {e['spend']['signature'][:20]}..."),
 ('RELAY WITH NARROW AUTHORITY','One finite-allowance key can call execute only.','Node rejects wrong receiver, method, deposit and transfer.'),
 ('LOCAL NEAR TRANSFER',f'{human} test NEAR transferred | callback succeeded',f'Local execute transaction: {tx[:22]}...'),
-('REVOKE. STAY IN CONTROL.','Owner signs revocation; later spend is rejected.',f"PC applet revocation signature: {e['revocation']['signature'][:20]}...")]
+('REVOKE. STAY IN CONTROL.','Owner signs revocation; later spend is rejected.',f"Owner revocation signature: {e['revocation']['signature'][:20]}...")]
 for i,(title,sub,detail) in enumerate(slides):
  for name,text in [('title',title),('sub',sub),('detail',detail)]: (tmp/f'{name}{i}.txt').write_text(text,encoding='utf8')
+ (tmp/f'footer{i}.txt').write_text('Recorded demonstration  |  Owner signer: '+e['roles']['owner'].get('source','PC applet')+'  |  Local NEAR test funds',encoding='utf8')
  filt=('drawbox=x=0:y=0:w=24:h=720:color=0xff6b28:t=fill,'
  "drawtext=fontfile=font.ttf:fontsize=32:fontcolor=white:x=76:y=54:text='AgentSIM',"
  f"drawtext=fontfile=font.ttf:fontsize=20:fontcolor=0xffb88d:x=1030:y=62:text='0{i+1} / 08',"
@@ -33,7 +34,7 @@ for i,(title,sub,detail) in enumerate(slides):
  f'drawtext=fontfile=font.ttf:fontsize=29:fontcolor=0xffa270:x=76:y=315:textfile=sub{i}.txt,'
  f'drawtext=fontfile=font.ttf:fontsize=23:fontcolor=0xdddddd:x=76:y=380:textfile=detail{i}.txt,'
  'drawbox=x=76:y=566:w=1128:h=2:color=0x663d29:t=fill,'
- "drawtext=fontfile=font.ttf:fontsize=19:fontcolor=0xaaaaaa:x=76:y=606:text='Recorded demonstration  |  Product applet on PC  |  Local NEAR test funds'")
+ f"drawtext=fontfile=font.ttf:fontsize=19:fontcolor=0xaaaaaa:x=76:y=606:textfile=footer{i}.txt")
  if i == 3:
   (tmp/'raw-amount.txt').write_text('Raw amount: '+amount+' yoctoNEAR',encoding='utf8')
   filt += ',drawtext=fontfile=font.ttf:fontsize=23:fontcolor=0xaaaaaa:x=76:y=430:textfile=raw-amount.txt'

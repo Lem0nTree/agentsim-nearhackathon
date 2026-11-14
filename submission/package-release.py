@@ -15,8 +15,8 @@ for name in allow:
  f=ROOT.joinpath(*path.parts)
  if f.is_symlink() or not f.is_file() or not f.resolve().is_relative_to(ROOT): raise SystemExit('Missing or unsafe allowlist file: '+name)
  data[name]=f.read_bytes()
-if 'evidence/near/2026-11-14-live-near-ai.json' in data and hashlib.sha256(data['evidence/near/2026-11-14-live-near-ai.json']).hexdigest()!=hash_file(proof): raise SystemExit('Allowlisted live proof differs from video proof.')
-for name,src in {'evidence/near/2026-11-14-live-near-ai.json':proof,'submission/video/agentsim-live-demo.mp4':media/'agentsim-live-demo.mp4','submission/video/agentsim-live-demo.srt':media/'agentsim-live-demo.srt','submission/video/video-source.json':media/'video-source.json'}.items():
+if 'evidence/near/'+proof.name in data and hashlib.sha256(data['evidence/near/'+proof.name]).hexdigest()!=hash_file(proof): raise SystemExit('Allowlisted live proof differs from video proof.')
+for name,src in {'evidence/near/'+proof.name:proof,'submission/video/agentsim-live-demo.mp4':media/'agentsim-live-demo.mp4','submission/video/agentsim-live-demo.srt':media/'agentsim-live-demo.srt','submission/video/video-source.json':media/'video-source.json'}.items():
  value=src.read_bytes()
  if name in data and data[name]!=value: raise SystemExit('Allowlisted file differs from release artifact: '+name)
  data[name]=value

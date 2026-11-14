@@ -1,0 +1,9 @@
+# AgentSIM docs
+
+> Implementation and verification notes for AgentSIM.
+
+- [Verification](../docs/VERIFICATION.md): claim, mechanism, limits, emulator control
+- [Applet reference](../card/applet/README.md): APDU contract and build
+- [Restricted relayer guide](../tests/near-sandbox/RESTRICTED.md): reproduce the run
+- [Acceptance gates](handoff/ACCEPTANCE.md): what a reviewer checks
+- [Start here](handoff/START-HERE.md): handoff entry point

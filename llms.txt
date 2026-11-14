@@ -1,0 +1,19 @@
+# AgentSIM
+
+> SIM-secured P-256 spending authority for a personal NEAR AI agent. Recorded run: physical SIM over PC/SC. Local NEAR sandbox, test funds.
+
+## Start
+
+- [Judge brief](submission/judge-brief.json): commands, expected output, evidence paths
+- [README](README.md): product and 60-second check
+- [Verification](docs/VERIFICATION.md): claim, mechanism, limits, emulator control
+
+## Verify
+
+- `npm test` → `# pass 48`
+- `node tests/near-sandbox/verify-restricted.mjs evidence/near/2026-11-15-live-near-ai.json` → `Verified restricted key setup, …`
+- Applet suite (JDK 17+): `npm run card-sim:setup` then `npm run card-sim:test` → `# pass 21`
+
+## Limits
+
+Local sandbox, no public-chain settlement, no compute delivery, no device attestation, no shipped phone app.

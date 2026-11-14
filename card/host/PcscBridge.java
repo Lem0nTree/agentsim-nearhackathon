@@ -5,6 +5,15 @@ import java.util.*;
 public final class PcscBridge {
   static byte[] hex(String s) { if (!s.matches("(?i)([0-9a-f]{2})+")) throw new IllegalArgumentException("invalid hex"); byte[] b=new byte[s.length()/2]; for(int i=0;i<b.length;i++) b[i]=(byte)Integer.parseInt(s.substring(i*2,i*2+2),16); return b; }
   static String hex(byte[] b) { StringBuilder s=new StringBuilder(); for(byte x:b) s.append(String.format("%02x",x&255)); return s.toString(); }
+  static void validateCommand(byte[] cmd) {
+    if(cmd.length<4 || (cmd[0]&255)!=0x80 || !Arrays.asList(0x10,0x20,0x30,0x32,0x34).contains(cmd[1]&255))
+      throw new IllegalArgumentException("unsupported APDU");
+    int ins=cmd[1]&255;
+    if(ins==0x10 && !(cmd.length==5 && ((cmd[4]&255)==0 || (cmd[4]&255)==65)))
+      throw new IllegalArgumentException("public key command must have no data");
+    if(ins==0x30 && !(cmd.length==4 || (cmd.length==5 && cmd[4]==0)))
+      throw new IllegalArgumentException("sign init command must have no data");
+  }
   public static void main(String[] args) throws Exception {
     if(args.length!=2) throw new IllegalArgumentException("Expected exact reader name and AID");
     byte[] aid=hex(args[1]); if(aid.length<5||aid.length>16) throw new IllegalArgumentException("AID must be 5-16 bytes");
@@ -16,7 +25,7 @@ public final class PcscBridge {
       System.out.println("SELECT "+hex(select.getBytes())); System.out.flush();
       if(select.getSW()!=0x9000) return;
       BufferedReader in=new BufferedReader(new InputStreamReader(System.in,"UTF-8")); String line;
-      while((line=in.readLine())!=null) { if(line.equals("QUIT")) break; byte[] cmd=hex(line); if(cmd.length<4 || (cmd[0]&255)!=0x80 || !Arrays.asList(0x10,0x20,0x30,0x32,0x34).contains(cmd[1]&255)) throw new IllegalArgumentException("unsupported APDU"); System.out.println(hex(ch.transmit(new CommandAPDU(cmd)).getBytes())); System.out.flush(); }
+      while((line=in.readLine())!=null) { if(line.equals("QUIT")) break; byte[] cmd=hex(line); validateCommand(cmd); System.out.println(hex(ch.transmit(new CommandAPDU(cmd)).getBytes())); System.out.flush(); }
     } finally { card.disconnect(false); }
   }
 }

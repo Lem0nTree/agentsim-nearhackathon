@@ -1,0 +1,8 @@
+{
+  "record_type": "physical_sim_signing",
+  "capture_date": "2026-11-14",
+  "execution": "physical SIM via PC/SC and a USB smart-card reader",
+  "result": "P-256 ECDSA signing succeeded",
+  "device_provenance": "not attested",
+  "setup_photo": "evidence/hardware/2026-11-14-physical-sim.jpg"
+}

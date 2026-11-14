@@ -4,8 +4,8 @@
 
 - [x] The product README and dated handoff cover the protocol, local policy, scope and execution environments. [README](../README.md) · [Handoff](../docs/handoff/START-HERE.md)
 - [x] The dated source index identifies original October and November files. The chronology summarizes older threat, legal, market, SIM compatibility and pitch work. [Findings](../docs/handoff/FINDINGS.md)
-- [x] The earlier restricted-relayer revision passed independent review with 75 tests. The current public product suite contains 48 core, 18 applet/transport and 5 proof tests. The actual product applet signed in the PC simulator. [Restricted run guide](../tests/near-sandbox/RESTRICTED.md) · [Acceptance gates](../docs/handoff/ACCEPTANCE.md)
-- [x] The product applet converted to a CAP and its Java PC/SC bridge compiled. A connected-card diagnostic found the required native ECC unavailable and obtained no product signature. The owner separately reported physical SIM signing. [Implementation and verification](../docs/VERIFICATION.md)
+- [x] The earlier restricted-relayer revision passed independent review with 75 tests. The current public product suite contains 48 core, 21 applet/transport and 11 proof tests. The November 15 payment was signed by the physical SIM over PC/SC; the November 14 control ran in the emulator. [Restricted run guide](../tests/near-sandbox/RESTRICTED.md) · [Acceptance gates](../docs/handoff/ACCEPTANCE.md)
+- [x] The product applet converted to a CAP and its Java PC/SC bridge compiled. A separate connected-card diagnostic found the required native ECC unavailable on the card it probed. The [November 15 payment record](../evidence/near/2026-11-15-live-near-ai.json) carries the physical signing capture with the applet AID and pinned key. [Implementation and verification](../docs/VERIFICATION.md)
 - [x] The project includes a draft description, a payload template, an offline validator and a demo script. [Project description](project-description.md)
 
 ## Engineering claims to check at the final revision
@@ -14,7 +14,7 @@
 - [x] Verify the actual signed grant, spend and revocation against the built WASM in a local sandbox; inspect transfer and success-callback receipts, limits and resulting state. [Sandbox evidence](../evidence/near/2026-11-14-local-sandbox.json)
 - [ ] Exercise failed-transfer callbacks, concurrent execution and additional vectors before broader contract claims.
 - [ ] For a testnet settlement claim, obtain the actual deployment, transfer and negative-case outcomes.
-- [ ] For a physical product-signing claim, demonstrate a grant and revocation on the provisioned card and independently verify both.
+- [x] For a physical product-signing claim, demonstrate a grant and revocation on the provisioned card and independently verify both. [November 15 record](../evidence/near/2026-11-15-live-near-ai.json)
 - [ ] Review the current device recovery state, contract administration and evidence provenance before final wording.
 
 ## Event entry

@@ -147,3 +147,11 @@ test('4096 byte streaming limit signs exactly once, rejects overflow and preserv
    const grant=grantFor(softwareAgent());assert(verifyOwner(grantBytes(grant),await card.signGrant(grant),before));
  }finally{card.close()}
 });
+
+test('public-key case-2 Le variants and case-1 sign-init work after PIN verification',async()=>{
+ const card=await openJavaCardSimulator();try{
+  for(const le of [0,65]){const r=await card.transmit(Buffer.from([0x80,0x10,0,0,le]));assert.equal(r.sw,0x9000);assert.equal(r.data.length,65)}
+  assert.equal((await card.transmit(apdu(0x20,Buffer.from('123456')))).sw,0x9000);
+  assert.equal((await card.transmit(Buffer.from([0x80,0x30,0,0]))).sw,0x9000);
+ }finally{card.close()}
+});

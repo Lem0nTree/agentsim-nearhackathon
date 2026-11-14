@@ -86,6 +86,24 @@ public final class AgentSimApplet extends Applet {
         if (buffer[ISO7816.OFFSET_CLA] != (byte)0x80) ISOException.throwIt(ISO7816.SW_CLA_NOT_SUPPORTED);
         if (buffer[ISO7816.OFFSET_P1] != 0 || buffer[ISO7816.OFFSET_P2] != 0) ISOException.throwIt(ISO7816.SW_INCORRECT_P1P2);
         byte instruction = buffer[ISO7816.OFFSET_INS];
+        // These are outgoing/no-data commands. Calling setIncomingAndReceive on
+        // a case-2 APDU is illegal on conforming Java Card runtimes.
+        if (instruction == 0x10) {
+            byte le = buffer[ISO7816.OFFSET_LC];
+            if (le != 0 && le != 65) ISOException.throwIt(ISO7816.SW_WRONG_LENGTH);
+            short size = ((ECPublicKey)pair.getPublic()).getW(buffer, (short)0);
+            apdu.setOutgoingAndSend((short)0, size);
+            return;
+        }
+        if (instruction == 0x30) {
+            if (buffer[ISO7816.OFFSET_LC] != 0) ISOException.throwIt(ISO7816.SW_WRONG_LENGTH);
+            if (!pin.isValidated()) ISOException.throwIt(ISO7816.SW_SECURITY_STATUS_NOT_SATISFIED);
+            signer.init(pair.getPrivate(), Signature.MODE_SIGN);
+            active[0] = 1; total[0] = 0;
+            return;
+        }
+        if (instruction != 0x20 && instruction != 0x32 && instruction != 0x34)
+            ISOException.throwIt(ISO7816.SW_INS_NOT_SUPPORTED);
         short received = apdu.setIncomingAndReceive();
         short length = apdu.getIncomingLength();
         short offset = apdu.getOffsetCdata();
@@ -101,21 +119,10 @@ public final class AgentSimApplet extends Applet {
         if (copied != length) ISOException.throwIt(ISO7816.SW_WRONG_LENGTH);
         offset = 0;
         switch (instruction) {
-            case 0x10: // SEC1 uncompressed public key. Private key has no export command.
-                if (length != 0) ISOException.throwIt(ISO7816.SW_WRONG_LENGTH);
-                short size = ((ECPublicKey)pair.getPublic()).getW(buffer, (short)0);
-                apdu.setOutgoingAndSend((short)0, size);
-                return;
             case 0x20:
                 active[0] = 0; total[0] = 0;
                 if (length < 6 || length > 16) { pin.reset(); ISOException.throwIt(ISO7816.SW_WRONG_LENGTH); }
                 if (!pin.check(incoming,offset,(byte)length)) ISOException.throwIt((short)(0x63c0 | pin.getTriesRemaining()));
-                return;
-            case 0x30:
-                if (!pin.isValidated()) ISOException.throwIt(ISO7816.SW_SECURITY_STATUS_NOT_SATISFIED);
-                if (length != 0) ISOException.throwIt(ISO7816.SW_WRONG_LENGTH);
-                signer.init(pair.getPrivate(), Signature.MODE_SIGN);
-                active[0] = 1; total[0] = 0;
                 return;
             case 0x32:
             case 0x34:

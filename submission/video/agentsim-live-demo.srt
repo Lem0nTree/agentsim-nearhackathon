@@ -5,24 +5,24 @@ Buy one compute job for 0.001 test NEAR.
 
 2
 00:00:09,000 --> 00:00:18,000
-The project owner confirmed physical SIM signing.
-Owner report, 14 Nov 2026. Independent verification not supplied.
+The physical SIM signs the P-256 owner authorization.
+Physical PC/SC capture, 15 Nov 2026. Device provenance not attested.
 
 3
 00:00:18,000 --> 00:00:27,000
 P-256 owner grant: recipient, budget and expiry.
-PC applet grant signature: 13080a0a721fb66a241c...
+Owner grant signature: 860d7fcee86aae0e4220...
 
 4
 00:00:27,000 --> 00:00:36,000
 0.001 test NEAR | z-ai/glm-5.3-flash
-Receiver: pfunded1794691321922.test.near
+Receiver: pcheck1794701134.test.near
 Raw amount: 1000000000000000000000 yoctoNEAR
 
 5
 00:00:36,000 --> 00:00:45,000
 A separate Ed25519 session key signs the payment.
-Agent signature: 674b115ed883c95c86d2...
+Agent signature: dbaf4aae191dd4485fa4...
 
 6
 00:00:45,000 --> 00:00:54,000
@@ -32,10 +32,15 @@ Node rejects wrong receiver, method, deposit and transfer.
 7
 00:00:54,000 --> 00:01:03,000
 0.001 test NEAR transferred | callback succeeded
-Local execute transaction: 5K5Uz1Evew8wNKsYyKQjj7...
+Local execute transaction: uZ5xPztcDMj2MYpwgXjzPQ...
 
 8
 00:01:03,000 --> 00:01:12,000
 Owner signs revocation; later spend is rejected.
-PC applet revocation signature: 05064d3a61a93983acea...
+Owner revocation signature: 7471109013cee1e23701...
+
+9
+00:01:12,000 --> 00:01:27,000
+The applet suite compiles that same source and passes.
+Reproduce: npm run card-sim:setup && npm run card-sim:test
 

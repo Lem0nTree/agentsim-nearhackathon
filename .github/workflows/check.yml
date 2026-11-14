@@ -1,0 +1,25 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - run: npm ci --prefix tests/near-sandbox
+      - run: npm test
+      - run: node tests/near-sandbox/verify-restricted.mjs evidence/near/2026-11-15-live-near-ai.json
+      - run: node tests/near-sandbox/verify.mjs evidence/near/2026-11-14-local-sandbox.json
+      - run: npm run card-sim:setup
+      - run: npm run card-sim:test

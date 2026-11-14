@@ -2,7 +2,24 @@ import fs from 'node:fs';import assert from 'node:assert/strict';import crypto f
 import {transactions,utils} from 'near-api-js';
 import {grantBytes,spendBytes,controlBytes,digest,verifyOwner,verifySession,uint} from '../../src/protocol.mjs';
 const file=process.argv[2];if(!file)throw Error('EVIDENCE_PATH_REQUIRED');const e=JSON.parse(fs.readFileSync(file,'utf8'));
-assert.equal(e.schema,'agentsim-restricted-relayer/v1');assert.equal(e.appletSourceSha256,crypto.createHash('sha256').update(fs.readFileSync('card/applet/src/agentsim/card/AgentSimApplet.java')).digest('hex'));assert.equal(e.simulatorJarSha256,'5587d55f63d0364ed4da93404595071ad56f09833ded91d7addfd860341bee6b');assert.deepEqual(e.networkIsolation,{rpc:'http://127.0.0.1:3030',peerAddress:'127.0.0.1:24568',bootNodes:'',stunServers:[],telemetryEndpoints:[],tier1Inbound:false,tier1Outbound:false,peerOutboundDisabled:true});assert.equal(e.chainId,'agentsim-local');assert.equal(e.p256HostFunction,true);
+assert.equal(e.schema,'agentsim-restricted-relayer/v1');
+const ownerSource=e.roles?.owner?.source;
+if(ownerSource==='product applet in jCardSim'){
+ const current=crypto.createHash('sha256').update(fs.readFileSync('card/applet/src/agentsim/card/AgentSimApplet.java')).digest('hex');
+ const historical=['fa9d26eca4f6c0e9e4a7292872aaff77fd5dc5ebe05bca575ce86294c81e9a40','eb7cbbf726ec43d33da37dd82f9dedc3ca291639b34092783eaf197da1571467'];
+ assert([current,...historical].includes(e.appletSourceSha256),'unknown simulator applet source');
+ assert.equal(e.simulatorJarSha256,'5587d55f63d0364ed4da93404595071ad56f09833ded91d7addfd860341bee6b');
+}else if(ownerSource==='Physical SIM'){
+ assert.equal(e.appletSourceSha256??null,null);assert.equal(e.simulatorJarSha256??null,null);
+ assert.match(e.roles.owner.expectedAID,/^(?:[0-9A-F]{2}){5,16}$/);
+ assert.equal(e.roles.owner.pinnedPublicKey,e.roles.owner.publicKey);
+ assert.match(e.roles.owner.publicKey,/^(02|03)[0-9a-f]{64}$/);
+ assert.deepEqual(e.roles.owner.transport,{api:'PC/SC',selectStatus:'9000'});
+ assert.equal(e.roles.owner.keyCheck,'pinned before signing');
+ assert.equal(e.roles.owner.signatureEncoding,'DER to P1363, host-verified');
+ assert.equal(e.scope,'local NEAR sandbox; owner authorization signed over PC/SC; no public-chain transaction');
+}else throw Error('OWNER_SOURCE_INVALID');
+assert.deepEqual(e.networkIsolation,{rpc:'http://127.0.0.1:3030',peerAddress:'127.0.0.1:24568',bootNodes:'',stunServers:[],telemetryEndpoints:[],tier1Inbound:false,tier1Outbound:false,peerOutboundDisabled:true});assert.equal(e.chainId,'agentsim-local');assert.equal(e.p256HostFunction,true);
 const source=fs.readFileSync('contracts/agentsim-vault/artifacts/agentsim_vault.wasm');assert.equal(crypto.createHash('sha256').update(source).digest('hex'),e.wasmSha256);assert.equal(e.deployedCodeSha256,e.wasmSha256);
 const g=e.grant.value,s=e.spend.value,c=e.revocation.value,roles=e.roles,relay=roles.relayer;
 assert.equal(roles.owner.algorithm,'P-256');assert.equal(roles.agent.algorithm,'Ed25519');assert.equal(relay.algorithm,'Ed25519');
