@@ -11,3 +11,5 @@ target/
 evidence/private/
 submission/payload.private.json
 off-track/video-emulator/output/
+
+/off-track/video-emulator/

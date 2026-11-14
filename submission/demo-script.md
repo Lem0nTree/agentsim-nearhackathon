@@ -20,7 +20,7 @@ The product Java Card applet runs in jCardSim on a PC and signs the owner's gran
 
 The execute-only relay key has a finite fee allowance and is scoped to the vault. The local node rejected wrong-method, wrong-receiver, deposit and transfer actions. The contract rejected overspending and a post-revocation payment. The receiver gained 0.001 sandbox NEAR and the transfer callback succeeded.
 
-Keep “PC Java Card simulator; local NEAR sandbox; no physical SIM or public-chain transaction” visible. The [replay](../off-track/video-emulator/agentsim-restricted-relayer.mp4) is generated from the [recorded local proof](../evidence/near/2026-11-14-restricted-relayer.json), and the [guide](../tests/near-sandbox/RESTRICTED.md) explains how to repeat it.
+Keep “PC Java Card simulator; local NEAR sandbox; no physical SIM or public-chain transaction” visible. The historical fixture replay was generated from the [recorded local proof](../evidence/near/2026-11-14-restricted-relayer.json), and the [guide](../tests/near-sandbox/RESTRICTED.md) explains how to repeat it.
 
 ## Proposed phone experience
 

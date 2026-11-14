@@ -8,7 +8,7 @@ The stored [fixture proof](../../evidence/near/2026-11-14-restricted-relayer.jso
 
 ## Run locally
 
-Prerequisites and the pinned sandbox 2.14.0 download are in [the sandbox guide](README.md). From the repository root, run `npm run offtrack:setup` and `npm ci --prefix tests/near-sandbox`. Ensure ports 3030 and 24568 are unused. For a fresh, dedicated sandbox, in Linux or WSL:
+Prerequisites and the pinned sandbox 2.14.0 download are in [the sandbox guide](README.md). From the repository root, run `npm run card-sim:setup` and `npm ci --prefix tests/near-sandbox`. Ensure ports 3030 and 24568 are unused. For a fresh, dedicated sandbox, in Linux or WSL:
 
 ```sh
 near-sandbox --home ".build/relay-sandbox-home" init --chain-id agentsim-local --account-id test.near --fast
@@ -35,4 +35,4 @@ node --env-file=".local/near-ai.env" tests/near-sandbox/restricted-relayer.mjs l
 
 The CLI captures the provider credential in its own process and removes it from the environment before starting child Java tools; it passes the value only to the provider request. The key remains in the Node process memory while needed. The fixed endpoint is `https://cloud-api.near.ai/v1/chat/completions` ([NEAR AI quickstart](https://docs.near.ai/cloud/quickstart)); redirects are refused. The default requested model is `z-ai/glm-5.3-flash`; the response model must match. Only a successful, single assistant answer containing the exact two-field JSON proposal is accepted. Request and response are bounded, timeout and provider errors fail closed, and live mode never falls back to the fixture. An earlier live attempt reported HTTP 402. A later [live proof](../../evidence/near/2026-11-14-live-near-ai.json) records a validated response and local transfer. Provider attestation is not verified. No request is retried automatically. The proof records only the validated proposal, minimal provider metadata and hashes; it does not verify NEAR AI attestation or response origin.
 
-The checked-in [24-second replay](../../off-track/video-emulator/agentsim-restricted-relayer.mp4) is generated from the verified fixture proof. It is a replay of recorded local results, not a live inference recording. Run `python off-track/video-emulator/scripts/render-restricted-video.py` to regenerate it with FFmpeg.
+The [live replay](../../submission/video/agentsim-live-demo.mp4) uses the recorded live proposal and local NEAR results. See the [release guide](../../submission/RELEASE.md) for reproduction.

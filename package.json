@@ -11,10 +11,9 @@
     "demo": "node src/demo.mjs",
     "card:inspect": "node card/host/inspect.mjs",
     "applet:build": "node card/applet/build.mjs",
-    "offtrack:setup": "node off-track/video-emulator/scripts/setup-sim.mjs",
-    "offtrack:test": "node --test off-track/video-emulator/tests/*.test.mjs",
-    "offtrack:demo": "node off-track/video-emulator/scripts/demo-sim.mjs",
     "check:submission": "node scripts/validate-submission.mjs",
-    "demo:restricted": "node tests/near-sandbox/restricted-relayer.mjs"
+    "demo:restricted": "node tests/near-sandbox/restricted-relayer.mjs",
+    "card-sim:setup": "node tests/java-card/scripts/setup-sim.mjs",
+    "card-sim:test": "node --test tests/java-card/tests/*.test.mjs"
   }
 }

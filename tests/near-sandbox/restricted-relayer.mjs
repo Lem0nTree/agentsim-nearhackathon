@@ -1,6 +1,6 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';
 import {connect,keyStores,KeyPair,KeyPairSigner,Account,transactions,utils} from 'near-api-js';
-import {openJavaCardSimulator} from '../../off-track/video-emulator/src/product-applet-signer.mjs';
+import {openJavaCardSimulator} from '../java-card/src/product-applet-signer.mjs';
 import {grantBytes,spendBytes,controlBytes,digest,verifyOwner,verifySession,softwareAgent} from '../../src/protocol.mjs';
 import {proposePayment} from '../../src/proposal.mjs';
 // Keep the provider credential in this process only; child Java/Card tools do not need it.

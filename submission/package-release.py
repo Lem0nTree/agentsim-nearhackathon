@@ -20,7 +20,7 @@ for name,src in {'evidence/near/2026-11-14-live-near-ai.json':proof,'submission/
  value=src.read_bytes()
  if name in data and data[name]!=value: raise SystemExit('Allowlisted file differs from release artifact: '+name)
  data[name]=value
-manifest={'format':'agentsim-submission-manifest-v1','baseCommit':'f9d41e36ec3df338530563bdd08118f4152f7cce','proofSha256':hash_file(proof),'entries':{n:hashlib.sha256(v).hexdigest() for n,v in sorted(data.items())},'note':'Manifest lists every other archive entry; ZIP hash is printed separately.'}
+manifest={'format':'agentsim-submission-manifest-v1','baseCommit':'ee40265a54545436e40f772b213302ff2d9a5dee','proofSha256':hash_file(proof),'entries':{n:hashlib.sha256(v).hexdigest() for n,v in sorted(data.items())},'note':'Manifest lists every other archive entry; ZIP hash is printed separately.'}
 data['MANIFEST.json']=(json.dumps(manifest,indent=2)+'\n').encode()
 with zipfile.ZipFile(out,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
  for name,content in sorted(data.items()):

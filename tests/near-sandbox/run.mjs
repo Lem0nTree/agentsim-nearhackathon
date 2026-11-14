@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import {connect,keyStores,KeyPair,transactions,utils} from 'near-api-js';
-import {openJavaCardSimulator} from '../../off-track/video-emulator/src/product-applet-signer.mjs';
+import {openJavaCardSimulator} from '../java-card/src/product-applet-signer.mjs';
 import {grantBytes,spendBytes,controlBytes,digest,verifyOwner,verifySession,softwareAgent} from '../../src/protocol.mjs';
 const rpc='http://127.0.0.1:3030', expectedChain='agentsim-local';
 const callRpc=async(method,params)=>{const r=await fetch(rpc,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:'agentsim',method,params})});const x=await r.json();if(x.error)throw Error(JSON.stringify(x.error));return x.result};
