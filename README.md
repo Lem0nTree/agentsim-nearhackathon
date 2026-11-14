@@ -5,7 +5,7 @@ AgentSIM explores owner-authorized, bounded agent spending using a P-256 owner s
 | Component | Evidence and limits |
 | --- | --- |
 | Protocol and local vault | Automated software tests; settlement is simulated locally. |
-| Physical card | Java Card applet and PC/SC adapter are provided; no successful on-card signing has been established for this project. Card capabilities and applet installation require verification. |
+| Physical card | Java Card applet and PC/SC adapter are provided; no successful on-card signing has been established. After a diagnostic load timed out, authenticated inventory matched the original visible registry and the diagnostic was absent, but authenticated FF21 and a separate JCOP DF25 query both reported 44,712 free persistent bytes at 16:10:05.527 UTC on November 14, 152 below preflight for an undetermined reason. See the [recovery record](docs/handoff/CARD-RECOVERY.md). |
 | NEAR contract | Source scaffold; compilation, deployment and chain execution are not established. No mainnet funds. |
 | Video emulator | jCardSim on a PC, separate under `off-track/video-emulator`; public fixture PIN and ephemeral simulated key. It is not hardware evidence. |
 

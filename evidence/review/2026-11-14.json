@@ -8,8 +8,16 @@
   },
   "reviewResult": "accepted; no remaining actionable findings in reviewed source and prose",
   "tests": {
-    "core": {"command": "npm test", "passed": 39, "failed": 0},
-    "offTrack": {"command": "npm run offtrack:test", "passed": 18, "failed": 0},
+    "core": {
+      "command": "npm test",
+      "passed": 39,
+      "failed": 0
+    },
+    "offTrack": {
+      "command": "npm run offtrack:test",
+      "passed": 18,
+      "failed": 0
+    },
     "scope": "local software, Java Card simulator integration and mocked PC/SC transport; not physical card or NEAR execution",
     "jdk": "8u504",
     "javaCardSdk": "3.0.5u4"
@@ -35,11 +43,12 @@
     "committedBinary": false
   },
   "openGates": [
-    "Connected-card inventory reconciliation after interrupted owned-probe load",
+    "Explain or otherwise resolve the 152-byte free persistent memory difference following interrupted owned-probe load; visible registry matches baseline",
     "Fresh physical P-256 capability measurement and actual grant/revocation signatures",
     "Transport fragmentation within one APDU",
     "NEAR contract WASM build, sandbox and public-network execution",
     "Fresh-session native harness discovery; role configurations statically validated only",
     "License choice, public visibility, actual X video and confirmed event submission"
-  ]
+  ],
+  "openGatesSnapshotNote": "These are review-time gates; later authenticated inventory matched the visible baseline, while FF21 and JCOP DF25 agreed at 16:10:05.527 UTC on 44,712 free persistent bytes, 152 below preflight for an undetermined reason."
 }
