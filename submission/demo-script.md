@@ -1,31 +1,23 @@
 # Demo script
 
-## Current local demo, approximately 3 minutes
+## Recorded local NEAR sandbox demo — 24 seconds
 
-**0:00–0:25 — Problem.** “AI agents need limited authority. AgentSIM lets an owner approve an agent's recipient, budget and expiry. Our longer-term distribution thesis uses capable secure elements already present in mobile deployments.”
+**0:00–0:04 — Scope.** “AgentSIM lets an owner give an AI agent bounded spending authority. This recording uses a Java Card applet in a PC simulator and a private local NEAR sandbox.” Keep “No physical SIM; no public-chain transaction” visible.
 
-**0:25–0:40 — Disclosure, visible and spoken.** “This run uses software P-256 signing and a local simulated vault. It does not use a physical SIM, JCOP card, deployed NEAR contract, live funds or LLM.” Keep that text visible in the recording.
+**0:04–0:08 — Owner grant.** “The applet signs a P-256 grant that specifies the agent, allowed recipient, limits and expiry. The sandbox vault verifies it.” The video displays a prefix of the real local signature.
 
-**0:40–1:00 — Policy.** Show `src/demo.mjs`: approved recipient `compute.local`, cap 100 test units per call, 150 total, a short expiry and a separate agent key. Explain that these units are not currency.
+**0:08–0:12 — Agent request.** “The agent uses its own Ed25519 key to sign the spend. A separate Ed25519 relayer signs the outer sandbox transaction.”
 
-**1:00–1:35 — Run.** Execute `npm run demo`. Show accepted owner delegation and successful simulated spending of 90 units. Show replay, 101-unit overspend, substituted recipient and post-revocation requests rejected with explicit reasons.
+**0:12–0:16 — Local transfer.** “The sandbox executes the request. Its transfer receipt and callback succeed, and the receiver balance increases by the requested 10^21 yoctoNEAR in sandbox funds.”
 
-**1:35–2:00 — Verify.** Execute `npm test`. Explain that signatures are real and the ledger/settlement are simulated. Test coverage does not establish hardware or on-chain correctness.
+**0:16–0:20 — Revocation.** “The owner signs a revocation with the same simulated applet. A subsequent agent request is rejected.”
 
-**2:00–2:30 — NEAR role.** Show the vault architecture and Rust source. “The contract scaffold uses native P-256 owner verification, agent signatures and native NEAR transfer promises. Public RPC config reports the feature enabled; our contract still needs compilation and testnet execution.”
+**0:20–0:24 — Boundaries.** “The owner, agent and relayer use distinct signing roles. The recording shows no physical product signature and no public-network deployment or transfer.”
 
-**2:30–3:00 — Adoption and next proof.** “GSMA reports billions of wireless connections. This gives a distribution context, not a compatible-device count. We start with controlled hardware and managed fleets, then validate provisioning partnerships.” End with build/testnet and actual hardware gates.
+The replay is [agentsim-sandbox-demo.mp4](../off-track/video-emulator/agentsim-sandbox-demo.mp4). [Sandbox evidence](../evidence/near/2026-11-14-local-sandbox.json) records canonical messages, signatures, decoded outer actions, receipt results and balance changes. Use the [sandbox run instructions](../tests/near-sandbox/README.md) to reproduce and verify them. A separate [offline policy-only clip](../off-track/video-emulator/agentsim-demo.mp4) contains no settlement.
 
-## Testnet extension after implementation
+## Physical and public-network extensions
 
-Replace the simulation segment only after passing sandbox checks. Show actual vault/recipient accounts, grant policy, a successful transfer and final promise receipt. Show rejected replay, overspend and post-revocation calls. Reconcile recipient balance and distinguish gas from transferred amount. Keep software signer disclosure if no hardware is used. Record actual transaction hashes in a new evidence file. Never fill that file with invented examples.
+Show actual card and independently verified grant/revocation signatures only after they are obtained on a supported provisioned card. The current connected card's measured ECC failures are documented in the [physical evidence](../evidence/hardware/2026-11-14-native-ecc-retest.json); they are not a product signing demonstration.
 
-## Hardware extension after actual access
-
-Show card/reader/model and sanitized applet selection/generation/sign traces. Bind its public key to the demonstrated grant and verify the signature independently. Keep claims limited to the measured card and workflow. Explain whether hardware origin is based on a controlled lab record or a verified attestation chain.
-
-## Unpublished X draft
-
-Before the event: “AgentSIM preparation: a software prototype for bounded AI agent spending, with a NEAR vault scaffold and a SIM integration research plan. Local demo uses software keys and simulated settlement. No SIM/JCOP execution or deployed contract is claimed.”
-
-During/after eligible in-event work: write a fresh post naming NEAR HACKATHON, the exact work completed and the actual demonstration mode. Attach the real demo video or screenshots. Do not use “built at NEAR HACKATHON” for the October baseline unless organizers confirm the entry and the statement accurately describes the in-event work.
+Show testnet deployment, transaction hashes, transfer and final receipt only after separately authorized public-network execution. Never describe a sandbox receipt as a public NEAR transaction. No public post, event submission or publication is implied by this draft.

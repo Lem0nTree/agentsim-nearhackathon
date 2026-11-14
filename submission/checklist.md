@@ -11,7 +11,8 @@
 ## Engineering claims to check at the final revision
 
 - [ ] Repeat the documented commands from a clean checkout and record environment, commit and results.
-- [ ] Verify canonical Node vectors against the built WASM and run sandbox limiting, concurrency and callback cases before claiming contract execution.
+- [x] Verify the actual signed grant, spend and revocation against the built WASM in a local sandbox; inspect transfer and success-callback receipts, limits and resulting state. [Sandbox evidence](../evidence/near/2026-11-14-local-sandbox.json)
+- [ ] Exercise failed-transfer callbacks, concurrent execution and additional vectors before broader contract claims.
 - [ ] For a testnet settlement claim, obtain the actual deployment, transfer and negative-case outcomes.
 - [ ] For a physical product-signing claim, demonstrate a grant and revocation on the provisioned card and independently verify both.
 - [ ] Review the current device recovery state, contract administration and evidence provenance before final wording.
@@ -19,7 +20,8 @@
 ## Event entry
 
 - [ ] Link the actual in-window work and disclose reused sources in the README.
-- [ ] Obtain the owner's chosen license, add its file, obtain publication authorization and verify unauthenticated access to the repository.
+- [x] Add the owner-selected [MIT License](../LICENSE).
+- [ ] Obtain publication authorization and verify unauthenticated access to the repository.
 - [ ] Verify that the exported demo video plays, shows the actual execution mode and is attached to the participant's public X post.
 - [ ] Collect the real lead, email, team-size category, tracks, prize account and public links.
 - [ ] Check the event window and one-submission status, validate the exact payload and obtain genuine contact consent and final confirmation.

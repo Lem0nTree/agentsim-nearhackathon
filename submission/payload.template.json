@@ -4,10 +4,13 @@
   "leadName": null,
   "email": null,
   "size": null,
-  "tracks": ["security", "agents"],
+  "tracks": [
+    "security",
+    "agents"
+  ],
   "nearAddress": null,
   "projectUrl": null,
   "demoUrl": null,
-  "idea": "AgentSIM connects AI agent identities to the people who authorize them. An owner creates a signed permission with an approved supplier, budget and expiry. The agent uses its own key to act independently; the owner can revoke future access. Our working implementation demonstrates permitted payments, blocked overspending and revoked authority. The integration architecture combines SIM-class owner signing with NEAR policy enforcement. We target agent platforms, then supported SIM/eSIM provisioning and mobile-operator distribution. The reference demo uses real software signatures and simulated settlement; hardware and live deployment claims need separate evidence. This October code baseline requires prior-work eligibility clarification for the November event.",
+  "idea": "AgentSIM limits AI agent spending with owner-signed grants, separate agent keys, scoped recipients, budgets and revocation. The product Java Card source runs in a PC simulator for the demo; a local NEAR sandbox executes a signed spend, transfer and callback. No physical product signature or public-network deployment is claimed. Earlier work is documented in the project provenance.",
   "consent": false
 }

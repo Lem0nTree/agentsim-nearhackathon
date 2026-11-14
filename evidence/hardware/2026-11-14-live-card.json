@@ -1,6 +1,8 @@
 {
   "schema": "agentsim-hardware-evidence/v1",
   "date": "2026-11-14",
+  "capabilitySnapshotAsOf": "2026-11-14T16:10:05.527Z",
+  "laterCapabilityMeasurement": "2026-11-14-native-ecc-retest.json",
   "execution": "physical card via Windows PC/SC and GlobalPlatformPro",
   "readerObserved": true,
   "protocol": "T=0",

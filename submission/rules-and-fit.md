@@ -12,7 +12,7 @@ Q-001 allows code developed from the October 19 announcement. The reusable origi
 
 ## Publication and form
 
-- The organizers require a public repository by the cutoff and access through judging. They ask teams to include a license file and allow the team to choose the license. The maintainer's choice is pending. Q-013 says the team retains its rights and grants promotional use as described there.
+- The organizers require a public repository by the cutoff and access through judging. They ask teams to include a license file and allow the team to choose the license. The maintainer selected the [MIT License](../LICENSE), which is included. Q-013 says the team retains its rights and grants promotional use as described there.
 - The participant publishes a public X post naming the hackathon and tagging @NEARProtocol and #NEARHackathon. Q-012 calls for an attached video for a local-only demo. Capture the execution mode the video actually shows.
 - Supply genuine team/contact information, track selection, a mainnet NEAR payout address and public links. Review the contact notice and exact payload. The form has an anti-spam field and handles later corrections through an organizer request. One saved submission per project.
 - The primary evidence for this project is the product README, clean-repo run evidence and dated findings. October source snapshots reside in the legacy archive and are indexed by their hashes.

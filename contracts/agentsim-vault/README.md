@@ -1,8 +1,8 @@
 # NEAR vault implementation scaffold
 
-**Not compiled, deployed or audited. No mainnet funds.**
+**Built and exercised on a local NEAR sandbox; not audited or deployed to a public network. No mainnet funds.**
 
-Compilation, deployment and runtime capability require independent verification. Direct dependency versions are pinned, but no complete lockfile or WASM is supplied because Rust/Cargo was unavailable here.
+The pinned build recipe, local runtime requirements and receipt verification are documented in `tests/near-sandbox/README.md`; `Cargo.lock` and the tested WASM are supplied. The local sandbox test does not establish public-network execution.
 
 Methods: `new(owner_key)`, `fund()`, `authorize(grant,signature)`, `execute(spend,signature)`, `control(command,signature)`, `status()`, `grant_status(grant_id)` and private `on_settle(transfer_id)`.
 

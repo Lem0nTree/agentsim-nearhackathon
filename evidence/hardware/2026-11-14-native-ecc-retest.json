@@ -1,0 +1,187 @@
+{
+  "schema": "agentsim-physical-capability/v1",
+  "startedAt": "2026-11-14T16:29:15.264Z",
+  "execution": "physical development card via Windows PC/SC and GlobalPlatformPro",
+  "probe": {
+    "packageAid": "F0414753494D06",
+    "instanceAid": "F0414753494D0601",
+    "capSha256": "29bd3f6e6007334c0f603febc72b496c76053e1d641dfb19811ead0f811f5aa3",
+    "sourceSha256": "f9945182fd21b7a1d2184d8a1bc11e62a41242cf79bc31d65ab993569e45118c"
+  },
+  "loadBlockSize": 128,
+  "loadAttempts": 1,
+  "events": [
+    "Owned diagnostic CAP loaded and instance installed; 128-byte block trial succeeded",
+    "Removed only instance created in this run",
+    "Removed only package created in this run"
+  ],
+  "noOriginalContentDeletion": true,
+  "noKeyOrLifecycleChanges": true,
+  "physicalP256SignatureProduced": false,
+  "targetIdentityMatchedLocally": true,
+  "productAppletSelectStatus": "6A82",
+  "originalPackageCount": 5,
+  "freePersistentBefore": {
+    "ff21": 44712,
+    "jcopDf25": 44712
+  },
+  "results": [
+    {
+      "id": "01",
+      "operation": "P-256 private key",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "02",
+      "operation": "P-256 public key",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "03",
+      "operation": "EC FP256 KeyPair constructor",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "04",
+      "operation": "ECDSA SHA-256 factory",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "05",
+      "operation": "ECDSA SHA-1 factory",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "06",
+      "operation": "split SHA-256 ECDSA factory",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "07",
+      "operation": "FP256 private algorithm/memory overload",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "08",
+      "operation": "FP256 transient-reset private key",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "09",
+      "operation": "ECDH plain factory",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "0A",
+      "operation": "FP224 private key",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "0B",
+      "operation": "FP384 private key",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "0C",
+      "operation": "FP521 private key",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "0D",
+      "operation": "SHA-256 abc positive control",
+      "stage": 2,
+      "exceptionKind": 0,
+      "reason": 0,
+      "data": "BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "0E",
+      "operation": "RSA2048 public-key object positive control",
+      "stage": 1,
+      "exceptionKind": 0,
+      "reason": 0,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "0F",
+      "operation": "FP256 public algorithm/memory overload",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    },
+    {
+      "id": "10",
+      "operation": "P-256 public diagnostic scalar import/sign path",
+      "stage": 1,
+      "exceptionKind": 1,
+      "reason": 3,
+      "data": "",
+      "outerStatus": "9000"
+    }
+  ],
+  "unsupportedEccCases": 14,
+  "sha256ControlPassed": true,
+  "rsaPublicObjectControlPassed": true,
+  "nativeP256": "unsupported through all tested standard Java Card ECC APIs",
+  "registryMatchesPreflight": true,
+  "freePersistentAfter": {
+    "ff21": 44864,
+    "jcopDf25": 44864
+  },
+  "memoryMatchesPreflight": false,
+  "cleanupError": "Post-test registry or memory differs from fresh preflight",
+  "completedAt": "2026-11-14T16:29:45.575Z",
+  "status": "investigate recorded error"
+}

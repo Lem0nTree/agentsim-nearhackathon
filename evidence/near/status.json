@@ -1,11 +1,15 @@
 {
   "date": "2026-11-14",
   "contractSource": "contracts/agentsim-vault",
-  "status": "source scaffold",
-  "compiledWasmVerified": false,
-  "sandboxExecutionVerified": false,
+  "status": "WASM built and executed on isolated local NEAR sandbox; no public-network deployment",
+  "compiledWasmVerified": true,
+  "sandboxExecutionVerified": true,
   "testnetDeploymentVerified": false,
   "mainnetExecutionVerified": false,
   "historicalRuntimeMetadata": "legacy research observed p256_verify_host_fn in October; no project execution follows from that observation",
-  "nextGate": "build pinned Rust contract, verify canonical cross-language vectors and sandbox outcomes, then separately authorize any public-network execution"
+  "nextGate": "independent clean rerun, failed-transfer and concurrency tests, then separately authorized public-network execution",
+  "localSandboxEvidence": "evidence/near/2026-11-14-local-sandbox.json",
+  "localSandboxProtocol": 88,
+  "localSandboxVersion": "2.14.0",
+  "localTransferAndCallbackVerified": true
 }

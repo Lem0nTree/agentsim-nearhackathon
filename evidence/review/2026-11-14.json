@@ -50,5 +50,10 @@
     "Fresh-session native harness discovery; role configurations statically validated only",
     "License choice, public visibility, actual X video and confirmed event submission"
   ],
-  "openGatesSnapshotNote": "These are review-time gates; later authenticated inventory matched the visible baseline, while FF21 and JCOP DF25 agreed at 16:10:05.527 UTC on 44,712 free persistent bytes, 152 below preflight for an undetermined reason."
+  "openGatesSnapshotNote": "These are historical review-time gates. The 16:10 memory check reported 44,712 free persistent bytes. The 16:29 physical ECC retest and the subsequent WASM build, sandbox transfer and independent review are documented in the later records.",
+  "subsequentEvidence": [
+    "../hardware/2026-11-14-native-ecc-retest.json",
+    "../near/2026-11-14-local-sandbox.json",
+    "../../harness/2026-11-14-run.md"
+  ]
 }

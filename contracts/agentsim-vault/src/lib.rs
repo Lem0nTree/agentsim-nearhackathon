@@ -1,4 +1,4 @@
-//! TESTNET SCAFFOLD: not compiled or deployed in the authoring environment.
+//! RESEARCH SCAFFOLD: compiled and exercised locally; no public-network deployment.
 //! No claim of hardware provenance, KYC, NEP-641 support, or production security.
 use near_sdk::{env, near, require, AccountId, Gas, NearToken, PanicOnDefault, Promise};
 use near_sdk::store::{LookupMap, LookupSet};
@@ -114,14 +114,14 @@ impl AgentSimVault {
         let next_nonce=state.next_nonce.checked_add(1).expect("NONCE_EXHAUSTED");
         let state=self.grants.get_mut(&spend.grant_id).unwrap();state.spent=next_spent;state.next_nonce=next_nonce;
         self.available-=amount;self.pending_total=self.pending_total.checked_add(amount).expect("OVERFLOW");self.pending.insert(transfer_id.clone(),amount);
-        // Explicit flush before measuring storage and before cross-receipt effects.
-        self.grants.flush();self.pending.flush();self.revoked.flush();
+        // Flush cached maps before measuring storage; LookupSet writes directly.
+        self.grants.flush();self.pending.flush();
         let storage_floor=env::storage_byte_cost().as_yoctonear().checked_mul(env::storage_usage() as u128).expect("OVERFLOW");
         let reserve=storage_floor.checked_add(10_000_000_000_000_000_000_000).expect("OVERFLOW");
         require!(env::account_balance().as_yoctonear()>=amount.checked_add(reserve).expect("OVERFLOW"),"STORAGE_RESERVE");
         env::log_str(&json!({"event":"agentsim_reserved","transfer_id":transfer_id,"amount":spend.amount}).to_string());
         Promise::new(receiver).transfer(NearToken::from_yoctonear(amount)).then(
-            Promise::new(env::current_account_id()).function_call("on_settle".into(),message(json!({"transfer_id":transfer_id})),NearToken::from_yoctonear(0),Gas::from_tgas(15)))
+            Promise::new(env::current_account_id()).function_call("on_settle",message(json!({"transfer_id":transfer_id})),NearToken::from_yoctonear(0),Gas::from_tgas(15)))
     }
     #[private]
     pub fn on_settle(&mut self,transfer_id:String)->bool {
@@ -166,3 +166,4 @@ impl AgentSimVault {
         require!(env::p256_verify(&bytes::<64>(signature),&digest,&self.owner_key),"OWNER_SIGNATURE");
     }
 }
+
