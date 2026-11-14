@@ -4,8 +4,8 @@
 
 - [x] The product README and dated handoff cover the protocol, local policy, scope and execution environments. [README](../README.md) · [Handoff](../docs/handoff/START-HERE.md)
 - [x] The dated source index identifies original October and November files. The chronology summarizes older threat, legal, market, SIM compatibility and pitch work. [Findings](../docs/handoff/FINDINGS.md)
-- [x] The Node reference implementation passed local cryptographic and policy tests. The historical four-test emulator suite independently verified software-generated applet signatures. [Acceptance gates](../docs/handoff/ACCEPTANCE.md)
-- [x] The product applet converted to a CAP and its Java PC/SC bridge compiled. A connected-card inspection and incomplete diagnostic load are recorded. [Card recovery record](../docs/handoff/CARD-RECOVERY.md)
+- [x] The final restricted-relayer revision passed independent review: 48 core tests, 22 off-track tests and 5 proof tests (75 total). The actual product applet signed in the PC simulator. [Restricted run guide](../tests/near-sandbox/RESTRICTED.md) · [Acceptance gates](../docs/handoff/ACCEPTANCE.md)
+- [x] The product applet converted to a CAP and its Java PC/SC bridge compiled. A connected-card diagnostic found the required native ECC unavailable; no physical product signature was obtained. [Card recovery record](../docs/handoff/CARD-RECOVERY.md)
 - [x] The project includes a draft description, a payload template, an offline validator and a demo script. [Project description](project-description.md)
 
 ## Engineering claims to check at the final revision

@@ -1,23 +1,29 @@
 # Demo script
 
-## Recorded local NEAR sandbox demo — 24 seconds
+## Recorded local restricted-relayer replay — 24 seconds
 
-**0:00–0:04 — Scope.** “AgentSIM lets an owner give an AI agent bounded spending authority. This recording uses a Java Card applet in a PC simulator and a private local NEAR sandbox.” Keep “No physical SIM; no public-chain transaction” visible.
+**0:00–0:04.** “Your agent can handle expenses with permission you control.”
 
-**0:04–0:08 — Owner grant.** “The applet signs a P-256 grant that specifies the agent, allowed recipient, limits and expiry. The sandbox vault verifies it.” The video displays a prefix of the real local signature.
+**0:04–0:08.** “The product applet signs a bounded grant in simulation.”
 
-**0:08–0:12 — Agent request.** “The agent uses its own Ed25519 key to sign the spend. A separate Ed25519 relayer signs the outer sandbox transaction.”
+**0:08–0:12.** “A fixture proposes an amount and the agent signs separately.”
 
-**0:12–0:16 — Local transfer.** “The sandbox executes the request. Its transfer receipt and callback succeed, and the receiver balance increases by the requested 10^21 yoctoNEAR in sandbox funds.”
+**0:12–0:16.** “A restricted relay submits only the permitted vault call.”
 
-**0:16–0:20 — Revocation.** “The owner signs a revocation with the same simulated applet. A subsequent agent request is rejected.”
+**0:16–0:20.** “The sandbox transfers test funds and confirms the callback.”
 
-**0:20–0:24 — Boundaries.** “The owner, agent and relayer use distinct signing roles. The recording shows no physical product signature and no public-network deployment or transfer.”
+**0:20–0:24.** “The owner revokes permission. The next spend is rejected.”
 
-The replay is [agentsim-sandbox-demo.mp4](../off-track/video-emulator/agentsim-sandbox-demo.mp4). [Sandbox evidence](../evidence/near/2026-11-14-local-sandbox.json) records canonical messages, signatures, decoded outer actions, receipt results and balance changes. Use the [sandbox run instructions](../tests/near-sandbox/README.md) to reproduce and verify them. A separate [offline policy-only clip](../off-track/video-emulator/agentsim-demo.mp4) contains no settlement.
+## Speaker notes
 
-## Physical and public-network extensions
+The product Java Card applet runs in jCardSim on a PC and signs the owner's grant and revocation. Trusted code creates the grant context and a separate Ed25519 agent key signs the spend. The proposal is a fixture. A live NEAR AI request returned HTTP 402 without a completion.
 
-Show actual card and independently verified grant/revocation signatures only after they are obtained on a supported provisioned card. The current connected card's measured ECC failures are documented in the [physical evidence](../evidence/hardware/2026-11-14-native-ecc-retest.json); they are not a product signing demonstration.
+The execute-only relay key has a finite fee allowance and is scoped to the vault. The local node rejected wrong-method, wrong-receiver, deposit and transfer actions. The contract rejected overspending and a post-revocation payment. The receiver gained 0.001 sandbox NEAR and the transfer callback succeeded.
 
-Show testnet deployment, transaction hashes, transfer and final receipt only after separately authorized public-network execution. Never describe a sandbox receipt as a public NEAR transaction. No public post, event submission or publication is implied by this draft.
+Keep “PC Java Card simulator; local NEAR sandbox; no physical SIM or public-chain transaction” visible. The [replay](../off-track/video-emulator/agentsim-restricted-relayer.mp4) is generated from the [recorded local proof](../evidence/near/2026-11-14-restricted-relayer.json), and the [guide](../tests/near-sandbox/RESTRICTED.md) explains how to repeat it.
+
+## Proposed phone experience
+
+A future compatible, provisioned SIM or eSIM in the person's phone would protect the owner key without requiring another consumer device. A phone interface would show the exact grant for approval. Neither the mobile app nor that provisioning and approval flow has been shipped or demonstrated. The connected test card's [native ECC diagnostic](../evidence/hardware/2026-11-14-native-ecc-retest.json) failed for the required algorithms; no physical product signature is claimed.
+
+Show public-network deployment, transaction hashes and final receipts only after separately authorized execution. A sandbox receipt is not a public NEAR transaction. No public post, submission or publication is implied by this draft.

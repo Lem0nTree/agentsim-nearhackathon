@@ -8,7 +8,7 @@ Q-001 allows code developed from the October 19 announcement. The reusable origi
 
 ## Track selection
 
-**AI Security & Defense** (`security`) fits the limits, replay rejection and prospective revocation enforced outside the agent. **Agent Economy** (`agents`) fits limited authority to pay an approved supplier. The owner can select multiple tracks in one entry. The current driver is deterministic. Under Q-010 testnet projects are eligible, and Q-011 makes track integration suggestions optional. Keep the demonstrated NEAR execution level explicit. [Organizer's rules and tracks](https://nearhackathon.com/HACKATHON.md)
+**AI Security & Defense** (`security`) fits the limits, replay rejection and prospective revocation enforced outside the agent. **Agent Economy** (`agents`) fits limited authority to pay an approved supplier. The owner can select multiple tracks in one entry. The local restricted-relayer run uses a deterministic fixture proposal. The proposal-only NEAR AI adapter is implemented, but the live request returned HTTP 402 and no model completion is claimed. The proposed compatible, provisioned phone SIM owner key is not a shipped mobile app or demonstrated physical signature. Under Q-010 testnet projects are eligible, and Q-011 makes track integration suggestions optional. Keep the demonstrated NEAR execution level explicit. [Organizer's rules and tracks](https://nearhackathon.com/HACKATHON.md)
 
 ## Publication and form
 
