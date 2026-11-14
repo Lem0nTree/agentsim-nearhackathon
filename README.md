@@ -2,9 +2,15 @@
 
 We tested P-256 signing on a physical SIM. With AgentSIM, you sign a budget for your personal NEAR AI agent, let it buy compute, and revoke its permission when the job is done.
 
+**Primary track · AI Security & Defense (`security`)**
+
+Suppose an instruction in a supplier’s quote tricks the agent into changing the payment address. Even a correctly signed agent request fails the vault’s recipient check. Changing the approved supplier or raising the budget takes a new P-256 grant from the owner. [Vault implementation](contracts/agentsim-vault/src/lib.rs) · [Demo and tests](src/demo.mjs)
+
 [Visit agentsimnear.xyz](https://agentsimnear.xyz/) · [30-second overview](submission/video/agentsim-overview-30s.mp4) · [Live proposal and local payment replay](submission/video/agentsim-live-demo.mp4)
 
 ![AgentSIM website introduction](docs/images/website-sections/01-hero.jpg)
+
+![Physical SIM and USB reader on the test bench](evidence/hardware/2026-11-14-physical-sim.jpg)
 
 ## Give an agent a compute budget
 
@@ -17,8 +23,6 @@ Suppose your agent needs compute from one supplier. You approve 150 credits in t
 The SIM is a small computer with its own processor and protected storage. Our Java Card applet generates the owner’s P-256 key there. After a PIN check, the applet signs the exact grant or revocation with ECDSA and SHA-256. The applet returns the signature while the private key stays on the card.
 
 ![Website diagram of SIM signing and verification](docs/images/website-sections/02-how-it-works.jpg)
-
-![Physical SIM and USB reader on the test bench](evidence/hardware/2026-11-14-physical-sim.jpg)
 
 ## How NEAR enforces the budget
 
@@ -42,6 +46,10 @@ A leaked agent key still leaves the recipient, budget and expiry fixed by the ow
 
 ![Website security bulletin](docs/images/website-sections/06-security-bulletin.jpg)
 
+## Try the local policy demo
+
+Run `npm run demo` from the repository root with Node.js 22. The local software demo settles 90 test units, then prints `NONCE` for replay, `PER_CALL` for overspending, `RECEIVER` for a changed supplier and `REVOKED` after the owner withdraws permission.
+
 ## Verify the recorded payment
 
 ```sh
@@ -49,7 +57,9 @@ npm ci --prefix tests/near-sandbox
 node tests/near-sandbox/verify-restricted.mjs evidence/near/2026-11-14-live-near-ai.json
 ```
 
-The verifier checks the signed grant, relay actions, transfer outcome and final vault state.
+The verifier checks the signed grant, relay actions, transfer outcome and final vault state. On success it prints `Verified restricted key setup, signed messages/actions, recorded node rejection codes, local receipts and policy states.`
+
+Our in-window work added the Java Card applet, PC/SC host, NEAR vault execution, restricted relayer and AI proposal flow. We reused protocol helpers and vectors from the earlier unversioned workspace.
 
 [Run guide](tests/near-sandbox/RESTRICTED.md) · [Source history](docs/handoff/FINDINGS.md) · [In-window changes](https://github.com/Lem0nTree/agentsim-nearhackathon/compare/f89603ed6aa0ff4d68e99896d53c933b43f53471...main) · [MIT License](LICENSE)
 
