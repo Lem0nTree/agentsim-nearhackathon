@@ -12,6 +12,10 @@ Suppose an instruction in a supplier’s quote tricks the agent into changing th
 
 ![Physical SIM and USB reader on the test bench](evidence/hardware/2026-11-14-physical-sim.jpg)
 
+[![Watch the 30-second AgentSIM overview](submission/video/agentsim-real-sim-poster.jpg)](submission/video/agentsim-overview-30s.mp4)
+
+[Watch the 30-second AgentSIM overview](submission/video/agentsim-overview-30s.mp4).
+
 ## Give an agent a compute budget
 
 Suppose your agent needs compute from one supplier. You approve 150 credits in total and up to 100 per purchase. Its first request for 90 goes through, leaving 60. A request for 101 exceeds the purchase limit. If you revoke the grant, even a request for 10 fails.
