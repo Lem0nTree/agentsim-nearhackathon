@@ -13,6 +13,8 @@ Requires Node.js 22+. `npm test` runs protocol and software tests. `npm run demo
 
 `npm run applet:build` requires a compatible Java Card Classic SDK and JDK: set `AGENTSIM_JC_HOME` and optionally `AGENTSIM_JAVA_HOME`. The build creates a CAP in ignored `.build/card`; it does not install anything. Supply application install data as one PIN-length byte followed by 6–16 PIN bytes, inside standard GlobalPlatform install parameters. Secure provisioning, transport and lifecycle management are operator responsibilities; this prototype has not been audited.
 
+For the command table, per-signature PIN flow and dated CAP build hashes, see the [Java Card applet reference](card/applet/README.md).
+
 For read-only inspection, set `AGENTSIM_READER` to the exact PC/SC reader name and `AGENTSIM_AID` to the expected applet AID in hexadecimal (the build uses `F0414753494D0701`), then run `npm run card:inspect`. It selects only that applet and reads its public key; missing reader, SELECT failure, card status and transport errors are surfaced. It never installs, signs, tries a PIN or substitutes an emulator. The host adapter accepts a PIN at runtime through its `sign` API; keep PINs out of logs and source. No private-key export command exists.
 
 For the video-only emulator, run `npm run offtrack:setup`, `npm run offtrack:test`, and `npm run offtrack:demo`. Setup downloads pinned `com.klinec:jcardsim:3.0.5.0` from Maven Central and checks SHA-256 `5587d55f63d0364ed4da93404595071ad56f09833ded91d7addfd860341bee6b`. It builds an isolated demo applet with public PIN `123456`; never provision that PIN to a physical card. Simulator output is not card or NEAR network proof.

@@ -8,6 +8,7 @@ Start at the [product README](../../README.md) for the runnable entry points. Ag
 2. Use the [Codex launcher](../../harness/launch.md) to start Astra. Assign Terra one outcome with the applicable [acceptance gates](ACCEPTANCE.md). Sol independently tests that revision. Bring blockers back to Astra.
 3. Read the [November 14 physical diagnostic](../../evidence/hardware/2026-11-14-native-ecc-retest.json). At 16:29 UTC all 14 standard Java Card ECC paths failed at stage 1, and both positive controls passed. The coordinator removed the temporary diagnostic, confirmed the original registry and read 44,864 free persistent bytes. The [recovery record](CARD-RECOVERY.md) explains the earlier interruption and the 44,712-byte intermediate reading.
 4. For a physical product signature, continue on a card that demonstrates the required P-256 operations through its Java Card API. Use the [harness run](../../harness/2026-11-14-run.md) and current README for the independent emulator, policy and NEAR execution results.
+5. For possible additions to the security-track demonstration, see the dated [NEAR integration options](NEAR-OPTIONS-2026-11-14.md).
 
 ## Delivery scope and deadline
 

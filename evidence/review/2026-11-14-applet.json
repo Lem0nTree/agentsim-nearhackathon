@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-14",
+  "baseCommit": "344b124fe1f4d23d911ad23199ecbbe2b6fb2fff",
+  "scope": "Java Card product applet, PC/SC transport failure handling, and independent simulator signature verification",
+  "source": "card/applet/src/agentsim/card/AgentSimApplet.java",
+  "sourceSha256": "fa9d26eca4f6c0e9e4a7292872aaff77fd5dc5ebe05bca575ce86294c81e9a40",
+  "cap": {
+    "sdk": "Java Card Classic 3.0.5u4",
+    "jdk": "8u504",
+    "sha256": "8e75cea2595d0b36f126872d5d914932edec62f341b13c92a785718310f7c31a",
+    "converterErrors": 0,
+    "converterWarnings": 0,
+    "javacWarning": "source-7 bootstrap classpath"
+  },
+  "tests": {
+    "corePassed": 39,
+    "offTrackPassed": 22,
+    "execution": "Same product Java source compiled into jCardSim on a PC",
+    "signing": "P-256 grant and revocation signatures independently verified over canonical bytes",
+    "negativeCases": [
+      "Malformed APDU header and signing-session invalidation",
+      "240-byte chunk and 4096-byte message boundaries",
+      "Public-key continuity across reset; reset and reselection clear signing authorization",
+      "Malformed PC/SC bridge response rejects queued work"
+    ]
+  },
+  "implementationAndTestFiles": [
+    "card/applet/src/agentsim/card/AgentSimApplet.java",
+    "card/host/pcsc.mjs",
+    "off-track/video-emulator/java/ProductAppletBridge.java",
+    "off-track/video-emulator/src/product-applet-signer.mjs",
+    "off-track/video-emulator/tests/pcsc-mock.test.mjs",
+    "off-track/video-emulator/tests/product-applet.test.mjs"
+  ],
+  "hardwareOperationsInThisRun": 0,
+  "previousPhysicalDiagnostic": "../hardware/2026-11-14-native-ecc-retest.json"
+}

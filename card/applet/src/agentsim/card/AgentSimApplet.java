@@ -68,8 +68,18 @@ public final class AgentSimApplet extends Applet {
 
     public void process(APDU apdu) {
         if (selectingApplet()) return;
+        byte instruction = apdu.getBuffer()[ISO7816.OFFSET_INS];
         try { processCommand(apdu); }
         catch (RuntimeException error) { active[0] = 0; total[0] = 0; pin.reset(); throw error; }
+        finally {
+            // No command needs its input after processing. Clear PIN material promptly,
+            // including on bad length or header; leave response-producing APDUs intact.
+            Util.arrayFillNonAtomic(incoming, (short)0, (short)incoming.length, (byte)0);
+            byte[] buffer = apdu.getBuffer();
+            if (instruction == (byte)0x20)
+                Util.arrayFillNonAtomic(buffer, ISO7816.OFFSET_CDATA,
+                    (short)(buffer.length - ISO7816.OFFSET_CDATA), (byte)0);
+        }
     }
     private void processCommand(APDU apdu) {
         byte[] buffer = apdu.getBuffer();
