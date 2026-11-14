@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {validateSubmission,OPEN,CLOSE} from '../scripts/validate-submission.mjs';
+const payload=()=>({requestId:'12345678-1234-4123-8123-123456789012',projectName:'Test Fixture',leadName:'Test Builder',email:'fixture@example.com',size:'1',tracks:['security'],nearAddress:'fixture.near',projectUrl:'https://github.com/example/fixture',demoUrl:'https://x.com/example/status/123',idea:'A fictional payload used only for offline schema tests.',consent:true});
+test('valid fixture only passes inside window',()=>{assert.deepEqual(validateSubmission(payload(),OPEN),[]);assert.deepEqual(validateSubmission(payload(),CLOSE),[]);assert(validateSubmission(payload(),'2026-10-21').includes('Submission window is closed'));assert(validateSubmission(payload(),'2026-11-15').length);});
+test('rejects accidental spam trap field',()=>assert(validateSubmission({...payload(),website:'https://example.com'},OPEN).some(e=>e.includes('no website'))));
+test('requires affirmative consent',()=>assert(validateSubmission({...payload(),consent:false},OPEN).some(e=>e.includes('consent'))));
+test('rejects duplicate and invented tracks',()=>{for(const tracks of [['security','security'],['bogus'],[]])assert(validateSubmission({...payload(),tracks},OPEN).some(e=>e.includes('tracks')));});
+test('testnet payout and invalid categories rejected',()=>{assert(validateSubmission({...payload(),nearAddress:'fixture.testnet'},OPEN).some(e=>e.includes('mainnet')));assert(validateSubmission({...payload(),size:'2-4'},OPEN).some(e=>e.includes('size')));});
+test('missing fields and invented values fail closed',()=>{assert(validateSubmission({},OPEN).length);assert(validateSubmission(null,OPEN).length);assert(validateSubmission({...payload(),requestId:null},OPEN).some(e=>e.includes('UUID')));});
+test('rejects non-X demo and credential URLs',()=>{assert(validateSubmission({...payload(),demoUrl:'https://example.com/demo'},OPEN).some(e=>e.includes('X post')));assert(validateSubmission({...payload(),projectUrl:'https://secret:password@example.com'},OPEN).some(e=>e.includes('valid public')));});

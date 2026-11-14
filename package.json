@@ -1,0 +1,19 @@
+{
+  "name": "agentsim-near-hackathon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "demo": "node src/demo.mjs",
+    "card:inspect": "node card/host/inspect.mjs",
+    "applet:build": "node card/applet/build.mjs",
+    "offtrack:setup": "node off-track/video-emulator/scripts/setup-sim.mjs",
+    "offtrack:test": "node --test off-track/video-emulator/tests/*.test.mjs",
+    "offtrack:demo": "node off-track/video-emulator/scripts/demo-sim.mjs",
+    "check:submission": "node scripts/validate-submission.mjs"
+  }
+}

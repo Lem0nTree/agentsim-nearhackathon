@@ -1,0 +1,28 @@
+# Submission checklist
+
+## Available for review
+
+- [x] The product README and dated handoff cover the protocol, local policy, scope and execution environments. [README](../README.md) · [Handoff](../docs/handoff/START-HERE.md)
+- [x] The dated source index identifies original October and November files. The chronology summarizes older threat, legal, market, SIM compatibility and pitch work. [Findings](../docs/handoff/FINDINGS.md)
+- [x] The Node reference implementation passed local cryptographic and policy tests. The historical four-test emulator suite independently verified software-generated applet signatures. [Acceptance gates](../docs/handoff/ACCEPTANCE.md)
+- [x] The product applet converted to a CAP and its Java PC/SC bridge compiled. A connected-card inspection and incomplete diagnostic load are recorded. [Card recovery record](../docs/handoff/CARD-RECOVERY.md)
+- [x] The project includes a draft description, a payload template, an offline validator and a demo script. [Project description](project-description.md)
+
+## Engineering claims to check at the final revision
+
+- [ ] Repeat the documented commands from a clean checkout and record environment, commit and results.
+- [ ] Verify canonical Node vectors against the built WASM and run sandbox limiting, concurrency and callback cases before claiming contract execution.
+- [ ] For a testnet settlement claim, obtain the actual deployment, transfer and negative-case outcomes.
+- [ ] For a physical product-signing claim, demonstrate a grant and revocation on the provisioned card and independently verify both.
+- [ ] Review the current device recovery state, contract administration and evidence provenance before final wording.
+
+## Event entry
+
+- [ ] Link the actual in-window work and disclose reused sources in the README.
+- [ ] Obtain the owner's chosen license, add its file, obtain publication authorization and verify unauthenticated access to the repository.
+- [ ] Verify that the exported demo video plays, shows the actual execution mode and is attached to the participant's public X post.
+- [ ] Collect the real lead, email, team-size category, tracks, prize account and public links.
+- [ ] Check the event window and one-submission status, validate the exact payload and obtain genuine contact consent and final confirmation.
+- [ ] Save the organizer's actual success receipt. Corrections to a saved entry use the organizer's request-changes process.
+
+Hardware and NEAR milestones above govern what the project can claim. The event rules establish the entry requirements. [Official rules](https://nearhackathon.com/HACKATHON.md)

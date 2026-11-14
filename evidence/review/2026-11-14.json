@@ -1,0 +1,45 @@
+{
+  "reviewedAt": "2026-11-14T16:01:00Z",
+  "workflow": {
+    "planner": "gpt-6-astra",
+    "coder": "gpt-6.1-terra",
+    "independentReviewer": "gpt-6.1-sol",
+    "blockerDecisions": "returned to the same Astra planner, repairs assigned to the same Terra coder, independently rechecked by Sol"
+  },
+  "reviewResult": "accepted; no remaining actionable findings in reviewed source and prose",
+  "tests": {
+    "core": {"command": "npm test", "passed": 39, "failed": 0},
+    "offTrack": {"command": "npm run offtrack:test", "passed": 18, "failed": 0},
+    "scope": "local software, Java Card simulator integration and mocked PC/SC transport; not physical card or NEAR execution",
+    "jdk": "8u504",
+    "javaCardSdk": "3.0.5u4"
+  },
+  "resolvedFindings": [
+    "Queued message bytes are snapshotted before asynchronous signing",
+    "Unresponsive PC/SC sessions time out and queued work rejects",
+    "Broken-pipe and stream closure errors reject without unhandled Node crashes",
+    "Actual product applet source is exercised by separate simulator integration tests",
+    "Copied submission prose reconciled with current rules and observed status"
+  ],
+  "reviewedSourceSha256": {
+    "card/host/pcsc.mjs": "a77e56702c11bbd3c90e359761ded953160ccdd879c32193d3aa213d3c20385d",
+    "card/applet/src/agentsim/card/AgentSimApplet.java": "2b0a8b134b50f50a4473646ef1fbef5b81b932935bf2ac23f2e24545a185e842"
+  },
+  "productCap": {
+    "localPath": ".build/card/agentsim/card/javacard/card.cap",
+    "sha256": "0a6cd172559bf13cfce53e3be26657f8ba6051322ed7db1ae92a3980bb9ce99e",
+    "converterErrors": 0,
+    "converterWarnings": 0,
+    "compilerNote": "javac reported the source-7 bootstrap-classpath warning",
+    "deployedToPhysicalCard": false,
+    "committedBinary": false
+  },
+  "openGates": [
+    "Connected-card inventory reconciliation after interrupted owned-probe load",
+    "Fresh physical P-256 capability measurement and actual grant/revocation signatures",
+    "Transport fragmentation within one APDU",
+    "NEAR contract WASM build, sandbox and public-network execution",
+    "Fresh-session native harness discovery; role configurations statically validated only",
+    "License choice, public visibility, actual X video and confirmed event submission"
+  ]
+}

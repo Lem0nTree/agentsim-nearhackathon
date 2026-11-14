@@ -1,0 +1,41 @@
+{
+  "schema": "agentsim-hardware-evidence/v1",
+  "date": "2026-11-14",
+  "execution": "physical card via Windows PC/SC and GlobalPlatformPro",
+  "readerObserved": true,
+  "protocol": "T=0",
+  "readOnlyChecks": {
+    "issuerSecurityDomainSelect": "9000",
+    "targetAppletSelect": "6A82",
+    "targetAppletAid": "F0414753494D0701",
+    "jcopIdentify": "9000",
+    "platformIdentifier": "J3R35101FA9E0400",
+    "unauthenticatedModuleBitmap": "not returned; no current ECC conclusion from this field"
+  },
+  "diagnosticAttempt": {
+    "startedAt": "2026-11-14T15:46:10.110Z",
+    "kind": "owned disposable ECC capability diagnostic",
+    "packageAid": "F0414753494D06",
+    "instanceAid": "F0414753494D0601",
+    "capSha256": "29bd3f6e6007334c0f603febc72b496c76053e1d641dfb19811ead0f811f5aa3",
+    "credentialSource": "previously verified local credentials; not included",
+    "authenticatedPreflightRegistry": "five original packages; no diagnostic AID collision",
+    "freePersistentBeforeBytes": 44864,
+    "installForLoadStatus": "9000",
+    "firstLoadBlock": "no response before 45-second timeout; outcome unknown",
+    "eccMatrixExecuted": false,
+    "cleanupAttempt": "authenticated inventory read timed out before any cleanup DELETE",
+    "subsequentReadOnlyReconnect": "no available readers; Windows smart-card service observed stopped",
+    "inventoryRestorationVerified": false,
+    "remainingAction": "operator reconnect, read-only SELECT, one authenticated registry and memory comparison; remove only a verified newly created diagnostic item if present",
+    "repeatLoadAuthorizedByPlanner": false
+  },
+  "currentP256Capability": "undetermined by fresh direct diagnostic; October 31 negative results remain historical evidence",
+  "physicalGrantSignatureObtained": false,
+  "physicalRevocationSignatureObtained": false,
+  "noOriginalPackageDeletion": true,
+  "noKeyChanges": true,
+  "noLifecycleOrFuseChanges": true,
+  "rawLogHandling": "authenticated logs retained only in ignored legacy .build/nearhackathon-hardware; not copied into this repository",
+  "privacy": "unique card identifiers, keys, challenges and PIN values omitted"
+}

@@ -1,0 +1,13 @@
+.build/
+node_modules/
+target/
+*.cap
+*.jar
+.env*
+*.pem
+*.key
+*.pfx
+.local/
+evidence/private/
+submission/payload.private.json
+off-track/video-emulator/output/

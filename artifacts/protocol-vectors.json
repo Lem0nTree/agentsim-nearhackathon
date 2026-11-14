@@ -1,0 +1,40 @@
+{
+  "disclosure": "Fresh software-only public test vectors. No private keys retained. Not a chain execution receipt.",
+  "ownerKey": "03bb0d2bd983b2fd1bf89c87fbdb4cf88efe0a7d5f0a3bb3717b41ce1b6125f544",
+  "grant": {
+    "chain": "testnet",
+    "vault": "agentsim-example.testnet",
+    "epoch": "0",
+    "agent": "demo",
+    "sessionKey": "f8533a913b50f2b04ff8bb4ae9a6dba3a5d7637e6334b05d625fbf4158695943",
+    "perCall": "10000000000000000000000",
+    "total": "30000000000000000000000",
+    "receiver": "receiver-example.testnet",
+    "expires": "2000000000"
+  },
+  "grantBytes": "[\"AgentSIM\",1,\"grant\",\"testnet\",\"agentsim-example.testnet\",\"0\",\"demo\",\"f8533a913b50f2b04ff8bb4ae9a6dba3a5d7637e6334b05d625fbf4158695943\",\"10000000000000000000000\",\"30000000000000000000000\",\"receiver-example.testnet\",\"2000000000\"]",
+  "grantSha256": "51dbab0a9cc16ac697c1e7e72a315aa1177022ba6fb87ade81c2bcbef19854d2",
+  "grantSignature": "e7786a572f9fb5c25bb8d60091cdbd0d66fd2e94792768af77781206481e199d0fe9713e2b2f354088277666709f67c1a8aa709aece9472aac0b1816c4f09d8d",
+  "spend": {
+    "chain": "testnet",
+    "vault": "agentsim-example.testnet",
+    "epoch": "0",
+    "grantId": "51dbab0a9cc16ac697c1e7e72a315aa1177022ba6fb87ade81c2bcbef19854d2",
+    "nonce": "0",
+    "receiver": "receiver-example.testnet",
+    "amount": "1000000000000000000000",
+    "deadline": "1999999900"
+  },
+  "spendBytes": "[\"AgentSIM\",1,\"spend\",\"testnet\",\"agentsim-example.testnet\",\"0\",\"51dbab0a9cc16ac697c1e7e72a315aa1177022ba6fb87ade81c2bcbef19854d2\",\"0\",\"receiver-example.testnet\",\"1000000000000000000000\",\"1999999900\"]",
+  "spendSignature": "a28e850fe808f3f79e696c59be4bb071b0d27feb116da3e53735cac5d4feb9d277ac6156c8b189bf8fca8efc37618e765e658210b53b4a290526e47522b13600",
+  "control": {
+    "chain": "testnet",
+    "vault": "agentsim-example.testnet",
+    "epoch": "0",
+    "nonce": "0",
+    "operation": "revoke",
+    "value": "51dbab0a9cc16ac697c1e7e72a315aa1177022ba6fb87ade81c2bcbef19854d2"
+  },
+  "controlBytes": "[\"AgentSIM\",1,\"control\",\"testnet\",\"agentsim-example.testnet\",\"0\",\"0\",\"revoke\",\"51dbab0a9cc16ac697c1e7e72a315aa1177022ba6fb87ade81c2bcbef19854d2\"]",
+  "controlSignature": "d987280bdebeb5902891a27c38b38d30cbbd22762870df66cfea27451173a0a828d24d552ffc75a6efc114b8a18b7ba8e990c856a84a90f8fdba89ea5c63af06"
+}

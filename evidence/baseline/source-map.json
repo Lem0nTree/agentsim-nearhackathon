@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-14",
+  "legacyRepositoryGitHistory": "not present locally; no verified remote AgentSIM repository found",
+  "files": [
+    {
+      "legacyPath": "README.md",
+      "sha256": "919b1f2ad81b2edf88bac3931843a9e1b3896a565e27e640c0f655e11f6baef0",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "docs/01-product.md",
+      "sha256": "2a83490a550cc63e0dd52f7842dfe946020aefd888d63cf57368651f934134c3",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "docs/02-architecture.md",
+      "sha256": "2cc073e8ab0103232225fa7e4a9c4d0b97593f305f4db690e29943a76ba9c5ed",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "docs/03-protocol.md",
+      "sha256": "b03c3633ef40f1a449aec9fb6c99e6fd1f714f3dbfdba8ee1ce2612721d6915d",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "docs/04-threat-model.md",
+      "sha256": "4a5203408f231776dd90ab9533ba8a4a62ee8a526417b05445680a880469640c",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "docs/05-near-integration.md",
+      "sha256": "f9a050972ec375ee7679c8c0dd1feb3bcf3c4e4d8504397d6310a68a439b0048",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "docs/06-sim-compatibility.md",
+      "sha256": "25978ab1ee943d0eb5cea1565060c5d3b5b760526f4a0de80524ef95614a0392",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "docs/11-mvp-readiness.md",
+      "sha256": "6f74226e6a8ee087cb73f16e6f08f01224bc5e8e66007e4be1d18435b42da174",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "src/protocol.mjs",
+      "sha256": "cb1cf100ab982655d393834155ba77aa6a88f035baf45542d59693f6abc8c73d",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "src/vault.mjs",
+      "sha256": "0f03972172f03403a925862c51cd7920542763a1290d3af65dc8e280efec3f73",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "src/owner-signer.mjs",
+      "sha256": "405373f024d70bfb3cddf87f5c59a6aafea3aab4455dc4107eb4f2ee8e161853",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "artifacts/protocol-vectors.json",
+      "sha256": "54d0f1755e545ce680a6f9b5cde155be5f92ae0b79405f57cee4959d6788c484",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "tools/globalplatformpro/memory-probe/INVESTIGATION.md",
+      "sha256": "bce9e9d79113193fee9a8dabb9b4f825edc4999ae39a390bedc35a246f672096",
+      "treatment": "summarized; raw file excluded because it contains operational values"
+    },
+    {
+      "legacyPath": "tools/globalplatformpro/ecc-retest/src/agentsim/ecc/Ecc.java",
+      "sha256": "f9945182fd21b7a1d2184d8a1bc11e62a41242cf79bc31d65ab993569e45118c",
+      "treatment": "selectively reused or referenced; see handoff"
+    },
+    {
+      "legacyPath": "applet/src/agentsim/card/AgentSimApplet.java",
+      "sha256": "a7a95da928d52ad3fa7cb342eecab705864b84a728a9729c3d76ce018a634638",
+      "treatment": "selectively reused or referenced; see handoff"
+    }
+  ]
+}

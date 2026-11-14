@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-14",
+  "contractSource": "contracts/agentsim-vault",
+  "status": "source scaffold",
+  "compiledWasmVerified": false,
+  "sandboxExecutionVerified": false,
+  "testnetDeploymentVerified": false,
+  "mainnetExecutionVerified": false,
+  "historicalRuntimeMetadata": "legacy research observed p256_verify_host_fn in October; no project execution follows from that observation",
+  "nextGate": "build pinned Rust contract, verify canonical cross-language vectors and sandbox outcomes, then separately authorize any public-network execution"
+}
