@@ -4,7 +4,7 @@ The project owner confirmed on November 14, 2026: “signing on the physical SIM
 
 A separate controlled diagnostic on November 14 found native ECC unavailable on the tested card; it did not demonstrate a product signature. The two reports do not establish whether the same card was involved. [Diagnostic record](../evidence/hardware/2026-11-14-native-ecc-retest.json)
 
-The local NEAR flow used a fixture rather than a live model completion. An authenticated NEAR AI request returned HTTP 402 with no completion. The phone approval interface and authorized provisioning/access have not been demonstrated. The local operator retains contract administrative authority, and no public-chain deployment is recorded. The PC simulator and local network results below identify their execution environments.
+An earlier NEAR AI request returned HTTP 402 with no completion. A later live NEAR AI response supplied a validated payment proposal for the [recorded local NEAR flow](../evidence/near/2026-11-14-live-near-ai.json). The proof does not independently attest provider origin. The phone approval interface and authorized provisioning/access have not been demonstrated. The live driver recorded final outcomes and receipts. A later independent RPC check matched the final key permissions, deployed code, grant state and recipient balance, while transaction history queries returned UNKNOWN_TRANSACTION. The local operator retains contract administrative authority, and no public-chain deployment is recorded. The PC simulator and local network results below identify their execution environments.
 
 ## Restricted relayer and proposals
 
@@ -15,7 +15,7 @@ Run `npm run demo:restricted -- fixture` after starting the dedicated local sand
 | Protocol and local vault | Software tests and an actual transfer on a private local NEAR sandbox, using test funds. |
 | Physical card | On November 14 a controlled diagnostic on the connected card returned `NO_SUCH_ALGORITHM` for all 14 tested ECC cases. The owned probe was removed; inventory matched baseline and free persistent memory returned to 44,864 bytes. This diagnostic did not demonstrate a product applet or physical product signature. See the [physical evidence](../evidence/hardware/2026-11-14-native-ecc-retest.json) and [recovery record](../docs/handoff/CARD-RECOVERY.md). |
 | NEAR contract | Built and tested on a private local NEAR sandbox: signed authorization, agent spend, transfer receipt and revocation. No public-network deployment or real funds. See [sandbox evidence](../evidence/near/2026-11-14-local-sandbox.json). |
-| AI proposal | The local payment flow uses a fixture. Live NEAR AI returned HTTP 402; no live completion is claimed. |
+| AI proposal | A later live response supplied the validated proposal in the [live proof](../evidence/near/2026-11-14-live-near-ai.json). An earlier request returned HTTP 402. Provider attestation is not verified. |
 | Video emulator | jCardSim on a PC, separate under `off-track/video-emulator`; public fixture PIN and ephemeral simulated key. It is not hardware evidence. |
 
 Requires Node.js 22+. `npm test` runs protocol and software tests. `npm run demo` runs the local software scenario. Baseline protocol code, public vectors and tests originate in the earlier AgentSIM research workspace. The submission validator is retained for historical offline validation, not a claim that current rules are unchanged.

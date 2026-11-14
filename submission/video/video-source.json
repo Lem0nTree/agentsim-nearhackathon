@@ -1,0 +1,11 @@
+{
+  "proofSha256": "a6ec92a57fd7d9aeaecd53fc353e41d764c47c9b458c441e79292675ac0d4317",
+  "mode": "live",
+  "proposalAmount": "1000000000000000000000",
+  "receiver": "pfunded1794691321922.test.near",
+  "executeTransactionHash": "5K5Uz1Evew8wNKsYyKQjj7wTDtgnmWzWbzu8U11mnmJz",
+  "requestedModel": "z-ai/glm-5.3-flash",
+  "returnedModel": "z-ai/glm-5.3-flash",
+  "assistantContentSha256": "04cf6df0dc252d04286e628c48fb6790dd13c447b1e1e183d87bdbd12827d901",
+  "attestation": "not verified"
+}

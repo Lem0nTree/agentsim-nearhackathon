@@ -1,0 +1,1350 @@
+{
+  "schema": "agentsim-restricted-relayer/v1",
+  "createdAt": "2026-11-14T21:22:17.190Z",
+  "scope": "local NEAR sandbox only; no public-chain transaction or physical card",
+  "appletSourceSha256": "fa9d26eca4f6c0e9e4a7292872aaff77fd5dc5ebe05bca575ce86294c81e9a40",
+  "simulatorJarSha256": "5587d55f63d0364ed4da93404595071ad56f09833ded91d7addfd860341bee6b",
+  "networkIsolation": {
+    "rpc": "http://127.0.0.1:3030",
+    "peerAddress": "127.0.0.1:24568",
+    "bootNodes": "",
+    "stunServers": [],
+    "telemetryEndpoints": [],
+    "tier1Inbound": false,
+    "tier1Outbound": false,
+    "peerOutboundDisabled": true
+  },
+  "chainId": "agentsim-local",
+  "protocolVersion": 88,
+  "sandboxVersion": {
+    "build": "2.14.0",
+    "commit": "bc4e9e8cfb03d9e82f027883055624e18576993e",
+    "rustc_version": "1.95.0",
+    "version": "2.14.0"
+  },
+  "p256HostFunction": true,
+  "mode": {
+    "mode": "live",
+    "liveInference": true,
+    "requestedModel": "z-ai/glm-5.3-flash",
+    "returnedModel": "z-ai/glm-5.3-flash",
+    "responseIdSha256": "84e23ec14c84bdc63823a3d910ffe9f16d69951043ef772d35aba544ae2b1643",
+    "responseContent": "{\"amount\": \"1000000000000000000000\", \"receiver\": \"pfunded1794691321922.test.near\"}",
+    "contentSha256": "04cf6df0dc252d04286e628c48fb6790dd13c447b1e1e183d87bdbd12827d901"
+  },
+  "policy": {
+    "receiver": "pfunded1794691321922.test.near",
+    "maxAmount": "2000000000000000000000"
+  },
+  "proposal": {
+    "amount": "1000000000000000000000",
+    "receiver": "pfunded1794691321922.test.near"
+  },
+  "roles": {
+    "owner": {
+      "algorithm": "P-256",
+      "publicKey": "02cf07949067d60669b3ad9f742f205f6d97a14df0f2745624cdabead693174b5d",
+      "source": "product applet in jCardSim"
+    },
+    "agent": {
+      "algorithm": "Ed25519",
+      "publicKey": "e244e89c8e4aea35cde6ec0c2f0231ae3534d30f09a07876eaee7caed572a9f8"
+    },
+    "relayer": {
+      "algorithm": "Ed25519",
+      "account": "rfunded1794691321922.test.near",
+      "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf"
+    },
+    "setupOperator": {
+      "account": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ"
+    },
+    "vaultOperator": {
+      "account": "vfunded1794691321922.test.near",
+      "publicKey": "ed25519:FFMR9YqHoSxF39oBdyeU9NuAisHDpvm8wXHwsPNHY8Zr"
+    }
+  },
+  "wasmSha256": "b26c7b6a9928e967e3e26c8219a8587f84982c40acfe05fa77d673317c20c3c0",
+  "deployedCodeSha256": "b26c7b6a9928e967e3e26c8219a8587f84982c40acfe05fa77d673317c20c3c0",
+  "installedKey": {
+    "nonce": "16464000000",
+    "permission": {
+      "FunctionCall": {
+        "allowance": "500000000000000000000000",
+        "method_names": [
+          "execute"
+        ],
+        "receiver_id": "vfunded1794691321922.test.near"
+      }
+    }
+  },
+  "allKeys": {
+    "block_hash": "5FV3EKUJp42fYCy2eN1aY1neXU16mkN1nxWe7DuzyAex",
+    "block_height": 16466,
+    "keys": [
+      {
+        "access_key": {
+          "nonce": 16464000000,
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "public_key": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf"
+      }
+    ]
+  },
+  "grant": {
+    "value": {
+      "chain": "agentsim-local",
+      "vault": "vfunded1794691321922.test.near",
+      "epoch": "0",
+      "agent": "fixture-agent",
+      "sessionKey": "e244e89c8e4aea35cde6ec0c2f0231ae3534d30f09a07876eaee7caed572a9f8",
+      "perCall": "2000000000000000000000",
+      "total": "3000000000000000000000",
+      "receiver": "pfunded1794691321922.test.near",
+      "expires": "1794692530"
+    },
+    "canonicalUtf8": "[\"AgentSIM\",1,\"grant\",\"agentsim-local\",\"vfunded1794691321922.test.near\",\"0\",\"fixture-agent\",\"e244e89c8e4aea35cde6ec0c2f0231ae3534d30f09a07876eaee7caed572a9f8\",\"2000000000000000000000\",\"3000000000000000000000\",\"pfunded1794691321922.test.near\",\"1794692530\"]",
+    "signature": "13080a0a721fb66a241c880920488b0131d25bdbc1dfdf06cf3fed5062227e9cb9da56875f02e4acc6d3b55236ff95d7831dc6c44a302101d01b2cb3a60baf79",
+    "id": "40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87"
+  },
+  "spend": {
+    "value": {
+      "chain": "agentsim-local",
+      "vault": "vfunded1794691321922.test.near",
+      "epoch": "0",
+      "grantId": "40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87",
+      "nonce": "0",
+      "receiver": "pfunded1794691321922.test.near",
+      "amount": "1000000000000000000000",
+      "deadline": "1794691930"
+    },
+    "canonicalUtf8": "[\"AgentSIM\",1,\"spend\",\"agentsim-local\",\"vfunded1794691321922.test.near\",\"0\",\"40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87\",\"0\",\"pfunded1794691321922.test.near\",\"1000000000000000000000\",\"1794691930\"]",
+    "signature": "674b115ed883c95c86d252418317b60400acac447cddefac15c58634f81d12caf3ec82a80061c35e72a55962861f63f62308ef986a0fab9b7d3d41903ac4f20c"
+  },
+  "revocation": {
+    "value": {
+      "chain": "agentsim-local",
+      "vault": "vfunded1794691321922.test.near",
+      "epoch": "0",
+      "nonce": "0",
+      "operation": "revoke",
+      "value": "40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87"
+    },
+    "canonicalUtf8": "[\"AgentSIM\",1,\"control\",\"agentsim-local\",\"vfunded1794691321922.test.near\",\"0\",\"0\",\"revoke\",\"40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87\"]",
+    "signature": "05064d3a61a93983aceac711785955af0db9211535f134c4ad2232bd35ab934d18faf24112e8703acc649a9120102fe8a3cea18038c67349a2228439b7487679"
+  },
+  "protocolRejects": [
+    {
+      "label": "wrong-method",
+      "layer": "protocol",
+      "expected": "MethodNameMismatch",
+      "error": {
+        "name": "HANDLER_ERROR",
+        "cause": {
+          "info": {},
+          "name": "INVALID_TRANSACTION"
+        },
+        "code": -32000,
+        "message": "Server error",
+        "data": {
+          "TxExecutionError": {
+            "InvalidTxError": {
+              "InvalidAccessKeyError": {
+                "MethodNameMismatch": {
+                  "method_name": "control"
+                }
+              }
+            }
+          }
+        }
+      },
+      "signed": {
+        "signedTxBase64": "HgAAAHJmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgBWcYO5rC6Rybtcyf/jXWFVskDlOSEEc37gSokQNAN1OgK0VNUDAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcri7VV4ydBvVLRWkrYrdSAyUueTYbMxiFAaF/I88ADGWAQAAAAIHAAAAY29udHJvbAIAAAB7fQCA9CDmtQAAAAAAAAAAAAAAAAAAAAAAAAADzTn6zNPyn2Y7u8u+by5R+IY56XAbDe1pswR+Ezr123yJUNVaQVHMP16e2gfs6Zt8U52mO9WPyitCb8L7Gi4I",
+        "transactionHash": "DSTZtp2DfYiE4rb7mYYXahzN7EndN7Chrwtoj1vVSRMY",
+        "signer": "rfunded1794691321922.test.near",
+        "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "16464000002",
+        "blockHash": "DS7hKB2iR7VMgr5MFJAvJ53AK1NHVA9StpzchzZrr653"
+      },
+      "before": {
+        "relayKey": {
+          "nonce": "16464000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996969921750401200000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      },
+      "after": {
+        "relayKey": {
+          "nonce": "16464000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996969921750401200000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      }
+    },
+    {
+      "label": "wrong-receiver",
+      "layer": "protocol",
+      "expected": "ReceiverMismatch",
+      "error": {
+        "name": "HANDLER_ERROR",
+        "cause": {
+          "info": {},
+          "name": "INVALID_TRANSACTION"
+        },
+        "code": -32000,
+        "message": "Server error",
+        "data": {
+          "TxExecutionError": {
+            "InvalidTxError": {
+              "InvalidAccessKeyError": {
+                "ReceiverMismatch": {
+                  "ak_receiver": "vfunded1794691321922.test.near",
+                  "tx_receiver": "pfunded1794691321922.test.near"
+                }
+              }
+            }
+          }
+        }
+      },
+      "signed": {
+        "signedTxBase64": "HgAAAHJmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgBWcYO5rC6Rybtcyf/jXWFVskDlOSEEc37gSokQNAN1OgK0VNUDAAAAHgAAAHBmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcjAA64pn08rjmY/a9xP+Umi9wiIsZyYzht3TcrXpjZR9AQAAAAIHAAAAZXhlY3V0ZacBAAB7InNwZW5kIjp7ImNoYWluIjoiYWdlbnRzaW0tbG9jYWwiLCJ2YXVsdCI6InZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI0MGYwNDk2M2I1MGYzYjJjMDUyNWRmOGRiMTcwN2ZmMDRkODY3ZjJmOGJjOGY1MmEyZjI0OGFiYjk4ZTljYTg3Iiwibm9uY2UiOiIwIiwicmVjZWl2ZXIiOiJwZnVuZGVkMTc5NDY5MTMyMTkyMi50ZXN0Lm5lYXIiLCJhbW91bnQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiZGVhZGxpbmUiOiIxNzk0NjkxOTMwIn0sInNpZ25hdHVyZSI6IjY3NGIxMTVlZDg4M2M5NWM4NmQyNTI0MTgzMTdiNjA0MDBhY2FjNDQ3Y2RkZWZhYzE1YzU4NjM0ZjgxZDEyY2FmM2VjODJhODAwNjFjMzVlNzJhNTU5NjI4NjFmNjNmNjIzMDhlZjk4NmEwZmFiOWI3ZDNkNDE5MDNhYzRmMjBjIn0AgPQg5rUAAAAAAAAAAAAAAAAAAAAAAAAAyKsHQBOaXeqdQgI7AqxUQr18H47HKu5ByXej8sRgTJwUFRAZYUWrSfGj2cWj3UrM4dGuG/TVkSoUwS9Bn6fcCQ==",
+        "transactionHash": "5ijBiq22qf6hoPctH88HoyT8defHDUFHkEunzHQFCDCe",
+        "signer": "rfunded1794691321922.test.near",
+        "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+        "receiver": "pfunded1794691321922.test.near",
+        "nonce": "16464000002",
+        "blockHash": "4EPPE99MbnoBM3ZBJsp2QT7rfx3d5Sw3ZwmCAzkTkdGG"
+      },
+      "before": {
+        "relayKey": {
+          "nonce": "16464000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996969921750401200000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      },
+      "after": {
+        "relayKey": {
+          "nonce": "16464000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996969921750401200000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      }
+    },
+    {
+      "label": "nonzero-deposit",
+      "layer": "protocol",
+      "expected": "DepositWithFunctionCall",
+      "error": {
+        "name": "HANDLER_ERROR",
+        "cause": {
+          "info": {},
+          "name": "INVALID_TRANSACTION"
+        },
+        "code": -32000,
+        "message": "Server error",
+        "data": {
+          "TxExecutionError": {
+            "InvalidTxError": {
+              "InvalidAccessKeyError": "DepositWithFunctionCall"
+            }
+          }
+        }
+      },
+      "signed": {
+        "signedTxBase64": "HgAAAHJmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgBWcYO5rC6Rybtcyf/jXWFVskDlOSEEc37gSokQNAN1OgK0VNUDAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcjAA64pn08rjmY/a9xP+Umi9wiIsZyYzht3TcrXpjZR9AQAAAAIHAAAAZXhlY3V0ZacBAAB7InNwZW5kIjp7ImNoYWluIjoiYWdlbnRzaW0tbG9jYWwiLCJ2YXVsdCI6InZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI0MGYwNDk2M2I1MGYzYjJjMDUyNWRmOGRiMTcwN2ZmMDRkODY3ZjJmOGJjOGY1MmEyZjI0OGFiYjk4ZTljYTg3Iiwibm9uY2UiOiIwIiwicmVjZWl2ZXIiOiJwZnVuZGVkMTc5NDY5MTMyMTkyMi50ZXN0Lm5lYXIiLCJhbW91bnQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiZGVhZGxpbmUiOiIxNzk0NjkxOTMwIn0sInNpZ25hdHVyZSI6IjY3NGIxMTVlZDg4M2M5NWM4NmQyNTI0MTgzMTdiNjA0MDBhY2FjNDQ3Y2RkZWZhYzE1YzU4NjM0ZjgxZDEyY2FmM2VjODJhODAwNjFjMzVlNzJhNTU5NjI4NjFmNjNmNjIzMDhlZjk4NmEwZmFiOWI3ZDNkNDE5MDNhYzRmMjBjIn0AgPQg5rUAAAEAAAAAAAAAAAAAAAAAAAAAQxQKYD7INyk6kK8kE+pArUCdbljYid5+CpVgmWiHgAerTDwGbFyV2lIeMK0dHpCAO87zIv51lXa9aqyHWa3NCg==",
+        "transactionHash": "EEmQtCHgtTSK8tNbAV3j6uAVJYtF27eF9xWPXyzDV2tt",
+        "signer": "rfunded1794691321922.test.near",
+        "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "16464000002",
+        "blockHash": "4EPPE99MbnoBM3ZBJsp2QT7rfx3d5Sw3ZwmCAzkTkdGG"
+      },
+      "before": {
+        "relayKey": {
+          "nonce": "16464000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996969921750401200000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      },
+      "after": {
+        "relayKey": {
+          "nonce": "16464000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996969921750401200000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      }
+    },
+    {
+      "label": "transfer-action",
+      "layer": "protocol",
+      "expected": "RequiresFullAccess",
+      "error": {
+        "name": "HANDLER_ERROR",
+        "cause": {
+          "info": {},
+          "name": "INVALID_TRANSACTION"
+        },
+        "code": -32000,
+        "message": "Server error",
+        "data": {
+          "TxExecutionError": {
+            "InvalidTxError": {
+              "InvalidAccessKeyError": "RequiresFullAccess"
+            }
+          }
+        }
+      },
+      "signed": {
+        "signedTxBase64": "HgAAAHJmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgBWcYO5rC6Rybtcyf/jXWFVskDlOSEEc37gSokQNAN1OgK0VNUDAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcoLoPHEE4bGcFVWM+svEYYVHw61KDiZ3Ve3+f1grfz9xAQAAAAMBAAAAAAAAAAAAAAAAAAAAAFiCx6efMMLuK2vP1HtDJeyIiwEFln8Ovm8Gt6uzubhWCCnVhlgMk9yG3b6hE6cqhQc18XG4MCvVpr3YObTgIgQ=",
+        "transactionHash": "Nm1CTFcotTHmLxR6H64kgFxWfjrVzbptDyfSuSKdpkn",
+        "signer": "rfunded1794691321922.test.near",
+        "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "16464000002",
+        "blockHash": "9p1PhyvPHTHXh9BKPuQHoP4v5NK16X3wkv74DY8YLCXJ"
+      },
+      "before": {
+        "relayKey": {
+          "nonce": "16464000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996969921750401200000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      },
+      "after": {
+        "relayKey": {
+          "nonce": "16464000000",
+          "permission": {
+            "FunctionCall": {
+              "allowance": "500000000000000000000000",
+              "method_names": [
+                "execute"
+              ],
+              "receiver_id": "vfunded1794691321922.test.near"
+            }
+          }
+        },
+        "relayBalance": "10000000000000000000000000",
+        "vaultBalance": "9996969921750401200000000",
+        "recipientBalance": "10000000000000000000000000",
+        "vault": {
+          "epoch": "0",
+          "controlNonce": "0",
+          "paused": false,
+          "available": "2000000000000000000000000"
+        },
+        "grant": {
+          "spent": "0",
+          "nextNonce": "0",
+          "revoked": false,
+          "epoch": "0"
+        }
+      }
+    }
+  ],
+  "states": {
+    "trustedBefore": {
+      "relayKey": {
+        "nonce": "16464000000",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "500000000000000000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vfunded1794691321922.test.near"
+          }
+        }
+      },
+      "relayBalance": "10000000000000000000000000",
+      "vaultBalance": "9996969921750401200000000",
+      "recipientBalance": "10000000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "2000000000000000000000000"
+      },
+      "grant": {
+        "spent": "0",
+        "nextNonce": "0",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "trustedAfter": {
+      "relayKey": {
+        "nonce": "16464000000",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "500000000000000000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vfunded1794691321922.test.near"
+          }
+        }
+      },
+      "relayBalance": "10000000000000000000000000",
+      "vaultBalance": "9996969921750401200000000",
+      "recipientBalance": "10000000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "2000000000000000000000000"
+      },
+      "grant": {
+        "spent": "0",
+        "nextNonce": "0",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "before": {
+      "relayKey": {
+        "nonce": "16464000000",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "500000000000000000000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vfunded1794691321922.test.near"
+          }
+        }
+      },
+      "relayBalance": "10000000000000000000000000",
+      "vaultBalance": "9996969921750401200000000",
+      "recipientBalance": "10000000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "2000000000000000000000000"
+      },
+      "grant": {
+        "spent": "0",
+        "nextNonce": "0",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "paid": {
+      "relayKey": {
+        "nonce": "16464000002",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499468486607357300000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vfunded1794691321922.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999468486607357300000000",
+      "vaultBalance": "9995969921750401200000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "overspendBefore": {
+      "relayKey": {
+        "nonce": "16464000002",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499468486607357300000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vfunded1794691321922.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999468486607357300000000",
+      "vaultBalance": "9995969921750401200000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "overspendAfter": {
+      "relayKey": {
+        "nonce": "16464000004",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499276759108631600000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vfunded1794691321922.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999276759108631600000000",
+      "vaultBalance": "9995969921750401200000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "0",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": false,
+        "epoch": "0"
+      }
+    },
+    "revokedBefore": {
+      "relayKey": {
+        "nonce": "16464000004",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499276759108631600000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vfunded1794691321922.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999276759108631600000000",
+      "vaultBalance": "9995969921750401200000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "1",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": true,
+        "epoch": "0"
+      }
+    },
+    "revokedAfter": {
+      "relayKey": {
+        "nonce": "16464000006",
+        "permission": {
+          "FunctionCall": {
+            "allowance": "499093379606266300000000",
+            "method_names": [
+              "execute"
+            ],
+            "receiver_id": "vfunded1794691321922.test.near"
+          }
+        }
+      },
+      "relayBalance": "9999093379606266300000000",
+      "vaultBalance": "9995969921750401200000000",
+      "recipientBalance": "10001000000000000000000000",
+      "vault": {
+        "epoch": "0",
+        "controlNonce": "1",
+        "paused": false,
+        "available": "1999000000000000000000000"
+      },
+      "grant": {
+        "spent": "1000000000000000000000",
+        "nextNonce": "1",
+        "revoked": true,
+        "epoch": "0"
+      }
+    }
+  },
+  "outcomes": [
+    {
+      "name": "create-account",
+      "layer": "setup",
+      "transactionHash": "5dhkziJPnTUJHLhfzFF9RrML7V5DKWnvpxrxFZEtqRwR",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "4TiyCk5P35GGZsfMKyqGm7aMNSn2RjjyAfGFJSpgqn3w",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 7524947687500,
+          "tokensBurnt": "7032494768750000000000"
+        },
+        {
+          "id": "BB7b41qLBib3jZnhvjMh6CC99c1kg3hmL7juzCV62HtQ",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Q2wAAAAAAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcg7aVgH5E26kkktWU9kxVvw3/xw4/tNrydIETa35c6q9AwAAAAADAAAASkgBFBaVRQgAAAAAAAUA07DVR0cFyaWfXduPyT/vStGIwIIq1ni7st3ZN49KaeUAAAAAAAAAAAEA8Ciw4tnIZxy1F6Lq1tsQgLZuJ/8riOopxid1VAJsQQ+s/Z2OptiAombgXAOA6GmlLiZq/4iK9n/wwDSukD07Dg==",
+        "transactionHash": "5dhkziJPnTUJHLhfzFF9RrML7V5DKWnvpxrxFZEtqRwR",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "108",
+        "blockHash": "zyohiCpjzM9RqTAPQk3edHUzNdgFcDBZGfSxxgDMZfa"
+      }
+    },
+    {
+      "name": "create-account",
+      "layer": "setup",
+      "transactionHash": "7WV3fb7WkqsDPzSHQgqbWdo124oxh6HgdbtMkjQa32NC",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "pfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "C1v9ffbys69zGjaQmde8R7giChYjzq8P15xhjRo5oSd6",
+          "executor": "pfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 7524947687500,
+          "tokensBurnt": "7032494768750000000000"
+        },
+        {
+          "id": "5jP2CZ3rm8DQExaSZiPPgRnAHTRUgqk3kmW99ekYSJVB",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Q24AAAAAAAAAHgAAAHBmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcur8Oz+ClC4W3IPG5fqPrHiZ4d8XBOKP90X+torwmkKeAwAAAAADAAAASkgBFBaVRQgAAAAAAAUAjKMgZxrNkzQRSUAHtix9ZVChl8LV9JFzfk+FJlsKBxAAAAAAAAAAAAEAbeOcA4rm4jyxrIkA+5LqpxEIJo3EwINuBWEQA45RIJbfTvpg00S0IdrruiY5goETYjPVPAzCgsbjZW+SaOSqAA==",
+        "transactionHash": "7WV3fb7WkqsDPzSHQgqbWdo124oxh6HgdbtMkjQa32NC",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "pfunded1794691321922.test.near",
+        "nonce": "110",
+        "blockHash": "GpHUcPonWLGZNCVQt16tKxJqeFwqyTJoo63wwwQoqNVK"
+      }
+    },
+    {
+      "name": "create-restricted-relay",
+      "layer": "setup",
+      "transactionHash": "CxiyxG3YuhdC5HN1em5LJDKuLHVv9GecWZjoiGno8W3A",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "rfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "8GTcsaAMeEu1ehSyagicHdsdbprxgXNV77G1cU3Pbqsu",
+          "executor": "rfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 7525415590148,
+          "tokensBurnt": "7032541559014800000000"
+        },
+        {
+          "id": "8t31fGxVPXfqMZ8gmooSZSwZwXUQksTStTwn2dCdMo3k",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Q3AAAAAAAAAAHgAAAHJmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhciLj37wFGI+D13erWn8IQjL6hZCLBYoqksGAIgWz1Oe8AwAAAAADAAAASkgBFBaVRQgAAAAAAAUAVnGDuawukcm7XMn/411hVbJA5TkhBHN+4EqJEDQDdToAAAAAAAAAAAABAACA0HZm5w3haQAAAAAAAB4AAAB2ZnVuZGVkMTc5NDY5MTMyMTkyMi50ZXN0Lm5lYXIBAAAABwAAAGV4ZWN1dGUAjjMuhVcUDLyCo9v5nzgJADnSihzR2Zes+ahi914R93uWDERlJcipk25Mtl4SlscQz7oBTyTHASx/EZJ7rY59AA==",
+        "transactionHash": "CxiyxG3YuhdC5HN1em5LJDKuLHVv9GecWZjoiGno8W3A",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "rfunded1794691321922.test.near",
+        "nonce": "112",
+        "blockHash": "3MCPtUUVVh5eG8oB5gKTWq5qAzo7Se4x1m2DcxhL5Kvb"
+      }
+    },
+    {
+      "name": "deploy",
+      "layer": "setup",
+      "transactionHash": "2z9BU7Etg1UfPw9TSBdDCXqzU7x9H4ssdh8sxpqPhUTW",
+      "signer": "vfunded1794691321922.test.near",
+      "publicKey": "ed25519:FFMR9YqHoSxF39oBdyeU9NuAisHDpvm8wXHwsPNHY8Zr",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "64XFd5ZySTaeREaFD7CHuxhnPMN46CSy3ckyWkUmtWuv",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 23351113250016,
+          "tokensBurnt": "2335111325001600000000"
+        },
+        {
+          "id": "8SoP2KnYvWnWHMmgeDHmbkyApQ5V4MUboQ1AREf7TGGR",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {}
+    },
+    {
+      "name": "new",
+      "layer": "setup",
+      "transactionHash": "3zJAtb9dJDodA5gisFwcKwS66xUcFLZgtsmBMMpyD6q9",
+      "signer": "vfunded1794691321922.test.near",
+      "publicKey": "ed25519:FFMR9YqHoSxF39oBdyeU9NuAisHDpvm8wXHwsPNHY8Zr",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "GLpeiAZboECJbW38EN52NsPx5zaMxE9HBCgdVTNFRfev",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 2124529447279,
+          "tokensBurnt": "212452944727900000000"
+        },
+        {
+          "id": "HRspPPRfaKxDdc1gznXqJmeXVK8yoBaNf9EAFEZALYb3",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "HgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgDTsNVHRwXJpZ9d24/JP+9K0YjAgirWeLuy3dk3j0pp5QSZndQDAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcqB7zSUEJliBOJ8aRJZ9UKD7CXglTLhE9+PR7pvzpXLbAQAAAAIDAAAAbmV3UgAAAHsib3duZXJfa2V5IjoiMDJjZjA3OTQ5MDY3ZDYwNjY5YjNhZDlmNzQyZjIwNWY2ZDk3YTE0ZGYwZjI3NDU2MjRjZGFiZWFkNjkzMTc0YjVkIn0AgPQg5rUAAAAAAAAAAAAAAAAAAAAAAAAAh+AxAWJJ97jC7C8wBuTxF1FYb0xaMtc5k80a54snq7MBOTxYn+twEBFwilqnxnKoj1vi9bf2UlcAmQMZzqGhDQ==",
+        "transactionHash": "3zJAtb9dJDodA5gisFwcKwS66xUcFLZgtsmBMMpyD6q9",
+        "signer": "vfunded1794691321922.test.near",
+        "publicKey": "ed25519:FFMR9YqHoSxF39oBdyeU9NuAisHDpvm8wXHwsPNHY8Zr",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "16452000004",
+        "blockHash": "BoTitQxXMMPpHBxbT2XcKtNcG2Z5Ct1z7KuyKgcJamSi"
+      }
+    },
+    {
+      "name": "fund",
+      "layer": "setup",
+      "transactionHash": "8V6CyK9r5Cjde4rLgEukqkoAgjC1jd46U2EGdxP6EwmJ",
+      "signer": "vfunded1794691321922.test.near",
+      "publicKey": "ed25519:FFMR9YqHoSxF39oBdyeU9NuAisHDpvm8wXHwsPNHY8Zr",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "5Xbfyytw789ahb3GedU3AWNEixQM75NjMGug7rqJQ5cK",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 1483145078788,
+          "tokensBurnt": "148314507878800000000"
+        },
+        {
+          "id": "BtVPrrB1PUiH7iYiqxJ1MhmqyT7x6PHZN6ZTGHvi7Qkz",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {},
+      "signed": {
+        "signedTxBase64": "HgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgDTsNVHRwXJpZ9d24/JP+9K0YjAgirWeLuy3dk3j0pp5QaZndQDAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcnH5PT5izd5sePJDT4aV+ektaPd43hirCV59U+du0pFyAQAAAAIEAAAAZnVuZAIAAAB7fQCA9CDmtQAAAAAAQtuZnTeEpwEAAAAAAABEx5iP1/9TG2kAM3h7mkcxXCGPETQnzbdkPo9OV2vRD6sERbfx7O2luSINNpMV61wywgB+FvKDBbM1CfG+veoO",
+        "transactionHash": "8V6CyK9r5Cjde4rLgEukqkoAgjC1jd46U2EGdxP6EwmJ",
+        "signer": "vfunded1794691321922.test.near",
+        "publicKey": "ed25519:FFMR9YqHoSxF39oBdyeU9NuAisHDpvm8wXHwsPNHY8Zr",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "16452000006",
+        "blockHash": "8fuVuF2ygt91yrcBkWVUUsowu8zKC7JcZmnVYkveHuTF"
+      }
+    },
+    {
+      "name": "authorize",
+      "layer": "setup",
+      "transactionHash": "GhZEohPkHHLT2yb8kFFoccZrX4DQfezUK1RX4Fmk4YFh",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": "IjQwZjA0OTYzYjUwZjNiMmMwNTI1ZGY4ZGIxNzA3ZmYwNGQ4NjdmMmY4YmM4ZjUyYTJmMjQ4YWJiOThlOWNhODci"
+      },
+      "receipts": [
+        {
+          "id": "6zhpsDKfQARPaKenPzaYXRQP9swgvMHmooKic28vwz7x",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": "IjQwZjA0OTYzYjUwZjNiMmMwNTI1ZGY4ZGIxNzA3ZmYwNGQ4NjdmMmY4YmM4ZjUyYTJmMjQ4YWJiOThlOWNhODci"
+          },
+          "logs": [
+            "{\"event\":\"agentsim_grant\",\"grant_id\":\"40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87\"}"
+          ],
+          "gasBurnt": 3263146304023,
+          "tokensBurnt": "326314630402300000000"
+        },
+        {
+          "id": "4MdZEuz2MCknfXrekcZUekbXpPRnWyFSHqGd3KtecooV",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "grant": {
+          "chain": "agentsim-local",
+          "vault": "vfunded1794691321922.test.near",
+          "epoch": "0",
+          "agent": "fixture-agent",
+          "sessionKey": "e244e89c8e4aea35cde6ec0c2f0231ae3534d30f09a07876eaee7caed572a9f8",
+          "perCall": "2000000000000000000000",
+          "total": "3000000000000000000000",
+          "receiver": "pfunded1794691321922.test.near",
+          "expires": "1794692530"
+        },
+        "signature": "13080a0a721fb66a241c880920488b0131d25bdbc1dfdf06cf3fed5062227e9cb9da56875f02e4acc6d3b55236ff95d7831dc6c44a302101d01b2cb3a60baf79"
+      },
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Q3IAAAAAAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhctZ6wBY5IvU3JIm0JUJWLAB4wu/Eia6N2J8VfL2Vo4tlAQAAAAIJAAAAYXV0aG9yaXpl1wEAAHsiZ3JhbnQiOnsiY2hhaW4iOiJhZ2VudHNpbS1sb2NhbCIsInZhdWx0IjoidmZ1bmRlZDE3OTQ2OTEzMjE5MjIudGVzdC5uZWFyIiwiZXBvY2giOiIwIiwiYWdlbnQiOiJmaXh0dXJlLWFnZW50Iiwic2Vzc2lvbktleSI6ImUyNDRlODljOGU0YWVhMzVjZGU2ZWMwYzJmMDIzMWFlMzUzNGQzMGYwOWEwNzg3NmVhZWU3Y2FlZDU3MmE5ZjgiLCJwZXJDYWxsIjoiMjAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRvdGFsIjoiMzAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInJlY2VpdmVyIjoicGZ1bmRlZDE3OTQ2OTEzMjE5MjIudGVzdC5uZWFyIiwiZXhwaXJlcyI6IjE3OTQ2OTI1MzAifSwic2lnbmF0dXJlIjoiMTMwODBhMGE3MjFmYjY2YTI0MWM4ODA5MjA0ODhiMDEzMWQyNWJkYmMxZGZkZjA2Y2YzZmVkNTA2MjIyN2U5Y2I5ZGE1Njg3NWYwMmU0YWNjNmQzYjU1MjM2ZmY5NWQ3ODMxZGM2YzQ0YTMwMjEwMWQwMWIyY2IzYTYwYmFmNzkifQCA9CDmtQAAAAAAAAAAAAAAAAAAAAAAAABk9nnb8qPdjtgmB73fGKbPoQL8wk4LvrnsPmoB62Qs+GiUpjjUb4tfMdgNQeu6qGRVDkFQIeGNzqgMDMQqfA0N",
+        "transactionHash": "GhZEohPkHHLT2yb8kFFoccZrX4DQfezUK1RX4Fmk4YFh",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "114",
+        "blockHash": "FSEotGSAiGrrdtF5ShxnwQNeQz3rAqrcH4YDXCeZLJrG"
+      }
+    },
+    {
+      "name": "execute",
+      "layer": "contract",
+      "transactionHash": "5K5Uz1Evew8wNKsYyKQjj7wTDtgnmWzWbzu8U11mnmJz",
+      "signer": "rfunded1794691321922.test.near",
+      "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": "dHJ1ZQ=="
+      },
+      "receipts": [
+        {
+          "id": "5fmBozAfZ83DHYrvZ1zbxmHuvsfNAADiJXoFtLyphh2D",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessReceiptId": "Gv48HCgXkXnkvCkSEbe8WDKMt1RxBimuYBdjd14EXZcy"
+          },
+          "logs": [
+            "{\"event\":\"agentsim_reserved\",\"transfer_id\":\"1280ce5ff9594bb5176c2427f698c034d7122f543e5b5acda9e97c853b51eb60\",\"amount\":\"1000000000000000000000\"}"
+          ],
+          "gasBurnt": 3019537599067,
+          "tokensBurnt": "301953759906700000000"
+        },
+        {
+          "id": "8HmUZDAWzwFHD65KMWeh7ndmQnntFe9XAzf3NT5wW9dv",
+          "executor": "pfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "22318256250000000000"
+        },
+        {
+          "id": "Ct2q9qr8PHYF1ATvWCqu2GoKmJvMnQiruowFfBC5mAvV",
+          "executor": "rfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        },
+        {
+          "id": "Gv48HCgXkXnkvCkSEbe8WDKMt1RxBimuYBdjd14EXZcy",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": "dHJ1ZQ=="
+          },
+          "logs": [
+            "{\"event\":\"agentsim_settled\",\"transfer_id\":\"1280ce5ff9594bb5176c2427f698c034d7122f543e5b5acda9e97c853b51eb60\",\"success\":true}"
+          ],
+          "gasBurnt": 1743850267410,
+          "tokensBurnt": "174385026741000000000"
+        },
+        {
+          "id": "HXk6dG5cEsbc1qfzkgtrEKV2vEFXT48xUoKnAh4C5vBa",
+          "executor": "rfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        },
+        {
+          "id": "2JsaKZ8vrtvjgmGH5cGgfeRAcjQBRRizpanmHJwLNrxX",
+          "executor": "rfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "spend": {
+          "chain": "agentsim-local",
+          "vault": "vfunded1794691321922.test.near",
+          "epoch": "0",
+          "grantId": "40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87",
+          "nonce": "0",
+          "receiver": "pfunded1794691321922.test.near",
+          "amount": "1000000000000000000000",
+          "deadline": "1794691930"
+        },
+        "signature": "674b115ed883c95c86d252418317b60400acac447cddefac15c58634f81d12caf3ec82a80061c35e72a55962861f63f62308ef986a0fab9b7d3d41903ac4f20c"
+      },
+      "signed": {
+        "signedTxBase64": "HgAAAHJmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgBWcYO5rC6Rybtcyf/jXWFVskDlOSEEc37gSokQNAN1OgK0VNUDAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcuUVeZ6HxAcI7SV0+fIM1Evt5NNlQwbPFuHMW0ni9OhnAQAAAAIHAAAAZXhlY3V0ZacBAAB7InNwZW5kIjp7ImNoYWluIjoiYWdlbnRzaW0tbG9jYWwiLCJ2YXVsdCI6InZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI0MGYwNDk2M2I1MGYzYjJjMDUyNWRmOGRiMTcwN2ZmMDRkODY3ZjJmOGJjOGY1MmEyZjI0OGFiYjk4ZTljYTg3Iiwibm9uY2UiOiIwIiwicmVjZWl2ZXIiOiJwZnVuZGVkMTc5NDY5MTMyMTkyMi50ZXN0Lm5lYXIiLCJhbW91bnQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiZGVhZGxpbmUiOiIxNzk0NjkxOTMwIn0sInNpZ25hdHVyZSI6IjY3NGIxMTVlZDg4M2M5NWM4NmQyNTI0MTgzMTdiNjA0MDBhY2FjNDQ3Y2RkZWZhYzE1YzU4NjM0ZjgxZDEyY2FmM2VjODJhODAwNjFjMzVlNzJhNTU5NjI4NjFmNjNmNjIzMDhlZjk4NmEwZmFiOWI3ZDNkNDE5MDNhYzRmMjBjIn0AgPQg5rUAAAAAAAAAAAAAAAAAAAAAAAAAz8OdgjYfGayWy3qop+WXvJgWXsQqpPILs6b41Kjr5whdr0ZvT8PprkoowmLLf5OielpFd7hclXufyYr+GS5WBg==",
+        "transactionHash": "5K5Uz1Evew8wNKsYyKQjj7wTDtgnmWzWbzu8U11mnmJz",
+        "signer": "rfunded1794691321922.test.near",
+        "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "16464000002",
+        "blockHash": "GRFMck6M2JMUwnguv8VpfGGzzTJ6VhQX1Hi6VxHUd2UN"
+      }
+    },
+    {
+      "name": "execute-overspend",
+      "layer": "contract",
+      "transactionHash": "FoLZVzA1TPF5DxabjzdhTmwfrmkieLBnoRNQYERtCoGb",
+      "signer": "rfunded1794691321922.test.near",
+      "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "Failure": {
+          "ActionError": {
+            "index": 0,
+            "kind": {
+              "FunctionCallError": {
+                "ExecutionError": "Smart contract panicked: PER_CALL"
+              }
+            }
+          }
+        }
+      },
+      "receipts": [
+        {
+          "id": "SCS5FLmwQBUHtrczXVCMejdn4eZvJ4ep5itgkshKHZw",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "Failure": {
+              "ActionError": {
+                "index": 0,
+                "kind": {
+                  "FunctionCallError": {
+                    "ExecutionError": "Smart contract panicked: PER_CALL"
+                  }
+                }
+              }
+            }
+          },
+          "logs": [],
+          "gasBurnt": 1588711489807,
+          "tokensBurnt": "158871148980700000000"
+        },
+        {
+          "id": "HEQKYkK9iGSA7ny2RLYRP6t5TMLfDrDi8UiHaBHWwiJv",
+          "executor": "rfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "spend": {
+          "chain": "agentsim-local",
+          "vault": "vfunded1794691321922.test.near",
+          "epoch": "0",
+          "grantId": "40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87",
+          "nonce": "1",
+          "receiver": "pfunded1794691321922.test.near",
+          "amount": "3000000000000000000000",
+          "deadline": "1794691930"
+        },
+        "signature": "5102cc9f581dbb0f141adcc942532142fe01fa4efe4a2b9d21c4e220f5ef5c71e53bb58cae7ff2039f04d982cee869b165fe026f6cc8d1e34bf81e2d0280830e"
+      },
+      "signed": {
+        "signedTxBase64": "HgAAAHJmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgBWcYO5rC6Rybtcyf/jXWFVskDlOSEEc37gSokQNAN1OgS0VNUDAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcngLce8VTWY3qpY8Cgbbor0Qwxl/ViKCR852xLnF04UnAQAAAAIHAAAAZXhlY3V0ZacBAAB7InNwZW5kIjp7ImNoYWluIjoiYWdlbnRzaW0tbG9jYWwiLCJ2YXVsdCI6InZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI0MGYwNDk2M2I1MGYzYjJjMDUyNWRmOGRiMTcwN2ZmMDRkODY3ZjJmOGJjOGY1MmEyZjI0OGFiYjk4ZTljYTg3Iiwibm9uY2UiOiIxIiwicmVjZWl2ZXIiOiJwZnVuZGVkMTc5NDY5MTMyMTkyMi50ZXN0Lm5lYXIiLCJhbW91bnQiOiIzMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiZGVhZGxpbmUiOiIxNzk0NjkxOTMwIn0sInNpZ25hdHVyZSI6IjUxMDJjYzlmNTgxZGJiMGYxNDFhZGNjOTQyNTMyMTQyZmUwMWZhNGVmZTRhMmI5ZDIxYzRlMjIwZjVlZjVjNzFlNTNiYjU4Y2FlN2ZmMjAzOWYwNGQ5ODJjZWU4NjliMTY1ZmUwMjZmNmNjOGQxZTM0YmY4MWUyZDAyODA4MzBlIn0AgPQg5rUAAAAAAAAAAAAAAAAAAAAAAAAAe1Ivfwq8aNL2sxOGnC5NDf86PNr5iCHeG79MObX38Lr7sazisFFCN6Z5zloP1nPGQGnuvYU2In6nDw18lal0Cw==",
+        "transactionHash": "FoLZVzA1TPF5DxabjzdhTmwfrmkieLBnoRNQYERtCoGb",
+        "signer": "rfunded1794691321922.test.near",
+        "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "16464000004",
+        "blockHash": "95c3f4F5KNNEPZWwZoRLU3AUCWSmJgUunvVbEeMUTojk"
+      }
+    },
+    {
+      "name": "control",
+      "layer": "setup",
+      "transactionHash": "2PnAN5tMFXMzJR836Af7VrT6FF84UwM7D5TpJJaakqvP",
+      "signer": "test.near",
+      "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "SuccessValue": ""
+      },
+      "receipts": [
+        {
+          "id": "7pZjruNefeZ76ccpbdkq9sc5racQuxuaxKaftz8DaGfk",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [
+            "{\"event\":\"agentsim_control\",\"operation\":\"revoke\",\"epoch\":\"0\"}"
+          ],
+          "gasBurnt": 3052168848668,
+          "tokensBurnt": "305216884866800000000"
+        },
+        {
+          "id": "EyS49AQgXue7UYM7j5xuVF35UQf8PY6ZV7UB1MAge1Xs",
+          "executor": "test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "command": {
+          "chain": "agentsim-local",
+          "vault": "vfunded1794691321922.test.near",
+          "epoch": "0",
+          "nonce": "0",
+          "operation": "revoke",
+          "value": "40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87"
+        },
+        "signature": "05064d3a61a93983aceac711785955af0db9211535f134c4ad2232bd35ab934d18faf24112e8703acc649a9120102fe8a3cea18038c67349a2228439b7487679"
+      },
+      "signed": {
+        "signedTxBase64": "CQAAAHRlc3QubmVhcgAW6mxITa8z3j4AkxZRXXg27Z2yfBw3bCQuU0uwocf6Q3QAAAAAAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhciuQNlNpwtU/NxLISdAr9fmnMX1LdidPYmocXB71xes7AQAAAAIHAAAAY29udHJvbFYBAAB7ImNvbW1hbmQiOnsiY2hhaW4iOiJhZ2VudHNpbS1sb2NhbCIsInZhdWx0IjoidmZ1bmRlZDE3OTQ2OTEzMjE5MjIudGVzdC5uZWFyIiwiZXBvY2giOiIwIiwibm9uY2UiOiIwIiwib3BlcmF0aW9uIjoicmV2b2tlIiwidmFsdWUiOiI0MGYwNDk2M2I1MGYzYjJjMDUyNWRmOGRiMTcwN2ZmMDRkODY3ZjJmOGJjOGY1MmEyZjI0OGFiYjk4ZTljYTg3In0sInNpZ25hdHVyZSI6IjA1MDY0ZDNhNjFhOTM5ODNhY2VhYzcxMTc4NTk1NWFmMGRiOTIxMTUzNWYxMzRjNGFkMjIzMmJkMzVhYjkzNGQxOGZhZjI0MTEyZTg3MDNhY2M2NDlhOTEyMDEwMmZlOGEzY2VhMTgwMzhjNjczNDlhMjIyODQzOWI3NDg3Njc5In0AgPQg5rUAAAAAAAAAAAAAAAAAAAAAAAAA4o3trf09B2hMjtifUibIy8kxeNWif6Cs6zRI2mBf0dcGcMdITNM4puE+cQYnJXpfmRWdneCX9iYOfgpotehvAg==",
+        "transactionHash": "2PnAN5tMFXMzJR836Af7VrT6FF84UwM7D5TpJJaakqvP",
+        "signer": "test.near",
+        "publicKey": "ed25519:2YTJ4m4vwCReLSKsvLaiwMbbbcRJoMx8eBbivPeArZsQ",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "116",
+        "blockHash": "3w45EcppwHdhyUzKNxe44tTJenaURVsH4rBQ9eAzjRbg"
+      }
+    },
+    {
+      "name": "execute-revoked",
+      "layer": "contract",
+      "transactionHash": "6NDmdY2BPSEnksCnsJwZnapQqtVXNDqcHRFJms5Y8f8Q",
+      "signer": "rfunded1794691321922.test.near",
+      "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+      "receiver": "vfunded1794691321922.test.near",
+      "status": {
+        "Failure": {
+          "ActionError": {
+            "index": 0,
+            "kind": {
+              "FunctionCallError": {
+                "ExecutionError": "Smart contract panicked: REVOKED"
+              }
+            }
+          }
+        }
+      },
+      "receipts": [
+        {
+          "id": "EopNLxV55xh2UEpo9gdAuXthGYvTYH7zVz28voaVhKag",
+          "executor": "vfunded1794691321922.test.near",
+          "status": {
+            "Failure": {
+              "ActionError": {
+                "index": 0,
+                "kind": {
+                  "FunctionCallError": {
+                    "ExecutionError": "Smart contract panicked: REVOKED"
+                  }
+                }
+              }
+            }
+          },
+          "logs": [],
+          "gasBurnt": 1505231526203,
+          "tokensBurnt": "150523152620300000000"
+        },
+        {
+          "id": "6VK4tKjGPXdFwamE5TY98pE3qykxbuYgJpbwKpnahNLG",
+          "executor": "rfunded1794691321922.test.near",
+          "status": {
+            "SuccessValue": ""
+          },
+          "logs": [],
+          "gasBurnt": 223182562500,
+          "tokensBurnt": "0"
+        }
+      ],
+      "args": {
+        "spend": {
+          "chain": "agentsim-local",
+          "vault": "vfunded1794691321922.test.near",
+          "epoch": "0",
+          "grantId": "40f04963b50f3b2c0525df8db1707ff04d867f2f8bc8f52a2f248abb98e9ca87",
+          "nonce": "1",
+          "receiver": "pfunded1794691321922.test.near",
+          "amount": "1000000000000000000000",
+          "deadline": "1794691930"
+        },
+        "signature": "555de06e1e80864ce3ce16b8c8c2cb2e8f9ea31faf358a7e26b35fd6b2990a806c5217c8a47f46d2a2c2f0719fb06660482ca87b7768b95214a75e1d43ec2e09"
+      },
+      "signed": {
+        "signedTxBase64": "HgAAAHJmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhcgBWcYO5rC6Rybtcyf/jXWFVskDlOSEEc37gSokQNAN1Oga0VNUDAAAAHgAAAHZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhctsjw38cbax5Jizt6XUnbvX7kkL8jp2DbdxJM9MpnUdQAQAAAAIHAAAAZXhlY3V0ZacBAAB7InNwZW5kIjp7ImNoYWluIjoiYWdlbnRzaW0tbG9jYWwiLCJ2YXVsdCI6InZmdW5kZWQxNzk0NjkxMzIxOTIyLnRlc3QubmVhciIsImVwb2NoIjoiMCIsImdyYW50SWQiOiI0MGYwNDk2M2I1MGYzYjJjMDUyNWRmOGRiMTcwN2ZmMDRkODY3ZjJmOGJjOGY1MmEyZjI0OGFiYjk4ZTljYTg3Iiwibm9uY2UiOiIxIiwicmVjZWl2ZXIiOiJwZnVuZGVkMTc5NDY5MTMyMTkyMi50ZXN0Lm5lYXIiLCJhbW91bnQiOiIxMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiZGVhZGxpbmUiOiIxNzk0NjkxOTMwIn0sInNpZ25hdHVyZSI6IjU1NWRlMDZlMWU4MDg2NGNlM2NlMTZiOGM4YzJjYjJlOGY5ZWEzMWZhZjM1OGE3ZTI2YjM1ZmQ2YjI5OTBhODA2YzUyMTdjOGE0N2Y0NmQyYTJjMmYwNzE5ZmIwNjY2MDQ4MmNhODdiNzc2OGI5NTIxNGE3NWUxZDQzZWMyZTA5In0AgPQg5rUAAAAAAAAAAAAAAAAAAAAAAAAAoDVBHdK1N/mhrMI7ndYtTXOnwIrZYY/MOaca/V874N5kj58SUibghaabOJdzT7ua8bYqi2BWVCsZ6OiCLdxcBA==",
+        "transactionHash": "6NDmdY2BPSEnksCnsJwZnapQqtVXNDqcHRFJms5Y8f8Q",
+        "signer": "rfunded1794691321922.test.near",
+        "publicKey": "ed25519:6pSTP8ChXR3eSUvYb8aqBMbiXEQm5Txoea9waXGZ6JMf",
+        "receiver": "vfunded1794691321922.test.near",
+        "nonce": "16464000006",
+        "blockHash": "FkRv6JkjJ4jPq7K2bGhRQAYEj8jQiLSnseHmzju1TkfR"
+      }
+    }
+  ]
+}

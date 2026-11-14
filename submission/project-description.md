@@ -6,7 +6,7 @@ AgentSIM is designed to give you control of a personal NEAR AI agent from your p
 
 You set a recipient, per-payment limit, total budget and expiry, and can revoke the grant. A separate Ed25519 agent session key signs each spend and a restricted relayer submits it to the vault. A handset approval interface has not been shipped. Any identity link requires consent and an appropriate operator. A signature alone is not KYC or proof of identity.
 
-On November 14, 2026, the project owner confirmed signing on a physical SIM. A controlled local NEAR run transferred 0.001 test NEAR and completed the callback. Four forbidden relay actions, overspending and a post-revocation payment were rejected. [Implementation and verification](../docs/VERIFICATION.md) · [Replay](../off-track/video-emulator/agentsim-restricted-relayer.mp4)
+On November 14, 2026, the project owner confirmed signing on a physical SIM. A live NEAR AI response drove a controlled local NEAR run that transferred 0.001 test NEAR and completed the callback. Four forbidden relay actions, overspending and a post-revocation payment were rejected. [Implementation and verification](../docs/VERIFICATION.md) · [Live replay](video/agentsim-live-demo.mp4) · [Earlier fixture replay](../off-track/video-emulator/agentsim-restricted-relayer.mp4)
 
 ## Implementation and provenance
 

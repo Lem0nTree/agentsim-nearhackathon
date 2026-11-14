@@ -1,0 +1,41 @@
+1
+00:00:00,000 --> 00:00:09,000
+Owner control for personal NEAR AI agents.
+Buy one compute job for 0.001 test NEAR.
+
+2
+00:00:09,000 --> 00:00:18,000
+The project owner confirmed physical SIM signing.
+Owner report, 14 Nov 2026. Independent verification not supplied.
+
+3
+00:00:18,000 --> 00:00:27,000
+P-256 owner grant: recipient, budget and expiry.
+PC applet grant signature: 13080a0a721fb66a241c...
+
+4
+00:00:27,000 --> 00:00:36,000
+0.001 test NEAR | z-ai/glm-5.3-flash
+Receiver: pfunded1794691321922.test.near
+Raw amount: 1000000000000000000000 yoctoNEAR
+
+5
+00:00:36,000 --> 00:00:45,000
+A separate Ed25519 session key signs the payment.
+Agent signature: 674b115ed883c95c86d2...
+
+6
+00:00:45,000 --> 00:00:54,000
+One finite-allowance key can call execute only.
+Node rejects wrong receiver, method, deposit and transfer.
+
+7
+00:00:54,000 --> 00:01:03,000
+0.001 test NEAR transferred | callback succeeded
+Local execute transaction: 5K5Uz1Evew8wNKsYyKQjj7...
+
+8
+00:01:03,000 --> 00:01:12,000
+Owner signs revocation; later spend is rejected.
+PC applet revocation signature: 05064d3a61a93983acea...
+
