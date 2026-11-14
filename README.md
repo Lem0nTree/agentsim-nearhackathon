@@ -6,15 +6,13 @@ We tested P-256 signing on a physical SIM. With AgentSIM, you sign a budget for 
 
 Suppose an instruction in a supplier’s quote tricks the agent into changing the payment address. Even a correctly signed agent request fails the vault’s recipient check. Changing the approved supplier or raising the budget takes a new P-256 grant from the owner. [Vault implementation](contracts/agentsim-vault/src/lib.rs) · [Demo and tests](src/demo.mjs)
 
-[Visit agentsimnear.xyz](https://agentsimnear.xyz/) · [30-second overview](submission/video/agentsim-overview-30s.mp4) · [Live proposal and local payment replay](submission/video/agentsim-live-demo.mp4)
+[Visit agentsimnear.xyz](https://agentsimnear.xyz/) · [Live proposal and local payment replay](submission/video/agentsim-live-demo.mp4)
 
-![AgentSIM website introduction](docs/images/website-sections/01-hero.jpg)
+[![Play the 30-second AgentSIM video on YouTube](docs/images/website-sections/01-hero.jpg)](https://youtu.be/TdMTaH6908w)
+
+[▶ Watch on YouTube](https://youtu.be/TdMTaH6908w)
 
 ![Physical SIM and USB reader on the test bench](evidence/hardware/2026-11-14-physical-sim.jpg)
-
-[![Watch the 30-second AgentSIM overview](submission/video/agentsim-real-sim-poster.jpg)](submission/video/agentsim-overview-30s.mp4)
-
-[Watch the 30-second AgentSIM overview](submission/video/agentsim-overview-30s.mp4).
 
 ## Give an agent a compute budget
 
