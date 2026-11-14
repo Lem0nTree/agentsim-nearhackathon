@@ -1,0 +1,9 @@
+{
+  "record_type": "project_owner_p256_confirmation",
+  "confirmation_date": "2026-11-14",
+  "source": "project owner",
+  "summary": "The project owner confirmed that a physical SIM signing test worked with P-256 elliptic-curve cryptography.",
+  "scope": "This is a clarification received on the confirmation date, not an independently verified transcript or a claimed test date.",
+  "additional_details": "The applet build, signature bytes, card identity and relationship to the separately recorded ECC diagnostic were not independently established by this report.",
+  "owner_supplied_photo": "evidence/hardware/2026-11-14-physical-sim.jpg"
+}
